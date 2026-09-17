@@ -1,0 +1,15 @@
+{
+  "_comment": "Cinta inferior. Izquierda: título · autor. Centro: § sección › diapositiva. Derecha: ocasión · lugar · fecha · página. Cualquier campo puede sobrescribirse en la cabecera de slides.md bajo `ribbon:`.",
+  "title": "USaP Física 2027",
+  "author": "J. M. Igartua",
+  "event": "Reunión de coordinación",
+  "place": "UPV/EHU",
+  "date": "curso 2026–27",
+  "showSection": true,
+  "showSlideTitle": true,
+  "showPage": true,
+  "showProgress": true,
+  "hideOnPages": [
+    1
+  ]
+}

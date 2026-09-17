@@ -1,0 +1,8 @@
+node_modules
+dist
+png
+.slidev
+*.pdf
+.DS_Store
+# source documents stay local
+0_propuesta_orientaciones_final_fisica.md

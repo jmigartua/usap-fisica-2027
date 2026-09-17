@@ -1,0 +1,50 @@
+{
+  "name": "2027-usap-presentation",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": "^22.12.0 || >=24.0.0"
+  },
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export --per-slide --wait 2500 --timeout 300000 --output 2027-usap-presentation.pdf",
+    "export:png": "slidev export --format png --wait 2500 --timeout 120000 --output png",
+    "thumbs": "npm run export:png && node tools/thumbs.mjs",
+    "publish": "git add -A && git commit -m \"update deck\" ; git push origin main"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.19.1",
+    "@slidev/theme-default": "latest",
+    "vue": "^3.5.33"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.63.0"
+  },
+  "overrides": {
+    "floating-vue": "5.2.2",
+    "unocss": "66.8.1",
+    "@unocss/cli": "66.8.1",
+    "@unocss/config": "66.8.1",
+    "@unocss/core": "66.8.1",
+    "@unocss/extractor-arbitrary-variants": "66.8.1",
+    "@unocss/extractor-mdc": "66.8.1",
+    "@unocss/inspector": "66.8.1",
+    "@unocss/preset-attributify": "66.8.1",
+    "@unocss/preset-icons": "66.8.1",
+    "@unocss/preset-mini": "66.8.1",
+    "@unocss/preset-tagify": "66.8.1",
+    "@unocss/preset-typography": "66.8.1",
+    "@unocss/preset-uno": "66.8.1",
+    "@unocss/preset-web-fonts": "66.8.1",
+    "@unocss/preset-wind": "66.8.1",
+    "@unocss/reset": "66.8.1",
+    "@unocss/rollup": "66.8.1",
+    "@unocss/rule-utils": "66.8.1",
+    "@unocss/transformer-attributify-jsx": "66.8.1",
+    "@unocss/transformer-compile-class": "66.8.1",
+    "@unocss/transformer-directives": "66.8.1",
+    "@unocss/transformer-variant-group": "66.8.1",
+    "@unocss/vite": "66.8.1"
+  }
+}
