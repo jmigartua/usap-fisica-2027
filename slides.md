@@ -326,16 +326,16 @@ $163$
 $214$
 
 </div></div>
-<div class="bar-row" v-click="2"><div class="lab teal-lab">B1′</div><div class="track"><div class="bar short" style="width: calc(95/408*100%)"></div></div><div class="val">
+<div class="bar-row" v-click="2"><div class="lab teal-lab">B1′</div><div class="track"><div class="bar short" style="width: calc(90/408*100%)"></div></div><div class="val">
 
-$95$
+$90$
 
 </div></div>
 </div>
 
 <div class="note mt-2" v-click="2">
 
-B1′: problema 2 en forma competencial compacta (anexo)
+B1′: problema 2 preguntado a la manera habitual (anexo)
 
 Un examen de 2026: unas $1100$ palabras por alumno
 
@@ -427,27 +427,27 @@ section: "Anexo"
 class: dense
 ---
 
-<div class="kicker">Anexo · ingeniería inversa del problema 2 de 2026 · se lee de derecha a izquierda</div>
+<div class="kicker">Anexo · problema 2 de 2026 · de izquierda a derecha: cómo se llegó al enunciado de 2026</div>
 
-# Desmontar el enunciado, paso a paso
+# Del enunciado habitual al de 2026, paso a paso
 
 <div class="stages">
-<div :class="{ stage: true, active: $clicks === 3 }">
-<div class="stage-t">0 · Forma competencial</div>
+<div :class="{ stage: true, active: $clicks === 0, past: $clicks > 0 }">
+<div class="stage-t">0 · Habitual</div>
 <div class="stage-w">
 
-$95$ palabras
+$90$ palabras
 
 </div>
 <div class="stage-d">
 
-más corta, más difícil de entender
+define, deduce, calcula: lo de siempre
 
 </div>
 </div>
-<div class="stage-arrow">←</div>
-<div :class="{ stage: true, active: $clicks === 2, past: $clicks > 2 }">
-<div class="stage-t">1 · Sin repeticiones</div>
+<div class="stage-arrow">→</div>
+<div :class="{ stage: true, active: $clicks === 1, past: $clicks > 1 }">
+<div class="stage-t">1 · Competencial</div>
 <div class="stage-w">
 
 $178$ palabras
@@ -455,13 +455,13 @@ $178$ palabras
 </div>
 <div class="stage-d">
 
-flujo, fem, valor en $t$: una vez
+añade justificar y decidir
 
 </div>
 </div>
-<div class="stage-arrow">←</div>
-<div :class="{ stage: true, active: $clicks === 1, past: $clicks > 1 }">
-<div class="stage-t">2 · Sin narrativa</div>
+<div class="stage-arrow">→</div>
+<div :class="{ stage: true, active: $clicks === 2, past: $clicks > 2 }">
+<div class="stage-t">2 · Desglosado</div>
 <div class="stage-w">
 
 $244$ palabras
@@ -469,12 +469,12 @@ $244$ palabras
 </div>
 <div class="stage-d">
 
-sin narrativa; mismas preguntas
+cada cálculo, por configuración
 
 </div>
 </div>
-<div class="stage-arrow">←</div>
-<div :class="{ stage: true, active: $clicks === 0, past: $clicks > 0 }">
+<div class="stage-arrow">→</div>
+<div :class="{ stage: true, active: $clicks === 3 }">
 <div class="stage-t">3 · 2026, como salió</div>
 <div class="stage-w">
 
@@ -483,13 +483,13 @@ $408$ palabras
 </div>
 <div class="stage-d">
 
-contexto · 2 configuraciones · 7 ítems
+narrativa e instrucciones · muy largo
 
 </div>
 </div>
 </div>
 
-<div class="panel" v-show="$clicks === 0">
+<div class="panel" v-show="$clicks === 3">
 
 Una estación meteorológica instalada en una zona de montañosa aislada de la red eléctrica alimenta sus sensores con un microgenerador electromagnético. El dispositivo consiste en una espira circular plana de radio $R = 6.0$ cm, montada sobre un eje de giro dentro de un campo magnético uniforme. Durante las pruebas de laboratorio, el equipo de ingeniería ensaya el prototipo en dos configuraciones:
 
@@ -548,7 +548,7 @@ Una espira circular plana de radio $R = 6.0$ cm está en un campo magnético uni
 
 </div>
 
-<div class="panel compact" v-show="$clicks === 3">
+<div class="panel compact" v-show="$clicks === 0">
 
 Espira circular plana de radio $R = 6.0$ cm en un campo magnético uniforme según $OZ$. **I:** espira fija en el plano $XY$, $B(t) = 3t^2$ (SI). **II:** $B_0 = 8.0$ mT; la espira gira en torno a $OY$ con $\omega = 60$ rad/s, desde el plano $XY$ en $t = 0$.
 
@@ -556,17 +556,17 @@ Espira circular plana de radio $R = 6.0$ cm en un campo magnético uniforme seg�
 
 **b)** En I, deduce $\varepsilon(t)$ y calcula $\varepsilon$ en $t = 7.0$ ms. ($1.00$)
 
-**c)** En II, deduce $\varepsilon(t)$, calcula $\varepsilon(7.0\ \mathrm{ms})$ y decide si $\varepsilon_{\max} \ge 0.50$ mV. ($1.00$)
+**c)** En II, deduce $\varepsilon(t)$, calcula $\varepsilon(7.0\ \mathrm{ms})$ y $\varepsilon_{\max}$. ($1.00$)
 
 </div>
 
 <div class="note mt-2" v-click="3">
 
-2026: primer año de este saber básico en formato competencial · enunciado largo a propósito
+Así se llegó a 2026: de lo habitual a lo competencial, y con narrativa y repeticiones para facilitar la transición
 
-Gravitatorio, ya rodado: más corto, y más corto que en 2025
+Resultado: $408$ palabras, demasiado largo · misma rúbrica, $0.50 + 1.00 + 1.00$, en las cuatro versiones
 
-2027: mismo formato, menos texto · misma rúbrica, $0.50 + 1.00 + 1.00$, en las cuatro versiones
+Siguientes diapositivas: de 2026 a lo que debió ser, y a la forma competencial pura
 
 </div>
 
