@@ -4,6 +4,23 @@ Deck ligero (10 diapositivas) para la reunión con el profesorado: nada cambia r
 
 Fuentes: `ordinaria_física_26_examen.pdf` y `ordinaria_física_26_solucionario.pdf` (en esta carpeta). Los recuentos de palabras se obtuvieron con `pdftotext -layout` sobre el enunciado en castellano, sin los pesos de cada apartado.
 
+## Publicación
+
+Sitio: <https://jmigartua.github.io/usap-fisica-2027/> · repositorio público <https://github.com/jmigartua/usap-fisica-2027>. Cada `git push` a `main` lanza `.github/workflows/deploy.yml`, que construye con `slidev build --base /usap-fisica-2027/` y publica `dist/` en GitHub Pages (un minuto, aproximadamente).
+
+```bash
+npm run thumbs    # opcional: regenera las miniaturas del navegador (exporta PNG y las reduce con sips)
+npm run publish   # git add + commit "update deck" + push → despliegue automático
+```
+
+Fuera del repositorio, por `.gitignore`: los PDF del examen y del solucionario, el documento de orientaciones, `dist/`, `png/` y `node_modules/`.
+
+El deck usa `routerMode: hash`, así que el sitio construido funciona en cualquier servidor estático (también `python -m http.server` en una carpeta local) y los enlaces a una diapositiva son de la forma `#/11`.
+
+## Navegador de diapositivas
+
+El botón ▦ del extremo derecho de la cinta abre, al pasar el ratón o al pulsarlo, una rejilla con las trece diapositivas (miniatura, número y título); pulsar una salta a ella. Las miniaturas salen de `public/thumbs/N.jpg`; sin miniatura, la tarjeta muestra el número. Slidev también ofrece la vista general con la tecla `o`.
+
 ## Comandos
 
 Requiere Node ≥ 22 (`/usr/local/opt/node@22/bin` en esta máquina).
