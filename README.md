@@ -43,7 +43,7 @@ npm run export:png   # png/1.png … png/10.png (verificación)
 | 5 | El cambio | Enunciados más cortos · longitud de los seis enunciados de 2026 · qué se conserva y qué se recorta |
 | 6 | Cierre | Nada cambia. Salvo que se leerá menos. |
 | 7 | Anexo | 2026 de un vistazo (bloques, temas, reparto de puntos, palabras) |
-| 8 | Anexo | Ingeniería inversa del problema 2: cuatro versiones, de derecha (2026, 408 palabras) a izquierda (forma competencial, 95), una por clic |
+| 8 | Anexo | Cómo se llegó al enunciado de 2026, de izquierda a derecha, una versión por clic: habitual (90 palabras, define/deduce/calcula) → competencial (178, añade justificar y decidir) → desglosado (244, cada cálculo por configuración) → 2026 como salió (408, narrativa e instrucciones: demasiado largo) |
 | 9 | Anexo | Paso 3 → 2, parte a): cabecera común que se atenúa, y la frase a) enfocada, tachada y pasada a la versión de la izquierda (prototipo de la coreografía) |
 | 10 | Anexo | Paso 2 → 1: la versión «sin narrativa» a la derecha (referencia, lo que debió ser en el segundo año) y, a la izquierda, la forma competencial ideal construida fundiendo a), b) y c) (11 clics) |
 | 11 | Anexo | Último paso: la forma competencial ideal a la derecha y, a la izquierda, el enunciado habitual anterior al competencial obligatorio, solo con «escribe» y «calcula» (11 clics) |
