@@ -6,7 +6,7 @@ info: |
   ## USaP Física 2027
   Reunión de coordinación con el profesorado: qué se mantiene de 2026 y el único cambio previsto.
   Versión escrita en MDC (Markdown con componentes) para comparar con la versión HTML.
-author: J. M. Igartua
+author: Gorka Arretxe, Asier López-Eiguren, J. M. Igartua
 lang: es
 colorSchema: dark
 aspectRatio: 16/9
@@ -36,7 +36,7 @@ Misma estructura, contenidos y corrección que en 2026.<br>Un único cambio: enu
 ::
 
 ::div{.cover-meta}
-**Reunión de coordinación** · profesorado de Física de Bachillerato · UPV/EHU<br>J. M. Igartua · curso 2026–27
+**Reunión de coordinación** · profesorado de Física de Bachillerato · EHU<br>Gorka Arretxe (Ordizia Institutua) · Asier López-Eiguren (EHU) · J. M. Igartua (EHU) · curso 2026–27
 ::
 
 ---

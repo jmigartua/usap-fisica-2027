@@ -8,7 +8,7 @@
 1.1  [USaP · Física · Coordinación · edición 2027]{.kicker}
 1.2  Física 2027:<br>nada cambia
 1.3  Misma estructura, contenidos y corrección que en 2026.<br>Un único cambio: enunciados más cortos.
-1.4  **Reunión de coordinación** · profesorado de Física de Bachillerato · UPV/EHU<br>J. M. Igartua · curso 2026–27
+1.4  **Reunión de coordinación** · profesorado de Física de Bachillerato · EHU<br>Gorka Arretxe (Ordizia Institutua) · Asier López-Eiguren (EHU) · J. M. Igartua (EHU) · curso 2026–27
 
 ## 2 · 2027 es 2026
 

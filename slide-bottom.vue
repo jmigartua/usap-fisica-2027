@@ -98,7 +98,7 @@ function go(no: number) {
   left: 0; right: 0; bottom: 0;
   height: 1.55rem;
   display: grid;
-  grid-template-columns: minmax(0, 24%) minmax(0, 1fr) minmax(0, 28%) auto auto;
+  grid-template-columns: minmax(0, 31%) minmax(0, 1fr) minmax(0, 26%) auto auto;
   align-items: center;
   gap: 1rem;
   padding: 0 1.1rem 0 1.4rem;
