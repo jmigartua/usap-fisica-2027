@@ -618,3 +618,10 @@
 .consttab .cell { font-size: 0.6rem; min-height: 1.7rem; padding: 0.28rem 0.4rem; }
 .consttab .cell .katex { white-space: nowrap; }
 .consttab-grid { gap: 0.4rem 0.35rem; }
+
+/* full-width, larger table */
+.consttab.big { padding: 0.7rem 1rem 0.8rem; }
+.consttab.big .consttab-title { font-size: 0.78rem; margin-bottom: 0.6rem; }
+.consttab.big .cell { font-size: 0.86rem; min-height: 2.4rem; padding: 0.4rem 0.7rem; }
+.consttab.big .consttab-grid { gap: 0.55rem 0.6rem; }
+.consttab.big .tag { font-size: 0.58rem; padding: 0.04rem 0.38rem; }
