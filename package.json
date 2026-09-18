@@ -11,7 +11,9 @@
     "export": "slidev export --per-slide --wait 2500 --timeout 300000 --output 2027-usap-presentation.pdf",
     "export:png": "slidev export --format png --wait 2500 --timeout 120000 --output png",
     "thumbs": "npm run export:png && node tools/thumbs.mjs",
-    "publish": "git add -A && git commit -m \"update deck\" ; git push origin main"
+    "publish": "git add -A && git commit -m \"update deck\" ; git push origin main",
+    "text": "node tools/text.mjs extract",
+    "text:apply": "node tools/text.mjs apply"
   },
   "dependencies": {
     "@slidev/cli": "^52.19.1",

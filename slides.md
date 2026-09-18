@@ -5,6 +5,7 @@ titleTemplate: '%s · Coordinación'
 info: |
   ## USaP Física 2027
   Reunión de coordinación con el profesorado: qué se mantiene de 2026 y el único cambio previsto.
+  Versión escrita en MDC (Markdown con componentes) para comparar con la versión HTML.
 author: J. M. Igartua
 lang: es
 colorSchema: dark
@@ -24,354 +25,280 @@ htmlAttrs:
   lang: es
 ---
 
-<div class="kicker">USaP · Física · Coordinación · edición 2027</div>
+[USaP · Física · Coordinación · edición 2027]{.kicker}
 
-<div class="cover-title" v-motion :initial="{ y: 24, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { duration: 600 } }">
+::div{.cover-title}
 Física 2027:<br>nada cambia
-</div>
+::
 
-<div class="cover-sub" v-motion :initial="{ y: 24, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 250, duration: 600 } }">
+::div{.cover-sub}
 Misma estructura, contenidos y corrección que en 2026.<br>Un único cambio: enunciados más cortos.
-</div>
+::
 
-<div class="cover-meta" v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1, transition: { delay: 550, duration: 600 } }">
-<strong>Reunión de coordinación</strong> · profesorado de Física de Bachillerato · UPV/EHU<br>
-J. M. Igartua · curso 2026–27
-</div>
+::div{.cover-meta}
+**Reunión de coordinación** · profesorado de Física de Bachillerato · UPV/EHU<br>J. M. Igartua · curso 2026–27
+::
 
 ---
 transition: fade
 section: "El mensaje"
 ---
 
-<div class="kicker">El mensaje</div>
+[El mensaje]{.kicker}
 
 # 2027 es 2026
 
-<div class="grid grid-cols-3 gap-5 mt-6">
-<div class="card kpi eq-tile" v-click>
-  <div class="kpi-value teal">
+:::div{.grid.grid-cols-3.gap-5.mt-6}
 
-$=$
+::div{.card.kpi.eq-tile v-click}
+[$=$]{.kpi-value.teal}
 
-  </div>
-  <div class="kpi-label">
+[**Estructura**<br>cuatro problemas · $2.50$ cada uno]{.kpi-label}
+::
 
-**Estructura**<br>cuatro problemas · $2.50$ cada uno
+::div{.card.kpi.eq-tile v-click}
+[$=$]{.kpi-value.teal}
 
-  </div>
-</div>
-<div class="card kpi eq-tile" v-click>
-  <div class="kpi-value teal">
+[**Contenidos**<br>mismos cuatro bloques de saberes]{.kpi-label}
+::
 
-$=$
+::div{.card.kpi.eq-tile v-click}
+[$=$]{.kpi-value.teal}
 
-  </div>
-  <div class="kpi-label">
+[**Evaluación**<br>misma rúbrica, mismos criterios]{.kpi-label}
+::
 
-**Contenidos**<br>mismos cuatro bloques de saberes
+:::
 
-  </div>
-</div>
-<div class="card kpi eq-tile" v-click>
-  <div class="kpi-value teal">
-
-$=$
-
-  </div>
-  <div class="kpi-label">
-
-**Evaluación**<br>misma rúbrica, mismos criterios
-
-  </div>
-</div>
-</div>
-
-<div class="card amber mt-6" v-click>
-<h3>Un solo cambio, y es de estilo</h3>
-
-Enunciados **más cortos** · mismas competencias, datos y rúbrica · menos lectura
-
-</div>
+::div{.card.amber.mt-6 v-click}
+### Un solo cambio, y es de estilo
+Enunciados **más cortos** · mismas competencias, datos y rúbrica<br>competencia lectora → competencias en física
+::
 
 ---
 transition: slide-up
 section: "Estructura"
 ---
 
-<div class="kicker">Estructura · igual que en 2026</div>
+[Estructura · igual que en 2026]{.kicker}
 
 # Cuatro problemas, cuatro bloques
 
-<div class="grid grid-cols-4 gap-4 mt-4">
-<div class="card">
-<h3>1 · Bloque A</h3>
-<SaberModal title="Bloque A · Campo gravitatorio">
+::::div{.grid.grid-cols-4.gap-4.mt-4}
 
+:::div{.card}
+### 1 · Bloque A
+::saber-modal{title="Bloque A · Campo gravitatorio"}
 - **A1** Campo gravitatorio de un sistema de masas: cálculo vectorial; efectos cinemáticos y dinámicos.
 - **A2** Momento angular en un campo gravitatorio: fuerzas centrales y conservación.
 - **A3** Energía mecánica en un campo gravitatorio: tipo de trayectoria, trabajo y balances; velocidad orbital y de escape; órbitas geoestacionarias.
 - **A4** Leyes de Kepler: movimiento planetario, satélites y cuerpos celestes.
 - **A5** Cosmología y astrofísica: Big Bang, expansión del universo, materia y energía oscuras (solo descripción).
+::
 
-</SaberModal>
-
-<span class="chip coral">sin opción</span>
+[sin opción]{.chip.coral}
 
 Campo gravitatorio
 
 $2.50$ puntos
+:::
 
-</div>
-<div class="card">
-<h3>2 · Bloque B</h3>
-<SaberModal title="Bloque B · Campo electromagnético">
-
+:::div{.card}
+### 2 · Bloque B
+::saber-modal{title="Bloque B · Campo electromagnético"}
 - **B1** Campos eléctrico y magnético: tratamiento vectorial; cargas libres en presencia de campos; fuerza de Lorentz.
 - **B2** Campo eléctrico de distribuciones discretas y continuas; flujo y ley de Gauss.
 - **B3** Energía de una distribución de cargas: potencial, trabajo y superficies equipotenciales.
 - **B4** Campos magnéticos de hilos, espiras, solenoides y toros; interacción con cargas libres.
 - **B5** Líneas de campo eléctrico y magnético de cargas, imanes e hilos con corriente.
 - **B6** Fuerza electromotriz: flujo magnético y ley de Faraday; motores, generadores y transformadores.
+::
 
-</SaberModal>
-
-<span class="chip coral">sin opción</span>
+[sin opción]{.chip.coral}
 
 Campo electromagnético
 
 $2.50$ puntos
+:::
 
-</div>
-<div class="card teal">
-<h3>3 · Bloque C</h3>
-<SaberModal title="Bloque C · Vibraciones y ondas">
-
+:::div{.card.teal}
+### 3 · Bloque C
+::saber-modal{title="Bloque C · Vibraciones y ondas"}
 - **C1** Movimiento oscilatorio: MAS, ley de Hooke, conservación de la energía.
 - **C2** Movimiento ondulatorio: ecuación de onda, gráficas, tipos de ondas.
 - **C3** Fenómenos ondulatorios: sonido y decibelios, ondas esféricas, efecto Doppler.
 - **C4** Naturaleza de la luz: Huygens, Young, onda electromagnética, espectro.
 - **C5** Formación de imágenes: refracción, lentes delgadas, espejos, telescopios.
+::
 
-</SaberModal>
-
-<span class="chip teal">opción a o b</span>
+[opción a o b]{.chip.teal}
 
 Ondas · Óptica
 
 $2.50$ puntos
+:::
 
-</div>
-<div class="card teal">
-<h3>4 · Bloque D</h3>
-<SaberModal title="Bloque D · Física relativista, cuántica, nuclear y de partículas">
-
+:::div{.card.teal}
+### 4 · Bloque D
+::saber-modal{title="Bloque D · Física relativista, cuántica, nuclear y de partículas"}
 - **D1** Relatividad especial: postulados, contracción de la longitud, dilatación del tiempo, masa y energía.
 - **D2** Dualidad onda-corpúsculo y cuantización: efecto fotoeléctrico, De Broglie, incertidumbre.
 - **D3** Modelo estándar: partículas fundamentales, interacciones, aceleradores.
 - **D4** Núcleos e isótopos: radiactividad, ley de desintegración y datación, energía de enlace, fisión y fusión.
+::
 
-</SaberModal>
-
-<span class="chip teal">opción a o b</span>
+[opción a o b]{.chip.teal}
 
 Nuclear · Cuántica
 
 $2.50$ puntos
+:::
 
-</div>
-</div>
+::::
 
-<div class="grid grid-cols-2 gap-6 mt-5">
-<div class="card kpi" v-click>
-  <div class="kpi-value">
+:::div{.grid.grid-cols-2.gap-6.mt-5}
 
-$4 \times 2.50 = 10$
+::div{.card.kpi v-click}
+[$4 \times 2.50 = 10$]{.kpi-value}
 
-  </div>
-  <div class="kpi-label">
+[puntos en total · respuestas de más: se corrigen en orden]{.kpi-label}
+::
 
-puntos en total · respuestas de más: se corrigen en orden
+::div{v-click}
+[Condiciones de la prueba, sin cambios:]{.note-line}
 
-  </div>
-</div>
-<div v-click>
+[calculadora científica]{.chip.amber} [tabla de datos y constantes]{.chip.amber} [solo datos de tabla y enunciado]{.chip.amber} [código en cada cuadernillo]{.chip.amber}
+::
 
-<div class="note">
-
-Condiciones de la prueba, sin cambios:
-
-</div>
-
-<span class="chip amber">calculadora científica</span><span class="chip amber">tabla de datos y constantes</span><span class="chip amber">solo datos de tabla y enunciado</span><span class="chip amber">código en cada cuadernillo</span>
-
-</div>
-</div>
+:::
 
 ---
 transition: slide-left
 section: "Evaluación"
 ---
 
-<div class="kicker">Evaluación · igual que en 2026</div>
+[Evaluación · igual que en 2026]{.kicker}
 
 # Misma rúbrica, mismos criterios
 
-<div class="grid grid-cols-5 gap-6 mt-3">
-<div class="col-span-2">
+::::div{.grid.grid-cols-5.gap-6.mt-3}
 
-<div class="step" v-click><div class="n">a</div><div>
+:::div{.col-span-2}
+
+::div{.step v-click}
+[a]{.n}
 
 $2.50$ por problema<br>**tres apartados**, con su peso
+::
 
-</div></div>
-<div class="step" v-click><div class="n">·</div><div>
+::div{.step v-click}
+[·]{.n}
 
 **subapartados** de $0.25$ y $0.50$<br>un contenido cada uno
+::
 
-</div></div>
-<div class="step" v-click><div class="n">✓</div><div>
+::div{.step v-click}
+[✓]{.n}
 
 solucionario **orientativo**<br>qué se puntúa, no un único camino
+::
 
-</div></div>
+:::
 
-</div>
-<div class="col-span-3 grid grid-cols-2 gap-3">
-<div class="card" v-click>
-<h3>Simbólico, luego numérico</h3>
+:::div{.col-span-3.grid.grid-cols-2.gap-3}
 
+::div{.card v-click}
+### Simbólico, luego numérico
 planteamiento y despeje primero
+::
 
-</div>
-<div class="card coral" v-click>
-
+::div{.card.coral v-click}
 ### Descuentos de $0.1$
-
 - unidades
 - carácter vectorial
 - redondeo y decimales
 
-<div class="note">
+[no cifras significativas · se corrige]{.note-line}
+::
 
-no cifras significativas · se corrige
-
-</div>
-
-</div>
-<div class="card coral" v-click>
-<h3 style="color: var(--coral)">Errores graves</h3>
-
+::div{.card.coral v-click}
+### Errores graves
 - ecuación incorrecta
 - confusión escalar/vectorial
 - invalidan el apartado
+::
 
-</div>
-<div class="card teal" v-click>
-<h3 style="color: var(--teal)">Se arrastra el valor</h3>
-
+::div{.card.teal v-click}
+### Se arrastra el valor
 - valor del alumno, si hace falta
 - salvo resultado absurdo
+::
 
-</div>
-</div>
-</div>
+:::
+
+::::
 
 ---
 transition: slide-up
 section: "El cambio"
 ---
 
-<div class="kicker">El único cambio</div>
+[El único cambio]{.kicker}
 
 # Enunciados más cortos
 
-<div class="grid grid-cols-5 gap-6 mt-2">
-<div class="col-span-3">
+::::div{.grid.grid-cols-5.gap-6.mt-2}
 
-<div class="note">
+:::div{.col-span-3}
 
+::div{.note}
 Longitud de los enunciados de 2026, en palabras, sin los pesos de cada apartado:
+::
 
-</div>
+::word-bars{:rows='[["A1",295],["B1",408],["C1",150],["C2",242],["D1",163],["D2",214]]' :total="408" :sums='[["C1+C2",392],["D1+D2",377]]' :short='["B1′",90]' :target="$clicks >= 5"}
+::
 
-<div :class="{ bars: true, target: $clicks >= 5 }">
-<div class="bar-row" v-click="1"><div class="lab">A1</div><div class="track"><div class="bar" style="width: calc(295/408*100%)"></div><div class="band" style="left: calc(100/408*100%); width: calc(50/408*100%)"></div></div><div class="val">
+:::div{v-click="5"}
 
-$295$
+::band-controls
+::
 
-</div></div>
-<div class="bar-row" v-click="1"><div class="lab">B1</div><div class="track"><div class="bar" style="width: calc(408/408*100%)"></div><div class="band" style="left: calc(100/408*100%); width: calc(50/408*100%)"></div></div><div class="val">
+::band-totals{:read="1472" :answered="[1016, 1159]" :n-read="6" :n-answered="4"}
+::
 
-$408$
+:::
 
-</div></div>
-<div class="bar-row" v-click="1"><div class="lab">C1</div><div class="track"><div class="bar" style="width: calc(150/408*100%)"></div><div class="band" style="left: calc(100/408*100%); width: calc(50/408*100%)"></div></div><div class="val">
+::div{.note.mt-1 v-click="2"}
+B1′: la manera habitual (anexo) · C1+C2, D1+D2: lo que lee quien tiene opción
+::
 
-$150$
+:::
 
-</div></div>
-<div class="bar-row" v-click="1"><div class="lab">C2</div><div class="track"><div class="bar" style="width: calc(242/408*100%)"></div><div class="band" style="left: calc(100/408*100%); width: calc(50/408*100%)"></div></div><div class="val">
+:::div{.col-span-2}
 
-$242$
-
-</div></div>
-<div class="bar-row" v-click="1"><div class="lab">D1</div><div class="track"><div class="bar" style="width: calc(163/408*100%)"></div><div class="band" style="left: calc(100/408*100%); width: calc(50/408*100%)"></div></div><div class="val">
-
-$163$
-
-</div></div>
-<div class="bar-row" v-click="1"><div class="lab">D2</div><div class="track"><div class="bar" style="width: calc(214/408*100%)"></div><div class="band" style="left: calc(100/408*100%); width: calc(50/408*100%)"></div></div><div class="val">
-
-$214$
-
-</div></div>
-<div class="bar-row" v-click="2"><div class="lab teal-lab">B1′</div><div class="track"><div class="bar short" style="width: calc(90/408*100%)"></div></div><div class="val">
-
-$90$
-
-</div></div>
-</div>
-
-<div class="note mt-2" v-click="2">
-
-B1′: problema 2 preguntado a la manera habitual (anexo)
-
-Un examen de 2026: unas $1100$ palabras por alumno
-
-</div>
-
-</div>
-<div class="col-span-2">
-
-<div class="card teal" v-click="3">
-<h3 style="color: var(--teal)">Se conserva</h3>
-
+::div{.card.teal v-click="3"}
+### Se conserva
 - contexto real, da sentido al problema
 - datos y tabla de constantes
 - verbos, en cada apartado
 - rúbrica y pesos
+::
 
-</div>
-
-<div class="card coral mt-2" v-click="4">
-<h3 style="color: var(--coral)">Se recorta</h3>
-
+::div{.card.coral.mt-2 v-click="4"}
+### Se recorta
 - narrativa
 - preguntas repetidas entre apartados
 - instrucciones de formato redundantes
+::
 
-</div>
+::div{.card.lime.mt-2 v-click="5"}
+### Objetivo 2027
+<kx :tex="`${$lo}\\text{–}${$hi}`" /> palabras · media <kx :tex="$band.mean" />
+::
 
-<div class="card lime mt-2" v-click="5">
-<h3 style="color: var(--lime)">Objetivo 2027</h3>
+:::
 
-$100$–$150$ palabras · banda verde en 2026
-
-</div>
-
-</div>
-</div>
+::::
 
 ---
 layout: center
@@ -380,19 +307,19 @@ section: "Cierre"
 ribbonTitle: "Para llevar"
 ---
 
-<div class="kicker text-center">Para llevar</div>
+[Para llevar]{.kicker.text-center}
 
-<div class="section-title text-center" v-motion :initial="{ y: 16, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { duration: 500 } }">
+::div{.section-title.text-center}
 Nada cambia.
-</div>
+::
 
-<div class="section-title text-center" style="color: var(--amber)" v-click>
+::div{.section-title.text-center.amber v-click}
 Salvo que se leerá menos.
-</div>
+::
 
-<div class="section-sub text-center mt-6" style="margin-left: auto; margin-right: auto" v-click>
+::div{.section-sub.text-center.mt-6.mx-auto v-click}
 Misma estructura, contenidos y corrección.<br>Enunciados más cortos, misma rúbrica.
-</div>
+::
 
 ---
 transition: fade
@@ -400,7 +327,7 @@ section: "Anexo"
 class: dense
 ---
 
-<div class="kicker">Anexo · por si se pregunta</div>
+[Anexo · por si se pregunta]{.kicker}
 
 # 2026 de un vistazo
 
@@ -413,13 +340,11 @@ class: dense
 | D · opción a | D1 | Efecto fotoeléctrico: potencial de frenado, función trabajo, metal oxidado | $0.50 + 1.00 + 1.00$ | $163$ |
 | D · opción b | D2 | Desintegración radiactiva: datación por carbono-14 | $1.00 + 0.50 + 1.00$ | $214$ |
 
-<div class="note mt-3">
-
+::div{.note.mt-3}
 Cada problema, $2.50$ · subapartados de $0.25$ o $0.50$, con su contenido en el solucionario
 
 Palabras: enunciado en castellano, sin los pesos
-
-</div>
+::
 
 ---
 transition: slide-left
@@ -441,7 +366,7 @@ $90$ palabras
 </div>
 <div class="stage-d">
 
-define, deduce, calcula: lo de siempre
+define, escribe, calcula: lo de siempre
 
 </div>
 </div>
@@ -511,7 +436,7 @@ Una estación meteorológica instalada en una zona de montañosa aislada de la r
 
 </div>
 
-<div class="panel" v-show="$clicks === 1">
+<div class="panel" v-show="$clicks === 2">
 
 Una espira circular plana de radio $R = 6.0$ cm, montada sobre un eje de giro, está dentro de un campo magnético uniforme. Se ensaya en dos configuraciones:
 
@@ -533,7 +458,7 @@ Una espira circular plana de radio $R = 6.0$ cm, montada sobre un eje de giro, e
 
 </div>
 
-<div class="panel" v-show="$clicks === 2">
+<div class="panel" v-show="$clicks === 1">
 
 Una espira circular plana de radio $R = 6.0$ cm está en un campo magnético uniforme dirigido en el sentido positivo del eje $OZ$.
 
@@ -554,9 +479,9 @@ Espira circular plana de radio $R = 6.0$ cm en un campo magnético uniforme seg�
 
 **a)** Define el flujo magnético y enuncia la ley de Faraday-Lenz, explicando el signo. ($0.50$)
 
-**b)** En I, deduce $\varepsilon(t)$ y calcula $\varepsilon$ en $t = 7.0$ ms. ($1.00$)
+**b)** En I, escribe $\varepsilon(t)$ y calcula $\varepsilon$ en $t = 7.0$ ms. ($1.00$)
 
-**c)** En II, deduce $\varepsilon(t)$, calcula $\varepsilon(7.0\ \mathrm{ms})$ y $\varepsilon_{\max}$. ($1.00$)
+**c)** En II, escribe $\varepsilon(t)$, calcula $\varepsilon(7.0\ \mathrm{ms})$ y $\varepsilon_{\max}$. ($1.00$)
 
 </div>
 
@@ -578,7 +503,7 @@ class: dense tight
 
 <div class="kicker">Anexo · ingeniería inversa · paso 3 → 2 · problema 2 completo</div>
 
-# De «2026, como salió» a «sin narrativa»
+# De «2026, como salió» a «como debería haber sido...»
 
 <div :class="{ head: true, dim: $clicks >= 1 && $clicks < 32, hl: $clicks >= 30 && $clicks < 32, renewed: $clicks >= 32 }">
 <div class="head-tag">Contexto y configuraciones · común a las cuatro versiones</div>
@@ -1170,132 +1095,115 @@ transition: slide-up
 section: "Anexo"
 ---
 
-<div class="kicker">Anexo · los verbos de la competencia</div>
+[Anexo · los verbos de la competencia]{.kicker}
 
 # Cuatro niveles, presentes en los seis problemas de 2026
 
-<div class="grid grid-cols-2 gap-4 mt-3">
-<div class="card" v-click>
-<h3>1 · Conocer</h3>
+::::div{.grid.grid-cols-2.gap-4.mt-3}
 
-<span class="chip amber">escribe</span><span class="chip amber">enuncia</span>
+:::div{.card v-click}
+### 1 · Conocer
+[escribe]{.chip.amber} [enuncia]{.chip.amber}
 
 - ley de Faraday-Lenz
 - ecuación de Einstein
 - ley de desintegración
 
-<div class="note">
-
+::div{.note}
 B1 a · D1 a · D2 a
+::
+:::
 
-</div>
-
-</div>
-<div class="card" v-click>
-<h3>2 · Comprender</h3>
-
-<span class="chip amber">explica</span><span class="chip amber">justifica</span>
+:::div{.card v-click}
+### 2 · Comprender
+[explica]{.chip.amber} [justifica]{.chip.amber}
 
 - signo negativo de la fem
 - oxidación y $W_0$
 - qué depende de la masa
 
-<div class="note">
-
+::div{.note}
 A1 c · B1 a, b · C2 a · D1 c
+::
+:::
 
-</div>
-
-</div>
-<div class="card teal" v-click>
-<h3 style="color: var(--teal)">3 · Aplicar</h3>
-
-<span class="chip teal">calcula</span><span class="chip teal">deduce</span>
+:::div{.card.teal v-click}
+### 3 · Aplicar
+[calcula]{.chip.teal} [deduce]{.chip.teal}
 
 - simbólico, luego numérico
 - $r_{\mathrm{geo}}$, $\varepsilon(t)$, $L'$, $s$, $W_0$
 - $t$ a partir de $N/N_0$
 
-<div class="note">
-
+::div{.note}
 Los seis problemas
+::
+:::
 
-</div>
-
-</div>
-<div class="card amber" v-click>
-<h3>4 · Valorar</h3>
-
-<span class="chip amber">compara</span><span class="chip amber">decide</span>
+:::div{.card.amber v-click}
+### 4 · Valorar
+[compara]{.chip.amber} [decide]{.chip.amber}
 
 - ¿destruye grandes zonas?
 - ¿cumple los $0.50$ mV?
 - ¿imagen real o virtual?
 
-<div class="note">
-
+::div{.note}
 A1 b · B1 c · C2 c · D1 c
+::
+:::
 
-</div>
+::::
 
-</div>
-</div>
-
-<div class="note mt-4" v-click>
-
+::div{.note.mt-4 v-click}
 Acortar: un verbo por nivel, sin repeticiones entre apartados · la escalera no cambia, cambia cuántas veces se sube
-
-</div>
+::
 
 ---
 transition: fade
 section: "Anexo"
 ---
 
-<div class="kicker">Anexo · preguntas previsibles</div>
+[Anexo · preguntas previsibles]{.kicker}
 
 # Respuestas cortas
 
-<div class="grid grid-cols-3 gap-4 mt-4">
-<div class="card" v-click>
-<h3>¿Más cortos, más fáciles?</h3>
+:::div{.grid.grid-cols-3.gap-4.mt-4}
 
+::div{.card v-click}
+### ¿Más cortos, más fáciles?
 - no: mismos verbos y rúbrica
 - menos lectura, misma exigencia
+::
 
-</div>
-<div class="card" v-click>
-<h3>¿Cambia la opcionalidad?</h3>
-
+::div{.card v-click}
+### ¿Cambia la opcionalidad?
 - no: $1$ y $2$ sin opción
 - $3$ y $4$: opción a o b
+::
 
-</div>
-<div class="card" v-click>
-<h3>¿Cambia la tabla de datos?</h3>
-
-- no: misma tabla, con el enunciado
+::div{.card v-click}
+### ¿Cambia la tabla de datos?
+- no: una tabla para todo el examen
 - solo datos de tabla y enunciado
+::
 
-</div>
-<div class="card" v-click>
-<h3>¿Y las penalizaciones?</h3>
-
+::div{.card v-click}
+### ¿Y las penalizaciones?
 - $-0.1$: unidades, vectores, redondeo
+- $-0.1$: faltas de ortografía
 - decimales, no cifras significativas
+::
 
-</div>
-<div class="card" v-click>
-<h3>¿Y si responde de más?</h3>
-
+::div{.card v-click}
+### ¿Y si responde de más?
 - en orden, como hasta ahora
+::
 
-</div>
-<div class="card" v-click>
-<h3>¿Se arrastran los errores?</h3>
-
+::div{.card v-click}
+### ¿Se arrastran los errores?
 - se usa el valor del alumno
 - salvo resultado absurdo
+::
 
-</div>
-</div>
+:::

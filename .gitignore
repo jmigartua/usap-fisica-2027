@@ -6,3 +6,5 @@ png
 .DS_Store
 # source documents stay local
 0_propuesta_orientaciones_final_fisica.md
+.text-map.json
+TEXT copy.md

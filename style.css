@@ -554,3 +554,41 @@
 .boxed .bx-val,  .bx-val.on  { border-color: var(--coral); }
 .abs-note { position: absolute; left: 3.2rem; right: 3.2rem; bottom: 2.2rem; }
 .slidev-layout .abs-note p { font-size: 0.66rem; color: var(--muted); margin: 0; }
+
+/* MDC authoring: kicker and labels may be spans */
+.kicker { display: block; }
+.step > p { margin: 0; }
+
+.note-line { font-size: 0.82rem; color: var(--muted); }
+.section-title.amber { color: var(--amber); }
+.slidev-layout .mx-auto { margin-left: auto; margin-right: auto; }
+
+/* MDC: one-line blocks are not wrapped in <p>, so style the wrappers themselves */
+.slidev-layout .note { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+.slidev-layout.dense .note { font-size: 0.78rem; }
+
+/* ── Target band: sliders, sum rows, totals table ─────────────── */
+.bars .bar-row.sum .lab { color: rgba(245,181,63,0.75); }
+.bars .bar.sumbar { background: transparent; border: 1.5px dashed rgba(245,181,63,0.75); opacity: 0.9; box-sizing: border-box; }
+.bars.target .bar.sumbar { opacity: 0.35; }
+.bandctl { display: grid; grid-template-columns: 1fr 1fr auto; gap: 0.8rem; align-items: center; margin: 0.45rem 0 0.1rem; font-size: 0.7rem; color: var(--muted); }
+.bandctl label { display: grid; grid-template-columns: 3.4rem 1fr 2.2rem; align-items: center; gap: 0.4rem; }
+.bandctl-lab { letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.58rem; color: var(--teal); }
+.bandctl input[type="range"] { width: 100%; accent-color: var(--lime); cursor: pointer; }
+.bandctl-val { text-align: right; color: var(--paper); }
+.bandctl-out { color: var(--paper); white-space: nowrap; }
+.bandctl-reset { margin-left: 0.3rem; border: 1px solid var(--line); background: transparent; color: var(--muted); border-radius: 999px; width: 1.15rem; height: 1.15rem; font-size: 0.7rem; line-height: 1; cursor: pointer; }
+.bandctl-reset:hover { color: var(--paper); border-color: var(--paper); }
+.slidev-layout table.bandtot { font-size: 0.7rem; margin: 0.35rem 0 0; }
+.slidev-layout table.bandtot th { font-size: 0.6rem; padding: 0.22rem 0.45rem; }
+.slidev-layout table.bandtot td { padding: 0.22rem 0.45rem; }
+.slidev-layout table.bandtot td.mean .katex { color: var(--lime); }
+.slidev-layout table.bandtot td:not(:first-child), .slidev-layout table.bandtot th:not(:first-child) { text-align: right; }
+.kx .katex { font-size: 0.98em; }
+
+/* slide 5 with sliders and table: tighter rows */
+.bars { gap: 0.3rem; margin-top: 0.25rem; }
+.bar-row .track { height: 0.9rem; }
+.bandctl { margin: 0.3rem 0 0; }
+.slidev-layout table.bandtot { font-size: 0.66rem; margin-top: 0.25rem; }
+.slidev-layout table.bandtot th, .slidev-layout table.bandtot td { padding: 0.16rem 0.4rem; }
