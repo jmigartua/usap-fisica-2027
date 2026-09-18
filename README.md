@@ -98,6 +98,12 @@ Tres componentes reutilizables comparten un estado (`composables/band.ts`: media
 
 En cualquier diapositiva, `{{ $band.mean }}`, `{{ $lo }}` y `{{ $hi }}` dan los valores vivos; `<kx :tex="$lo" />` los compone en KaTeX (`components/Kx.vue`, para números calculados en ejecución; los `$…$` del Markdown se componen al construir). Los valores fijos de 2026: leídos 295 + 408 + 392 + 377 = 1472; respondidos entre 1016 (C1 y D1) y 1159 (C2 y D2).
 
+## Tabla de datos y constantes (diapositiva 8)
+
+`::const-table{name="constantes-2026" :clicks="$clicks"}` reproduce la tabla del examen desde `data/constantes-2026.json` (celdas en orden de lectura, KaTeX en `tex`, y pasos `{at, tag, cls, keys}`: en el clic `at`, las celdas `keys` reciben la clase `cls` y la etiqueta `tag`). Para otra convocatoria: otro JSON con el mismo formato y el nombre en `name`. Los usos de 2026 salen del solucionario: A1 usa $G$, $M_{\mathrm{Tierra}}$, $R_{\mathrm{Tierra}}$; C1, $v_{\mathrm{sonido}}$ e $I_0$; D1, $h$, $c$ y $|q_e|$; B1, C2 y D2 no usan la tabla; $K$, $m_p$ y $m_e$ no se usan nunca.
+
+Con esta diapositiva la numeración del anexo se desplaza: la coreografía del problema 2 pasa a las diapositivas 9–12, los verbos a la 13 y las respuestas cortas a la 14.
+
 ## Componentes (una línea cada uno)
 
 - Botón de saberes básicos en una tarjeta: `::saber-modal{title="Bloque A · Campo gravitatorio"}` … `::` con la lista dentro.

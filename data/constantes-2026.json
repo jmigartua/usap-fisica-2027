@@ -1,0 +1,26 @@
+{
+  "title": "Datos y constantes físicas · ordinaria 2026",
+  "columns": 4,
+  "cells": [
+    { "k": "G",  "tex": "G = 6.67 \\times 10^{-11}\\ \\mathrm{N\\,m^{2}\\,kg^{-2}}" },
+    { "k": "c",  "tex": "c = 3.00 \\times 10^{8}\\ \\mathrm{m\\,s^{-1}}" },
+    { "k": "vs", "tex": "v_{\\mathrm{sonido}} = 340\\ \\mathrm{m\\,s^{-1}}" },
+    { "k": "K",  "tex": "K = 9.00 \\times 10^{9}\\ \\mathrm{N\\,m^{2}\\,C^{-2}}" },
+    { "k": "MT", "tex": "M_{\\mathrm{Tierra}} = 5.97 \\times 10^{24}\\ \\mathrm{kg}" },
+    { "k": "h",  "tex": "h = 6.63 \\times 10^{-34}\\ \\mathrm{J\\,s}" },
+    { "k": "I0", "tex": "I_0 = 10^{-12}\\ \\mathrm{W\\,m^{-2}}" },
+    { "k": "mp", "tex": "m_p = 1.67 \\times 10^{-27}\\ \\mathrm{kg}" },
+    { "k": "RT", "tex": "R_{\\mathrm{Tierra}} = 6.37 \\times 10^{6}\\ \\mathrm{m}" },
+    { "k": "qe", "tex": "|q_e| = 1.60 \\times 10^{-19}\\ \\mathrm{C}" },
+    { "k": "me", "tex": "m_e = 9.11 \\times 10^{-31}\\ \\mathrm{kg}" }
+  ],
+  "steps": [
+    { "at": 1, "tag": "A1", "cls": "u-a", "keys": ["G", "MT", "RT"] },
+    { "at": 2, "tag": "B1", "cls": "u-b", "keys": [] },
+    { "at": 3, "tag": "C1", "cls": "u-c", "keys": ["vs", "I0"] },
+    { "at": 4, "tag": "C2", "cls": "u-c", "keys": [] },
+    { "at": 5, "tag": "D1", "cls": "u-d", "keys": ["h", "c", "qe"] },
+    { "at": 6, "tag": "D2", "cls": "u-d", "keys": [] },
+    { "at": 7, "tag": "×",  "cls": "u-x", "keys": ["K", "mp", "me"] }
+  ]
+}

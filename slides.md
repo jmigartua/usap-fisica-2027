@@ -347,6 +347,82 @@ Palabras: enunciado en castellano, sin los pesos
 ::
 
 ---
+transition: slide-up
+section: "Anexo"
+class: dense
+---
+
+[Anexo · la tabla de datos y constantes]{.kicker}
+
+# Once entradas: ocho se usan, tres nunca
+
+::::div{.grid.grid-cols-9.gap-5.mt-2}
+
+:::div{.col-span-6}
+
+::const-table{name="constantes-2026" :clicks="$clicks"}
+::
+
+::div{.note.mt-2}
+Tal como aparece en el examen de 2026 · la misma tabla en 2027
+::
+
+:::
+
+:::div{.col-span-3}
+
+::div{.step v-click="1"}
+[A1]{.n.u-a}
+
+campo gravitatorio: $G$, $M_{\mathrm{Tierra}}$, $R_{\mathrm{Tierra}}$
+::
+
+::div{.step v-click="2"}
+[B1]{.n.u-b}
+
+inducción: nada de la tabla
+::
+
+::div{.step v-click="3"}
+[C1]{.n.u-c}
+
+sonido: $v_{\mathrm{sonido}}$, $I_0$
+::
+
+::div{.step v-click="4"}
+[C2]{.n.u-b}
+
+óptica: nada de la tabla
+::
+
+::div{.step v-click="5"}
+[D1]{.n.u-d}
+
+fotoeléctrico: $h$, $c$, $|q_e|$
+::
+
+::div{.step v-click="6"}
+[D2]{.n.u-b}
+
+datación: nada, $T_{1/2}$ viene dada
+::
+
+::div{.step v-click="7"}
+[×]{.n.u-x}
+
+nunca usados: $K$, $m_p$, $m_e$
+::
+
+::div{.card.amber.mt-3 v-click="8"}
+### Lo que se evalúa aquí
+elegir, no buscar: la tabla trae de más
+::
+
+:::
+
+::::
+
+---
 transition: slide-left
 section: "Anexo"
 class: dense

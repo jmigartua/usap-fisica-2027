@@ -592,3 +592,29 @@
 .bandctl { margin: 0.3rem 0 0; }
 .slidev-layout table.bandtot { font-size: 0.66rem; margin-top: 0.25rem; }
 .slidev-layout table.bandtot th, .slidev-layout table.bandtot td { padding: 0.16rem 0.4rem; }
+
+/* ── Table of constants, marked step by step ─────────────────── */
+.consttab { background: var(--paper); color: #1a1a1a; border-radius: 12px; padding: 0.55rem 0.7rem 0.65rem; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+.consttab-title { font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: #333; text-align: center; border-bottom: 1px solid #333; padding-bottom: 0.25rem; margin-bottom: 0.45rem; }
+.consttab-grid { display: grid; gap: 0.35rem 0.4rem; }
+.consttab .cell { position: relative; border: 1.5px solid transparent; border-radius: 6px; padding: 0.3rem 0.45rem 0.32rem; font-size: 0.7rem; min-height: 1.9rem; display: flex; align-items: center; transition: background .35s ease, border-color .35s ease; }
+.consttab .cell .katex { font-size: 0.98em; color: #1a1a1a; }
+.consttab .cell.u-a { background: rgba(245,181,63,0.22); border-color: #d99a12; }
+.consttab .cell.u-c { background: rgba(63,208,201,0.22); border-color: #1a9a93; }
+.consttab .cell.u-d { background: rgba(155,227,109,0.28); border-color: #5aa32c; }
+.consttab .cell.u-x { background: rgba(255,107,107,0.14); border-color: #d34848; border-style: dashed; }
+.consttab .tags { position: absolute; top: -0.45rem; right: 0.35rem; display: flex; gap: 0.15rem; }
+.consttab .tag { font-size: 0.5rem; letter-spacing: 0.06em; padding: 0.02rem 0.3rem; border-radius: 999px; background: #1a1a1a; color: #fff; }
+.consttab .cell.u-a .tag { background: #d99a12; } .consttab .cell.u-c .tag { background: #1a9a93; } .consttab .cell.u-d .tag { background: #5aa32c; } .consttab .cell.u-x .tag { background: #d34848; }
+.consttab-missing { color: var(--coral); }
+/* legend rows on the right */
+.step .n.u-a { background: rgba(245,181,63,0.18); border-color: rgba(245,181,63,0.6); color: var(--amber); }
+.step .n.u-b { background: rgba(255,255,255,0.04); border-color: var(--line); color: var(--muted); }
+.step .n.u-c { background: rgba(63,208,201,0.15); border-color: rgba(63,208,201,0.55); color: var(--teal); }
+.step .n.u-d { background: rgba(155,227,109,0.15); border-color: rgba(155,227,109,0.55); color: var(--lime); }
+.step .n.u-x { background: rgba(255,107,107,0.12); border-color: rgba(255,107,107,0.6); color: var(--coral); border-style: dashed; }
+.step .n { font-size: 0.7rem; }
+.slidev-layout .col-span-6 { grid-column: span 6 / span 6; }
+.consttab .cell { font-size: 0.6rem; min-height: 1.7rem; padding: 0.28rem 0.4rem; }
+.consttab .cell .katex { white-space: nowrap; }
+.consttab-grid { gap: 0.4rem 0.35rem; }
