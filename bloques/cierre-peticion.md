@@ -9,25 +9,24 @@ class: dense
 
 :::div{.grid.grid-cols-2.gap-6.mt-4}
 
-::div{.card.teal v-click}
+::div{.card.teal.tel v-click}
 ### La tabla de bandas de 2026
-Los modelos que reproducen **las cuatro cifras publicadas** — media, aprobados, $\le 2$, ceros —
-difieren en la proporción de exámenes **con un 9 o más por un factor de veintitrés**, del
-$0.3\,\%$ al $6.1\,\%$. La tabla de bandas los separa **sola**, y se publicaba todos los años
-hasta 2025.
+- [Reproducen]{.v} [todos los modelos las cuatro cifras publicadas]{.t}
+- [Difieren]{.v} [en el 9 o más por un factor de veintitrés · $0.3\,\%$ a $6.1\,\%$]{.t}
+- [Los separa]{.v} [sola, la tabla de bandas]{.t}
+- [Se publicaba]{.v} [todos los años hasta 2025]{.t}
 ::
 
-::div{.card.amber v-click}
+::div{.card.amber.tel v-click}
 ### Las notas por subapartado
-Contenido de la prueba, severidad de la corrección y carga de lectura **dejan la misma huella
-en una media**: ningún agregado publicado las distingue. Las notas desglosadas por subapartado
-sí. Es el único dato que convierte cuatro hipótesis en una medida.
+- [Misma huella]{.v} [en una media · contenido, corrección, lectura]{.t}
+- [No las distingue]{.v} [ningún agregado publicado]{.t}
+- [Convierte]{.v} [cuatro hipótesis en una medida]{.t}
 ::
 
 :::
 
 ::div{.card.coral.mt-5.mx-auto v-click}
-No pedimos un estudio: pedimos **dos tablas que ya se calculan**. Sin ellas, la coordinación
-de 2028 tendrá exactamente la misma información que tenemos hoy — y en 2028 habrá además
-un cambio de enunciados que no podrá evaluarse.
+**No pedimos un estudio: dos tablas que ya se calculan.** Sin ellas, la coordinación de 2028
+tendrá la información de hoy — y un cambio de enunciados que no podrá evaluar.
 ::

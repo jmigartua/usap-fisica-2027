@@ -66,11 +66,13 @@ class: dense
 
 <div class="figcaps"><span>La serie vasca: 3.99 en 2026, el valor más bajo en dieciséis años</span><span>Las nueve comunidades con resultado publicado: seis suben, tres bajan</span></div>
 
-::div{.card.amber.mt-4 v-click}
-El modelo se aplicó **en las diecisiete comunidades y en los dos años**, y seis de las nueve
-**subieron** con él. **Seis no convirtieron nada** — cero marcas competenciales en los dos
-años — y aun así se reparten **$1.96$ puntos**, de $-0.83$ a $+1.13$: lo que las movió no
-fue la conversión. **El modelo, por sí solo, no explica 2026.**
+::div{.card.amber.tel.mt-4 v-click}
+- [Se aplicó]{.v} [el modelo · las diecisiete comunidades, los dos años]{.t}
+- [Subieron]{.v} [seis de las nueve]{.t}
+- [No convirtieron]{.v} [seis · cero marcas competenciales en 2025 y en 2026]{.t}
+- [Se reparten]{.v} [$1.96$ puntos aun así · de $-0.83$ a $+1.13$]{.t}
+
+**El modelo, por sí solo, no explica 2026.**
 ::
 
 ---
@@ -110,9 +112,7 @@ class: dense
 :::
 
 ::div{.note-line.mt-3 v-click}
-Los cuatro términos suman el $-1.48$ observado **por construcción**: es una identidad, no un ajuste.
-Química $-0.21$, Biología $+0.15$, Lengua Castellana $+0.03$ no acompañaron.
-**Ese $-1.18$ común pide una explicación que no sea de Física — y hay una candidata.**
+[Suman]{.v} el $-1.48$ por construcción · identidad, no ajuste  ·  [No acompañan]{.v} Química $-0.21$, Biología $+0.15$, Lengua $+0.03$  ·  [Pide]{.v} causa ajena a Física ese $-1.18$ común
 ::
 
 ---
@@ -125,30 +125,33 @@ class: dense tight
 
 # También se movió el calendario
 
-::div{.fig.fit-sm.mt-2}
+::div{.fig.fit-xs.mt-2}
 <img src="/figures/datos-semana.png" alt="La semana de exámenes 2025 y 2026, y la tabla de ponderaciones" />
 ::
 
 :::div{.grid.grid-cols-2.gap-5.mt-4}
 
-::div{.card.amber v-click}
-### Lo que se movió: Matemáticas II
-Física fue la última de su día en los dos años: **lo que cuesta ir la última se cancela en la
-diferencia**. Cambió **lo que la precede** — Matemáticas II, cuarenta y cinco minutos antes.
-Las dos que quedaron seguidas cayeron ($-1.67$, $-1.48$); las que se fueron al otro día, no.
+::div{.card.amber.tel v-click}
+### Qué se movió
+- [No se movió]{.v} [Física · última de su día en 2025 y en 2026]{.t}
+- [Se cancela]{.v} [por tanto, el coste de ir la última]{.t}
+- [Se movió]{.v} [Matemáticas II · a 45 min antes de Física]{.t}
+- [Cayeron]{.v} [las dos que quedaron seguidas · $-1.67$, $-1.48$]{.t}
+- [No cayeron]{.v} [las dos del otro día · $-0.21$, $+0.15$]{.t}
 ::
 
-::div{.card.coral v-click}
-### Por qué no lo contamos como causa
-Ese par es **también** el más cuantitativo y aquel cuyas pruebas más cambiaron: «seguidas» y
-«las más duras» nombran las mismas dos. Con dos observaciones por lado **no se puede separar**,
-así que es un dato para el calendario de 2027, no un término de la explicación de 2026.
+::div{.card.coral.tel v-click}
+### Por qué no entra en el presupuesto
+- [Nombran]{.v} [las mismas dos «seguidas» y «las más duras»]{.t}
+- [No separa]{.v} [un contraste de dos observaciones por lado]{.t}
+- [Sirve]{.v} [para decidir el calendario de 2027]{.t}
+- [No explica]{.v} [2026]{.t}
 ::
 
 :::
 
 ::div{.note-line.mt-3 v-click}
-El panel b es otra cosa: la regla impresa en cada página de las ponderaciones. **→ anexo, 2024.**
+[Panel b]{.v} la regla impresa en cada página de las ponderaciones — otra cosa. **→ anexo, 2024.**
 ::
 
 ---
@@ -167,23 +170,24 @@ class: dense
 
 :::div{.grid.grid-cols-2.gap-5.mt-4}
 
-::div{.card.teal v-click}
+::div{.card.teal.tel v-click}
 ### Lo que sí se acota
-**Elección retirada** $-0.20$ · **Promoción (PISA)** $-0.12$ — juntas, $-0.31$ de $-1.65$: menos de una quinta parte.
+- [$-0.20$]{.v} [elección retirada]{.t}
+- [$-0.12$]{.v} [promoción · PISA]{.t}
+- [$-0.31$]{.v} [de $-1.65$ · menos de una quinta parte]{.t}
 ::
 
-::div{.card.coral v-click}
+::div{.card.coral.tel v-click}
 ### Lo que no se separa
-Contenido de la prueba · severidad de la corrección · carga de lectura · fatiga.<br>
-**Las cuatro dejan la misma huella en una media**, y por eso ningún agregado publicado las distingue.
-
-[**Temas nuevos** ya no está: lo genuinamente nuevo — C-14, Pu-239 — estaba donde había elección.]{.note-line}
+- [Misma huella]{.v} [en una media · contenido, corrección, lectura, fatiga]{.t}
+- [No las distingue]{.v} [ningún agregado publicado]{.t}
+- [Sale de la lista]{.v} [«temas nuevos» · C-14 y Pu-239 estaban donde había elección]{.t}
 ::
 
 :::
 
 ::div{.note-line.mt-3 v-click}
-El dato publicado **no contiene** la información que las separaría. Una sola cosa la separaría: las notas **por subapartado**.
+[No contiene]{.v} el dato publicado lo que las separaría  ·  [Las separarían]{.v} las notas **por subapartado**
 ::
 
 ---
@@ -223,7 +227,7 @@ class: dense tight
 :::
 
 ::div{.note-line.mt-4 v-click}
-Triplicar de golpe el razonamiento examinado **no produjo nada detectable en seis años**, y la caída vasca de un solo año, $-1.65$, es mayor que todo el desplazamiento catalán posterior. **Cataluña intensificó una práctica que tenía; Euskadi introdujo una que no tenía.**
+[Triplicó]{.v} Cataluña de golpe su razonamiento examinado  ·  [No produjo]{.v} nada detectable en seis años  ·  [Supera]{.v} un solo año vasco, $-1.65$, todo el desplazamiento catalán  ·  [Intensificó]{.v} una práctica que tenía — [introdujo]{.v} Euskadi una que no tenía
 ::
 
 ---
@@ -242,17 +246,18 @@ ribbonTitle: "El recorrido de cada una"
 
 :::div{.grid.grid-cols-2.gap-5.mt-4}
 
-::div{.card.coral v-click}
-### Euskadi es la única flecha larga hacia abajo
-Del $25$ al $62.5\,\%$ de puntos competenciales esperados, y $-1.48$. Es la única comunidad
-que **cambió de género** la prueba de un año para otro.
+::div{.card.coral.tel v-click}
+### Euskadi · la única flecha larga hacia abajo
+- [Pasó]{.v} [del $25$ al $62.5\,\%$ de puntos competenciales]{.t}
+- [Cayó]{.v} [$-1.48$]{.t}
+- [Cambió de género]{.v} [la prueba · la única que lo hizo]{.t}
 ::
 
-::div{.card.teal v-click}
-### Y las seis que no se movieron se reparten $1.96$ puntos
-Cero marcas competenciales en 2025 y cero en 2026, y sus resultados van de $-0.83$ a $+1.13$.
-**Cualquier explicación basada solo en la conversión tiene que decir por qué el mismo año movió
-tanto a las que no convirtieron.**
+::div{.card.teal.tel v-click}
+### Las seis que no se movieron
+- [Convirtieron]{.v} [cero, en 2025 y en 2026]{.t}
+- [Se reparten]{.v} [$1.96$ puntos · de $-0.83$ a $+1.13$]{.t}
+- [Queda por explicar]{.v} [por qué el mismo año movió tanto a quien no convirtió]{.t}
 ::
 
 :::
@@ -289,21 +294,28 @@ ribbonTitle: "Quince años de inercia"
 
 :::
 
-::div{.card.mt-4 v-click}
-### Lo que ese instrumento premiaba
-Preparar bien los veintidós títulos, entrenar las plantillas que se repiten, y dejar el resto.
-**No es dejadez: es la respuesta correcta al incentivo.** Catorce de los quince problemas de
-física moderna de 2010–2024 fueron fotoeléctricos; **la fisión y la fusión solo existían como
-títulos de teoría** — nunca como cálculo — hasta que 2026 puso el C-14 y el Pu-239 como problema.
+:::div{.grid.grid-cols-2.gap-4.mt-4}
+
+::div{.card.tel v-click}
+### Qué premiaba ese instrumento
+- [Preparar]{.v} [los veintidós títulos]{.t}
+- [Entrenar]{.v} [las plantillas que se repiten]{.t}
+- [Dejar]{.v} [el resto]{.t}
+
+**La respuesta correcta al incentivo, no dejadez.**
+
+[Fotoeléctrico: catorce de quince problemas de física moderna, 2010–2024 · fisión y fusión, solo títulos de teoría hasta 2026.]{.note-line}
 ::
 
-::div{.card.amber.mt-4 v-click}
+::div{.card.amber.tel v-click}
 ### Y los centros lo sabían
-La reapertura **se anunció en 2024**, y 2024-25 y 2025-26 se declararon **de transición**: dos cursos.
-Esto no va de información, va de **práctica**. Un anuncio no crea bancos de ejemplos, simulacros,
-ni soltura para plantear y corregir preguntas que nunca se habían planteado. Eso se acumula,
-y lo acumulado estaba ajustado a un instrumento que dejó de existir.
+- [Se anunció]{.v} [la reapertura · 2024]{.t}
+- [Se declararon]{.v} [dos cursos de transición]{.t}
+- [No bastó]{.v} [el anuncio · no crea ejemplos, simulacros ni soltura]{.t}
+- [Se acumula]{.v} [la práctica · y la acumulada servía a un examen extinto]{.t}
 ::
+
+:::
 
 ---
 transition: fade
@@ -342,8 +354,9 @@ ribbonTitle: "2024, antes del modelo"
 :::
 
 ::div{.card.amber.mt-4 v-click}
-Y **en la última prueba del formato antiguo**. Menos arriba, más justo por encima de la línea,
-con la media quieta. **→ la candidata, en la diapositiva siguiente.**
+[Ocurrió]{.v} en la última prueba del formato antiguo  ·  [Menos arriba]{.v}, más justo por encima de la línea, con la media quieta
+
+**→ la candidata, en la diapositiva siguiente.**
 ::
 
 ---
@@ -362,18 +375,21 @@ ribbonTitle: "La regla de las ponderaciones"
 
 :::div{.grid.grid-cols-2.gap-5.mt-4}
 
-::div{.card.teal v-click}
+::div{.card.teal.tel v-click}
 ### Un escalón, no una pendiente
-Si solo cuentan **las dos mejores** y Matemáticas II ya ocupa una — es obligatoria y se
-arrastra —, la segunda se disputa entre **Química**, el día antes, y **Física**. En Ciencias
-de la Salud ni eso: Física pondera $0.1$, y no entra.
+- [Cuentan]{.v} [solo las dos mejores]{.t}
+- [Ocupa]{.v} [Matemáticas II una de las dos · obligatoria, se arrastra]{.t}
+- [Se disputan]{.v} [la segunda Química — el día antes — y Física]{.t}
+- [No entra]{.v} [Física en Ciencias de la Salud · pondera $0.1$]{.t}
 ::
 
-::div{.card.coral v-click}
+::div{.card.coral.tel v-click}
 ### Y predice la firma de 2024
-Eso selecciona **al alumno fuerte** como el que puede permitirse parar: pérdidas arriba con el
-aprobado quieto. **Candidata, no hallazgo** — una regla de asignación es una constante salvo
-que el incentivo cambiara, y lo que se movió en 2024 está publicado y sin comprobar.
+- [Selecciona]{.v} [al alumno fuerte como el que puede parar]{.t}
+- [Predice]{.v} [pérdidas arriba con el aprobado quieto]{.t}
+- [Falta]{.v} [comprobar qué movió el incentivo en 2024]{.t}
+
+**Candidata, no hallazgo.**
 ::
 
 :::
@@ -415,9 +431,7 @@ ribbonTitle: "Qué hizo la prueba"
 ::
 
 ::div{.note-line.mt-3 v-click}
-En un índice de intensidad de reforma sobre esos ejes, Euskadi puntúa $+1.76$ y la siguiente
-$+0.39$: **una sola comunidad implementó el marco por completo, y sola.** Con $n = 9$ eso es
-consistencia, no prueba.
+[Puntúa]{.v} Euskadi $+1.76$ en intensidad de reforma; la siguiente, $+0.39$  ·  [Implementó]{.v} el marco por completo una sola comunidad, y sola  ·  [Con $n = 9$]{.v} consistencia, no prueba
 ::
 
 ---
@@ -442,23 +456,24 @@ class: dense
 
 :::div{.col-span-2}
 
-::div{.card.teal v-click}
-### Las desviaciones revierten
-Dentro de una comunidad, el apartamiento del conjunto sigue un AR(1) con $\phi = 0.186$:
-**un choque devuelve cinco sextos de sí mismo en un año.** Medido: los cambios interanuales
-anticorrelacionan a $-0.389$ frente al $-0.407$ predicho ($n = 135$).
+::div{.card.teal.tel v-click}
+### Revierten las desviaciones
+- [Sigue]{.v} [el apartamiento del conjunto un AR(1) con $\phi = 0.186$]{.t}
+- [Devuelve]{.v} [un choque cinco sextos de sí mismo en un año]{.t}
+- [Medido]{.v} [$-0.389$ observado frente a $-0.407$ predicho · $n = 135$]{.t}
 ::
 
-::div{.card.coral.mt-3 v-click}
-### Y por eso, la advertencia
-Si en 2027 la media **se recupera punto y medio**, eso es lo que predice **no hacer nada**.
-No será prueba de que acortar los enunciados funcionó.
+::div{.card.coral.tel.mt-2 v-click}
+### La advertencia
+- [Predice]{.v} [no hacer nada: recuperación de punto y medio]{.t}
+- [No probará]{.v} [nada sobre los enunciados más cortos]{.t}
 ::
 
-::div{.card.amber.mt-3 v-click}
+::div{.card.amber.tel.mt-2 v-click}
 ### Lo que sí decide
-$-0.40$ si fue un choque · $-2.16$ si fue un cambio de nivel.<br>
-Separación **$3.7\sigma$**: **una sola convocatoria lo zanja.**
+- [$-0.40$]{.v} [si fue un choque]{.t}
+- [$-2.16$]{.v} [si fue un cambio de nivel]{.t}
+- [$3.7\sigma$]{.v} [una sola convocatoria lo zanja]{.t}
 ::
 
 :::
@@ -477,27 +492,26 @@ class: dense
 
 :::div{.grid.grid-cols-2.gap-6.mt-4}
 
-::div{.card.teal v-click}
+::div{.card.teal.tel v-click}
 ### La tabla de bandas de 2026
-Los modelos que reproducen **las cuatro cifras publicadas** — media, aprobados, $\le 2$, ceros —
-difieren en la proporción de exámenes **con un 9 o más por un factor de veintitrés**, del
-$0.3\,\%$ al $6.1\,\%$. La tabla de bandas los separa **sola**, y se publicaba todos los años
-hasta 2025.
+- [Reproducen]{.v} [todos los modelos las cuatro cifras publicadas]{.t}
+- [Difieren]{.v} [en el 9 o más por un factor de veintitrés · $0.3\,\%$ a $6.1\,\%$]{.t}
+- [Los separa]{.v} [sola, la tabla de bandas]{.t}
+- [Se publicaba]{.v} [todos los años hasta 2025]{.t}
 ::
 
-::div{.card.amber v-click}
+::div{.card.amber.tel v-click}
 ### Las notas por subapartado
-Contenido de la prueba, severidad de la corrección y carga de lectura **dejan la misma huella
-en una media**: ningún agregado publicado las distingue. Las notas desglosadas por subapartado
-sí. Es el único dato que convierte cuatro hipótesis en una medida.
+- [Misma huella]{.v} [en una media · contenido, corrección, lectura]{.t}
+- [No las distingue]{.v} [ningún agregado publicado]{.t}
+- [Convierte]{.v} [cuatro hipótesis en una medida]{.t}
 ::
 
 :::
 
 ::div{.card.coral.mt-5.mx-auto v-click}
-No pedimos un estudio: pedimos **dos tablas que ya se calculan**. Sin ellas, la coordinación
-de 2028 tendrá exactamente la misma información que tenemos hoy — y en 2028 habrá además
-un cambio de enunciados que no podrá evaluarse.
+**No pedimos un estudio: dos tablas que ya se calculan.** Sin ellas, la coordinación de 2028
+tendrá la información de hoy — y un cambio de enunciados que no podrá evaluar.
 ::
 
 ---
@@ -517,14 +531,13 @@ Y eso es un resultado, no una laguna.
 ::
 
 ::div{.section-sub.text-center.mt-6.mx-auto v-click}
-El dato publicado **no contiene** la información que separaría el contenido de la prueba,
-la severidad de la corrección y la carga de lectura: las tres dejan la misma huella en una media.
+Contenido, corrección y lectura: **la misma huella en una media.**
 ::
 
-::div{.card.amber.mt-6.mx-auto v-click}
-Por eso 2027 cambia **una sola cosa**, y por eso lo que se pide son **dos tablas que ya se
-calculan**. Y por eso la predicción va firmada antes de junio: si la media se recupera punto
-y medio, eso es lo que predice no hacer nada.
+::div{.card.amber.tel.mt-6.mx-auto v-click}
+- [Cambia]{.v} [2027 una sola cosa]{.t}
+- [Pedimos]{.v} [dos tablas que ya se calculan]{.t}
+- [Firmamos]{.v} [la predicción antes de junio]{.t}
 ::
 
 ---

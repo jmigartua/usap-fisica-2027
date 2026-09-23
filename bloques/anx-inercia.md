@@ -29,18 +29,25 @@ ribbonTitle: "Quince años de inercia"
 
 :::
 
-::div{.card.mt-4 v-click}
-### Lo que ese instrumento premiaba
-Preparar bien los veintidós títulos, entrenar las plantillas que se repiten, y dejar el resto.
-**No es dejadez: es la respuesta correcta al incentivo.** Catorce de los quince problemas de
-física moderna de 2010–2024 fueron fotoeléctricos; **la fisión y la fusión solo existían como
-títulos de teoría** — nunca como cálculo — hasta que 2026 puso el C-14 y el Pu-239 como problema.
+:::div{.grid.grid-cols-2.gap-4.mt-4}
+
+::div{.card.tel v-click}
+### Qué premiaba ese instrumento
+- [Preparar]{.v} [los veintidós títulos]{.t}
+- [Entrenar]{.v} [las plantillas que se repiten]{.t}
+- [Dejar]{.v} [el resto]{.t}
+
+**La respuesta correcta al incentivo, no dejadez.**
+
+[Fotoeléctrico: catorce de quince problemas de física moderna, 2010–2024 · fisión y fusión, solo títulos de teoría hasta 2026.]{.note-line}
 ::
 
-::div{.card.amber.mt-4 v-click}
+::div{.card.amber.tel v-click}
 ### Y los centros lo sabían
-La reapertura **se anunció en 2024**, y 2024-25 y 2025-26 se declararon **de transición**: dos cursos.
-Esto no va de información, va de **práctica**. Un anuncio no crea bancos de ejemplos, simulacros,
-ni soltura para plantear y corregir preguntas que nunca se habían planteado. Eso se acumula,
-y lo acumulado estaba ajustado a un instrumento que dejó de existir.
+- [Se anunció]{.v} [la reapertura · 2024]{.t}
+- [Se declararon]{.v} [dos cursos de transición]{.t}
+- [No bastó]{.v} [el anuncio · no crea ejemplos, simulacros ni soltura]{.t}
+- [Se acumula]{.v} [la práctica · y la acumulada servía a un examen extinto]{.t}
 ::
+
+:::

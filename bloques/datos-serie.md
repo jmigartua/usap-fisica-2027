@@ -21,9 +21,11 @@ class: dense
 
 <div class="figcaps"><span>La serie vasca: 3.99 en 2026, el valor más bajo en dieciséis años</span><span>Las nueve comunidades con resultado publicado: seis suben, tres bajan</span></div>
 
-::div{.card.amber.mt-4 v-click}
-El modelo se aplicó **en las diecisiete comunidades y en los dos años**, y seis de las nueve
-**subieron** con él. **Seis no convirtieron nada** — cero marcas competenciales en los dos
-años — y aun así se reparten **$1.96$ puntos**, de $-0.83$ a $+1.13$: lo que las movió no
-fue la conversión. **El modelo, por sí solo, no explica 2026.**
+::div{.card.amber.tel.mt-4 v-click}
+- [Se aplicó]{.v} [el modelo · las diecisiete comunidades, los dos años]{.t}
+- [Subieron]{.v} [seis de las nueve]{.t}
+- [No convirtieron]{.v} [seis · cero marcas competenciales en 2025 y en 2026]{.t}
+- [Se reparten]{.v} [$1.96$ puntos aun así · de $-0.83$ a $+1.13$]{.t}
+
+**El modelo, por sí solo, no explica 2026.**
 ::

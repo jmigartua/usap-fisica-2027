@@ -678,3 +678,41 @@
   border-color: rgba(245, 181, 63, 0.5);
   background: rgba(245, 181, 63, 0.07);
 }
+
+/* ── Registro telegráfico ──────────────────────────────────────────────────
+   Una diapositiva no es un párrafo. Cada línea nombra primero la acción —el
+   verbo— y después aquello sobre lo que actúa. Sin oraciones completas y sin
+   conectores («así que», «de modo que», «y por eso»): lo que une las líneas es
+   el orden en que se leen, no la sintaxis.
+
+   Los verbos se alinean en una columna propia. Para que se alineen entre líneas
+   la rejilla tiene que estar en la lista, no en cada punto, así que los puntos
+   son `display: contents` y quienes ocupan las celdas son los dos tramos.
+
+       ::div{.tel}
+       - [Se movió]{.v} [Matemáticas II · a 45 min antes de Física]{.t}
+       - [Cayeron]{.v} [las dos que quedaron seguidas: −1.67, −1.48]{.t}
+       ::
+
+   Sin línea en blanco entre puntos: una lista «suelta» envuelve cada punto en
+   un <p> y rompería la rejilla. Por si acaso, el <p> también se hace
+   transparente más abajo. */
+.tel ul {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.7rem;
+  row-gap: 0.18rem;
+  list-style: none;
+  padding-left: 0;
+  margin: 0.35rem 0 0;
+}
+.tel li { display: contents; }
+.tel li > p { display: contents; }
+.tel .v, .v { color: var(--amber); font-weight: 500; }
+.tel .t { color: #dfe4ee; }
+.tel .v, .tel .t { line-height: 1.34; }
+.tel + p, .tel + .note-line { margin-top: 0.5rem; }
+.card.teal  .tel .v, .card.teal  .v { color: var(--teal); }
+.card.coral .tel .v, .card.coral .v { color: var(--coral); }
+.card.lime  .tel .v, .card.lime  .v { color: var(--lime); }
+.slidev-layout .note-line .v { font-weight: 500; }

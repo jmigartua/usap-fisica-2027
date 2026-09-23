@@ -34,7 +34,5 @@ class: dense
 :::
 
 ::div{.note-line.mt-3 v-click}
-Los cuatro términos suman el $-1.48$ observado **por construcción**: es una identidad, no un ajuste.
-Química $-0.21$, Biología $+0.15$, Lengua Castellana $+0.03$ no acompañaron.
-**Ese $-1.18$ común pide una explicación que no sea de Física — y hay una candidata.**
+[Suman]{.v} el $-1.48$ por construcción · identidad, no ajuste  ·  [No acompañan]{.v} Química $-0.21$, Biología $+0.15$, Lengua $+0.03$  ·  [Pide]{.v} causa ajena a Física ese $-1.18$ común
 ::

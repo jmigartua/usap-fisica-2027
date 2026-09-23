@@ -13,21 +13,22 @@ class: dense
 
 :::div{.grid.grid-cols-2.gap-5.mt-4}
 
-::div{.card.teal v-click}
+::div{.card.teal.tel v-click}
 ### Lo que sí se acota
-**Elección retirada** $-0.20$ · **Promoción (PISA)** $-0.12$ — juntas, $-0.31$ de $-1.65$: menos de una quinta parte.
+- [$-0.20$]{.v} [elección retirada]{.t}
+- [$-0.12$]{.v} [promoción · PISA]{.t}
+- [$-0.31$]{.v} [de $-1.65$ · menos de una quinta parte]{.t}
 ::
 
-::div{.card.coral v-click}
+::div{.card.coral.tel v-click}
 ### Lo que no se separa
-Contenido de la prueba · severidad de la corrección · carga de lectura · fatiga.<br>
-**Las cuatro dejan la misma huella en una media**, y por eso ningún agregado publicado las distingue.
-
-[**Temas nuevos** ya no está: lo genuinamente nuevo — C-14, Pu-239 — estaba donde había elección.]{.note-line}
+- [Misma huella]{.v} [en una media · contenido, corrección, lectura, fatiga]{.t}
+- [No las distingue]{.v} [ningún agregado publicado]{.t}
+- [Sale de la lista]{.v} [«temas nuevos» · C-14 y Pu-239 estaban donde había elección]{.t}
 ::
 
 :::
 
 ::div{.note-line.mt-3 v-click}
-El dato publicado **no contiene** la información que las separaría. Una sola cosa la separaría: las notas **por subapartado**.
+[No contiene]{.v} el dato publicado lo que las separaría  ·  [Las separarían]{.v} las notas **por subapartado**
 ::

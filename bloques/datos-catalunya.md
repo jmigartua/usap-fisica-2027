@@ -34,5 +34,5 @@ class: dense tight
 :::
 
 ::div{.note-line.mt-4 v-click}
-Triplicar de golpe el razonamiento examinado **no produjo nada detectable en seis años**, y la caída vasca de un solo año, $-1.65$, es mayor que todo el desplazamiento catalán posterior. **Cataluña intensificó una práctica que tenía; Euskadi introdujo una que no tenía.**
+[Triplicó]{.v} Cataluña de golpe su razonamiento examinado  ·  [No produjo]{.v} nada detectable en seis años  ·  [Supera]{.v} un solo año vasco, $-1.65$, todo el desplazamiento catalán  ·  [Intensificó]{.v} una práctica que tenía — [introdujo]{.v} Euskadi una que no tenía
 ::

@@ -13,17 +13,18 @@ ribbonTitle: "El recorrido de cada una"
 
 :::div{.grid.grid-cols-2.gap-5.mt-4}
 
-::div{.card.coral v-click}
-### Euskadi es la única flecha larga hacia abajo
-Del $25$ al $62.5\,\%$ de puntos competenciales esperados, y $-1.48$. Es la única comunidad
-que **cambió de género** la prueba de un año para otro.
+::div{.card.coral.tel v-click}
+### Euskadi · la única flecha larga hacia abajo
+- [Pasó]{.v} [del $25$ al $62.5\,\%$ de puntos competenciales]{.t}
+- [Cayó]{.v} [$-1.48$]{.t}
+- [Cambió de género]{.v} [la prueba · la única que lo hizo]{.t}
 ::
 
-::div{.card.teal v-click}
-### Y las seis que no se movieron se reparten $1.96$ puntos
-Cero marcas competenciales en 2025 y cero en 2026, y sus resultados van de $-0.83$ a $+1.13$.
-**Cualquier explicación basada solo en la conversión tiene que decir por qué el mismo año movió
-tanto a las que no convirtieron.**
+::div{.card.teal.tel v-click}
+### Las seis que no se movieron
+- [Convirtieron]{.v} [cero, en 2025 y en 2026]{.t}
+- [Se reparten]{.v} [$1.96$ puntos · de $-0.83$ a $+1.13$]{.t}
+- [Queda por explicar]{.v} [por qué el mismo año movió tanto a quien no convirtió]{.t}
 ::
 
 :::

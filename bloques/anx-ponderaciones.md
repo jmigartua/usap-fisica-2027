@@ -13,18 +13,21 @@ ribbonTitle: "La regla de las ponderaciones"
 
 :::div{.grid.grid-cols-2.gap-5.mt-4}
 
-::div{.card.teal v-click}
+::div{.card.teal.tel v-click}
 ### Un escalón, no una pendiente
-Si solo cuentan **las dos mejores** y Matemáticas II ya ocupa una — es obligatoria y se
-arrastra —, la segunda se disputa entre **Química**, el día antes, y **Física**. En Ciencias
-de la Salud ni eso: Física pondera $0.1$, y no entra.
+- [Cuentan]{.v} [solo las dos mejores]{.t}
+- [Ocupa]{.v} [Matemáticas II una de las dos · obligatoria, se arrastra]{.t}
+- [Se disputan]{.v} [la segunda Química — el día antes — y Física]{.t}
+- [No entra]{.v} [Física en Ciencias de la Salud · pondera $0.1$]{.t}
 ::
 
-::div{.card.coral v-click}
+::div{.card.coral.tel v-click}
 ### Y predice la firma de 2024
-Eso selecciona **al alumno fuerte** como el que puede permitirse parar: pérdidas arriba con el
-aprobado quieto. **Candidata, no hallazgo** — una regla de asignación es una constante salvo
-que el incentivo cambiara, y lo que se movió en 2024 está publicado y sin comprobar.
+- [Selecciona]{.v} [al alumno fuerte como el que puede parar]{.t}
+- [Predice]{.v} [pérdidas arriba con el aprobado quieto]{.t}
+- [Falta]{.v} [comprobar qué movió el incentivo en 2024]{.t}
+
+**Candidata, no hallazgo.**
 ::
 
 :::

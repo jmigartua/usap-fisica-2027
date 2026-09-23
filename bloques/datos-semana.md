@@ -7,28 +7,31 @@ class: dense tight
 
 # También se movió el calendario
 
-::div{.fig.fit-sm.mt-2}
+::div{.fig.fit-xs.mt-2}
 <img src="/figures/datos-semana.png" alt="La semana de exámenes 2025 y 2026, y la tabla de ponderaciones" />
 ::
 
 :::div{.grid.grid-cols-2.gap-5.mt-4}
 
-::div{.card.amber v-click}
-### Lo que se movió: Matemáticas II
-Física fue la última de su día en los dos años: **lo que cuesta ir la última se cancela en la
-diferencia**. Cambió **lo que la precede** — Matemáticas II, cuarenta y cinco minutos antes.
-Las dos que quedaron seguidas cayeron ($-1.67$, $-1.48$); las que se fueron al otro día, no.
+::div{.card.amber.tel v-click}
+### Qué se movió
+- [No se movió]{.v} [Física · última de su día en 2025 y en 2026]{.t}
+- [Se cancela]{.v} [por tanto, el coste de ir la última]{.t}
+- [Se movió]{.v} [Matemáticas II · a 45 min antes de Física]{.t}
+- [Cayeron]{.v} [las dos que quedaron seguidas · $-1.67$, $-1.48$]{.t}
+- [No cayeron]{.v} [las dos del otro día · $-0.21$, $+0.15$]{.t}
 ::
 
-::div{.card.coral v-click}
-### Por qué no lo contamos como causa
-Ese par es **también** el más cuantitativo y aquel cuyas pruebas más cambiaron: «seguidas» y
-«las más duras» nombran las mismas dos. Con dos observaciones por lado **no se puede separar**,
-así que es un dato para el calendario de 2027, no un término de la explicación de 2026.
+::div{.card.coral.tel v-click}
+### Por qué no entra en el presupuesto
+- [Nombran]{.v} [las mismas dos «seguidas» y «las más duras»]{.t}
+- [No separa]{.v} [un contraste de dos observaciones por lado]{.t}
+- [Sirve]{.v} [para decidir el calendario de 2027]{.t}
+- [No explica]{.v} [2026]{.t}
 ::
 
 :::
 
 ::div{.note-line.mt-3 v-click}
-El panel b es otra cosa: la regla impresa en cada página de las ponderaciones. **→ anexo, 2024.**
+[Panel b]{.v} la regla impresa en cada página de las ponderaciones — otra cosa. **→ anexo, 2024.**
 ::

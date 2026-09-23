@@ -34,7 +34,5 @@ ribbonTitle: "Qué hizo la prueba"
 ::
 
 ::div{.note-line.mt-3 v-click}
-En un índice de intensidad de reforma sobre esos ejes, Euskadi puntúa $+1.76$ y la siguiente
-$+0.39$: **una sola comunidad implementó el marco por completo, y sola.** Con $n = 9$ eso es
-consistencia, no prueba.
+[Puntúa]{.v} Euskadi $+1.76$ en intensidad de reforma; la siguiente, $+0.39$  ·  [Implementó]{.v} el marco por completo una sola comunidad, y sola  ·  [Con $n = 9$]{.v} consistencia, no prueba
 ::

@@ -19,23 +19,24 @@ class: dense
 
 :::div{.col-span-2}
 
-::div{.card.teal v-click}
-### Las desviaciones revierten
-Dentro de una comunidad, el apartamiento del conjunto sigue un AR(1) con $\phi = 0.186$:
-**un choque devuelve cinco sextos de sí mismo en un año.** Medido: los cambios interanuales
-anticorrelacionan a $-0.389$ frente al $-0.407$ predicho ($n = 135$).
+::div{.card.teal.tel v-click}
+### Revierten las desviaciones
+- [Sigue]{.v} [el apartamiento del conjunto un AR(1) con $\phi = 0.186$]{.t}
+- [Devuelve]{.v} [un choque cinco sextos de sí mismo en un año]{.t}
+- [Medido]{.v} [$-0.389$ observado frente a $-0.407$ predicho · $n = 135$]{.t}
 ::
 
-::div{.card.coral.mt-3 v-click}
-### Y por eso, la advertencia
-Si en 2027 la media **se recupera punto y medio**, eso es lo que predice **no hacer nada**.
-No será prueba de que acortar los enunciados funcionó.
+::div{.card.coral.tel.mt-2 v-click}
+### La advertencia
+- [Predice]{.v} [no hacer nada: recuperación de punto y medio]{.t}
+- [No probará]{.v} [nada sobre los enunciados más cortos]{.t}
 ::
 
-::div{.card.amber.mt-3 v-click}
+::div{.card.amber.tel.mt-2 v-click}
 ### Lo que sí decide
-$-0.40$ si fue un choque · $-2.16$ si fue un cambio de nivel.<br>
-Separación **$3.7\sigma$**: **una sola convocatoria lo zanja.**
+- [$-0.40$]{.v} [si fue un choque]{.t}
+- [$-2.16$]{.v} [si fue un cambio de nivel]{.t}
+- [$3.7\sigma$]{.v} [una sola convocatoria lo zanja]{.t}
 ::
 
 :::
