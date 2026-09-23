@@ -1,5 +1,17 @@
 name: Deploy to GitHub Pages
 
+# Three presentations, one site. The informativa is served at the repository
+# root and the two companions one level down, so they share a deploy and the
+# links between them are plain relative paths that need no base baked in:
+#
+#   https://<owner>.github.io/<repo>/              la informativa
+#   https://<owner>.github.io/<repo>/enunciados/   cómo se escriben los enunciados
+#   https://<owner>.github.io/<repo>/hallazgos/    qué dicen los datos de 2026
+#
+# The three entry files are generated from bloques/ + decks.json, so the build
+# regenerates them first: a slide edited in the pool reaches every deck that
+# uses it, and a stale committed entry file cannot be published by accident.
+
 on:
   push:
     branches: [main]
@@ -19,6 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+      BASE: /${{ github.event.repository.name }}/
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -26,7 +39,30 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci --no-audit --no-fund
-      - run: npx slidev build --base /${{ github.event.repository.name }}/
+
+      - name: Regenerate the three entry files from the slide pool
+        run: npm run decks
+
+      - name: Fail if a generated entry file was committed stale
+        run: |
+          if ! git diff --quiet -- slides.md enunciados.md hallazgos.md; then
+            echo "::error::slides.md / enunciados.md / hallazgos.md differ from what bloques/ + decks.json generate."
+            echo "Run 'npm run decks' and commit the result."
+            git --no-pager diff --stat -- slides.md enunciados.md hallazgos.md
+            exit 1
+          fi
+
+      # The informativa is built first: it writes the site root and Vite empties
+      # the output directory, which would take the companions with it.
+      - name: Build la informativa
+        run: npx slidev build slides.md --base "$BASE" --out dist
+
+      - name: Build los enunciados
+        run: npx slidev build enunciados.md --base "${BASE}enunciados/" --out dist/enunciados
+
+      - name: Build los hallazgos
+        run: npx slidev build hallazgos.md --base "${BASE}hallazgos/" --out dist/hallazgos
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

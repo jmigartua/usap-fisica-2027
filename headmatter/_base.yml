@@ -1,0 +1,25 @@
+---
+theme: default
+title: USaP Física 2027
+titleTemplate: '%s · Coordinación'
+info: |
+  ## USaP Física 2027
+  Reunión de coordinación con el profesorado: qué se mantiene de 2026 y el único cambio previsto.
+  Versión escrita en MDC (Markdown con componentes) para comparar con la versión HTML.
+author: Asier Lopez-Eiguren, J. M. Igartua
+lang: es
+colorSchema: dark
+aspectRatio: 16/9
+canvasWidth: 980
+fonts:
+  sans: Roboto
+  serif: Roboto
+  mono: Roboto Mono
+  weights: '300,400,500,700'
+transition: slide-left
+routerMode: hash
+drawings:
+  persist: false
+mdc: true
+htmlAttrs:
+  lang: es

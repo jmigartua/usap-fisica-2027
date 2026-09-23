@@ -1,0 +1,152 @@
+{
+  "_comment": "Three presentations from one pool of slides. Each entry names a block in bloques/ and may override that block's `section:`, `ribbonTitle:`, `class:` or `transition:` for this deck — the same slide is 'Anexo' in one deck and the main argument in another. Build with `npm run decks`; never edit slides.md, enunciados.md or hallazgos.md by hand, they are generated.",
+  "decks": [
+    {
+      "out": "slides.md",
+      "title": "USaP Física 2027",
+      "ribbonTitle": "USaP Física 2027",
+      "thumbs": "thumbs/informativa",
+      "info": "Reunión de coordinación con el profesorado: qué se mantiene de 2026 y el único cambio previsto.",
+      "blocks": [
+        "portada-informativa",
+        "mensaje",
+        "estructura",
+        "evaluacion",
+        "cambio-enunciados",
+        {
+          "b": "ref-vistazo",
+          "section": "Referencia",
+          "ribbonTitle": "La prueba de 2026"
+        },
+        {
+          "b": "ref-constantes",
+          "section": "Referencia",
+          "ribbonTitle": "Datos y constantes"
+        },
+        "cierre-informativa",
+        {
+          "b": "enlaces",
+          "class": "dense here-informativa"
+        }
+      ]
+    },
+    {
+      "out": "enunciados.md",
+      "title": "Los enunciados, problema a problema",
+      "ribbonTitle": "Física 2027 · Los enunciados",
+      "thumbs": "thumbs/enunciados",
+      "info": "Material de apoyo: de dónde salen las palabras de más en un enunciado y cómo se quitan.",
+      "blocks": [
+        "portada-enunciados",
+        {
+          "b": "cambio-enunciados",
+          "section": "El objetivo",
+          "ribbonTitle": "La banda objetivo"
+        },
+        {
+          "b": "ref-vistazo",
+          "section": "El punto de partida",
+          "ribbonTitle": "La prueba de 2026"
+        },
+        {
+          "b": "enun-paso-a-paso",
+          "section": "Cómo se llegó a 2026"
+        },
+        {
+          "b": "enun-como-debio",
+          "section": "Cómo debió ser"
+        },
+        {
+          "b": "enun-competencial",
+          "section": "La forma pura"
+        },
+        {
+          "b": "enun-verbos-antes",
+          "section": "Lo que se pedía antes"
+        },
+        {
+          "b": "enun-niveles",
+          "section": "Los cuatro niveles"
+        },
+        {
+          "b": "enun-respuestas",
+          "section": "Las respuestas"
+        },
+        {
+          "b": "ref-constantes",
+          "section": "Datos y constantes",
+          "ribbonTitle": "Datos y constantes"
+        },
+        "cierre-enunciados",
+        {
+          "b": "enlaces",
+          "class": "dense here-enunciados"
+        }
+      ]
+    },
+    {
+      "out": "hallazgos.md",
+      "title": "Qué sabemos de 2026, y qué no",
+      "ribbonTitle": "Física 2027 · Los hallazgos",
+      "thumbs": "thumbs/hallazgos",
+      "info": "Material de apoyo: la caída de 2026 descompuesta, lo que se acota, lo que no se separa y la predicción para 2027.",
+      "blocks": [
+        "portada-hallazgos",
+        {
+          "b": "datos-serie"
+        },
+        {
+          "b": "datos-materias"
+        },
+        {
+          "b": "datos-semana"
+        },
+        {
+          "b": "datos-presupuesto"
+        },
+        {
+          "b": "datos-catalunya"
+        },
+        {
+          "b": "anx-rutas",
+          "section": "Los datos",
+          "ribbonTitle": "El recorrido de cada una",
+          "transition": "slide-up"
+        },
+        {
+          "b": "anx-inercia",
+          "section": "Lo que había antes",
+          "ribbonTitle": "Quince años de inercia"
+        },
+        {
+          "b": "anx-2024",
+          "section": "Lo que había antes",
+          "ribbonTitle": "2024, antes del modelo"
+        },
+        {
+          "b": "anx-ponderaciones",
+          "section": "Lo que había antes",
+          "ribbonTitle": "La regla de las ponderaciones"
+        },
+        {
+          "b": "anx-que-hizo",
+          "section": "La prueba de 2026",
+          "ribbonTitle": "Qué hizo la prueba"
+        },
+        {
+          "b": "cierre-prediccion",
+          "section": "La predicción"
+        },
+        {
+          "b": "cierre-peticion",
+          "section": "Lo que pedimos"
+        },
+        "cierre-hallazgos",
+        {
+          "b": "enlaces",
+          "class": "dense here-hallazgos"
+        }
+      ]
+    }
+  ]
+}

@@ -8,3 +8,11 @@ png
 0_propuesta_orientaciones_final_fisica.md
 .text-map.json
 TEXT copy.md
+
+# transfer leftovers and superseded assets — never part of the site
+_to_delete/
+_stage*/
+_*.tgz
+**/_superseded/
+.autopush.log
+.autopush.pid

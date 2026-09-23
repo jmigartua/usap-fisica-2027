@@ -44,7 +44,9 @@ const slides = computed(() => ($slidev.nav.slides ?? []).map((s: any, i: number)
     no: i + 1,
     title: cleanTitle(fm.ribbonTitle ?? s?.meta?.slide?.title ?? ''),
     section: fm.section ?? '',
-    thumb: `${base}thumbs/${i + 1}.jpg`,
+    // Per-deck: the three presentations share this component and this folder,
+    // so each names its own thumbnail directory in its headmatter `ribbon:`.
+    thumb: `${base}${r.value.thumbsDir ?? 'thumbs'}/${i + 1}.jpg`,
   }
 }))
 function go(no: number) {

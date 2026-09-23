@@ -1,7 +1,7 @@
 {
   "_comment": "Cinta inferior. Izquierda: título · autor. Centro: § sección › diapositiva. Derecha: ocasión · lugar · fecha · página. Cualquier campo puede sobrescribirse en la cabecera de slides.md bajo `ribbon:`.",
   "title": "USaP Física 2027",
-  "author": "Arretxe · López-Eiguren · Igartua",
+  "author": "Lopez-Eiguren · Igartua",
   "event": "Reunión de coordinación",
   "place": "EHU",
   "date": "curso 2026–27",

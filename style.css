@@ -237,6 +237,20 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 .fig img { width: 100%; height: auto; display: block; }
+/* Height-capped figure.
+   `.fig` alone lets the picture decide how tall the slide is. That is right for
+   the wide 3:1 strips and wrong for anything squarer: a 1.4:1 figure at full
+   width is taller than the slide, and everything under it — cards, note lines —
+   goes off the bottom, behind the ribbon, where it is not merely ugly but
+   invisible. These cap the picture instead and let the rest of the slide keep
+   its room. Pick by how much text sits below the figure, not by taste. */
+/* When the cap bites, the picture is narrower than the slide; the white card
+   must shrink with it or it frames a postage stamp in a field of paper. */
+.fig[class*="fit-"] { width: fit-content; margin-left: auto; margin-right: auto; max-width: 100%; }
+.fig.fit-lg img { max-height: 21rem; width: auto; margin: 0 auto; }
+.fig.fit-md img { max-height: 16rem; width: auto; margin: 0 auto; }
+.fig.fit-sm img { max-height: 12rem; width: auto; margin: 0 auto; }
+.fig.fit-xs img { max-height:  9.6rem; width: auto; margin: 0 auto; }
 .fig-cap { font-size: 0.78rem; color: var(--muted); margin-top: 0.45rem; line-height: 1.35; }
 
 .eq-hero {
@@ -537,6 +551,9 @@
 /* two figures side by side */
 .figrow { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 0.25rem 0 0.1rem; }
 .figrow .fig { padding: 0.25rem; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.3); }
+/* Same reason as .fit-*: in a two-up row the picture height is set by the
+   narrower of the two images, and a squarish one still runs off the slide. */
+.figrow .fig img { max-height: 13rem; width: auto; margin: 0 auto; }
 .figcaps { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.55rem; color: var(--muted); text-align: center; margin-bottom: 0.2rem; }
 .spot .figrow { gap: 1rem; margin-top: 0.4rem; }
 .spot .figcaps { font-size: 0.7rem; }
@@ -625,3 +642,39 @@
 .consttab.big .cell { font-size: 0.86rem; min-height: 2.4rem; padding: 0.4rem 0.7rem; }
 .consttab.big .consttab-grid { gap: 0.55rem 0.6rem; }
 .consttab.big .tag { font-size: 0.58rem; padding: 0.04rem 0.38rem; }
+
+/* ── Diapositiva de enlaces ────────────────────────────────────────────────
+   Tres tarjetas, cada una con el QR encima de la dirección que codifica: la
+   dirección legible para quien la copia, el código para quien la escanea.
+   Los enlaces son absolutos a propósito. Escritos como rutas relativas
+   funcionaban en la construcción y no en `npm run dev`, donde el servidor
+   responde a cualquier ruta con la misma presentación: el enlace parecía roto
+   justo en el sitio donde se edita. */
+.lk { text-align: center; }
+.lk h3 { margin-bottom: 0.2rem; }
+.lk p { margin: 0.15rem 0; }
+.lk .qr {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.45rem;
+  width: fit-content;
+  margin: 0.65rem auto 0.45rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
+}
+.lk .qr img { display: block; width: 6.6rem; height: 6.6rem; }
+.lk-url, .lk-url a { font-size: 0.72rem; line-height: 1.3; letter-spacing: 0.01em; }
+.lk-url a { border-bottom: none; }
+.lk-url a:hover { border-bottom: 1px dotted var(--teal); }
+
+/* «estás aquí»: la misma diapositiva va en las tres presentaciones, y cada una
+   se marca a sí misma con la clase que el generador le pone desde decks.json. */
+.lk .lk-here { display: none; vertical-align: middle; margin-left: 0.35rem; }
+.here-informativa .lk-informativa .lk-here,
+.here-enunciados  .lk-enunciados  .lk-here,
+.here-hallazgos   .lk-hallazgos   .lk-here { display: inline-block; }
+.here-informativa .lk-informativa,
+.here-enunciados  .lk-enunciados,
+.here-hallazgos   .lk-hallazgos {
+  border-color: rgba(245, 181, 63, 0.5);
+  background: rgba(245, 181, 63, 0.07);
+}

@@ -1,8 +1,145 @@
-# USaP Física 2027 · versión MDC
+# USaP Física 2027 · tres presentaciones desde un solo fondo de diapositivas
 
-Copia de `../2027-usap-presentation/` con las diapositivas 1–7, 12 y 13 reescritas en **MDC** (Markdown con componentes): mismo aspecto, sin HTML. Las diapositivas 8–11, la coreografía del problema 2, se copian tal cual: son un pequeño programa y no se editan a mano.
+Hay **tres** presentaciones y **un** fondo común de diapositivas. Los tres ficheros de
+entrada se generan; no se editan a mano.
 
-Misma carpeta de trabajo que el original: `npm run dev`, `npm run build`, `npm run export`.
+| Fichero | Qué es | Diapositivas | En línea |
+|---|---|---|---|
+| `slides.md` | **La informativa** — la que se proyecta en la reunión | 9 | [`/usap-fisica-2027/`](https://jmigartua.github.io/usap-fisica-2027/) |
+| `enunciados.md` | Apoyo: cómo se construyen las versiones de los problemas | 12 | [`/enunciados/`](https://jmigartua.github.io/usap-fisica-2027/enunciados/) |
+| `hallazgos.md` | Apoyo: qué dicen los datos de 2026 | 15 | [`/hallazgos/`](https://jmigartua.github.io/usap-fisica-2027/hallazgos/) |
+
+Las tres se publican juntas en cada `push` a `main`, con
+`.github/workflows/deploy.yml`, y las tres terminan en la misma diapositiva de enlaces:
+las tres direcciones, con su código QR, y la que se está viendo marcada con «estás aquí»
+(la marca la pone `decks.json` con una clase; la diapositiva es una sola).
+
+Esos enlaces son **absolutos** a propósito. Escritos como rutas relativas funcionaban en la
+construcción y **no** en `npm run dev`: el servidor de desarrollo responde a cualquier ruta
+con la misma presentación, así que el enlace llevaba a donde ya estabas. Absolutos se
+comportan igual en desarrollo, en la construcción y en Pages. El precio es que el nombre del
+repositorio sí está escrito dentro; si cambia, hay que tocar `bloques/enlaces.md` y volver a
+generar los QR.
+
+```bash
+npm run decks            # regenera los tres desde bloques/ + decks.json
+npm run dev              # la informativa
+npm run dev:enunciados   # la de los enunciados
+npm run dev:hallazgos    # la de los hallazgos
+npm run build            # los tres: dist/, dist/enunciados/, dist/hallazgos/
+npm run preview          # los tres, construidos y servidos en el 4173
+npm run export           # tres PDF
+```
+
+Los enlaces entre presentaciones solo funcionan sobre la **construcción**, no en
+`npm run dev`: el servidor de desarrollo sirve una sola presentación en la raíz. Para
+verlos, `npm run preview`.
+
+Para reproducir en local exactamente lo que se publica, con el mismo prefijo:
+
+```bash
+BASE=/usap-fisica-2027/ npm run build
+mkdir -p /tmp/pages && cp -r dist /tmp/pages/usap-fisica-2027
+(cd /tmp/pages && python3 -m http.server 4180)
+# http://localhost:4180/usap-fisica-2027/
+```
+
+Un error de prefijo no se ve sirviendo `dist/` en la raíz — solo aparece aquí. Hay dos
+comprobaciones para eso, con esa construcción servida:
+
+```bash
+node pagescheck.mjs      # las tres bajo /usap-fisica-2027/: peticiones fallidas,
+                         # miniaturas, y a dónde van los enlaces entre ellas
+node clickcheck.mjs      # y que esos enlaces de verdad llevan a la otra presentación
+```
+
+## Por qué un fondo común
+
+Tres diapositivas las quieren dos presentaciones a la vez: **la banda objetivo de los
+enunciados**, **la tabla de la prueba de 2026** y **la tabla de datos y constantes**. Como
+tres copias se separarían — es exactamente lo que ya pasó una vez, cuando el deck llevaba una
+figura que el dossier había corregido tres días antes — hay una sola copia de cada una.
+
+- `bloques/<nombre>.md` — una diapositiva. Primero su cabecera YAML, luego una línea con
+  `...`, luego el cuerpo. Las portadas no tienen cabecera y empiezan por `...`.
+- `decks.json` — qué diapositivas lleva cada presentación y en qué orden. Una entrada puede
+  ser el nombre a secas o un objeto `{"b": "nombre", "section": "…", "ribbonTitle": "…"}`:
+  la misma diapositiva es «Anexo» en una presentación y el argumento principal en otra, y la
+  cinta tiene que decirlo.
+- `headmatter/_base.yml` — la cabecera común. Título, `info` y la cinta los pone el
+  generador desde `decks.json`.
+- `tools/build_decks.mjs` — el generador.
+
+Para mover una diapositiva de una presentación a otra, o para que aparezca en dos, se toca
+`decks.json` y nada más. Para cambiar lo que dice, se toca su bloque, y el cambio llega a
+todas las presentaciones que la usan.
+
+## Miniaturas
+
+Cada presentación tiene las suyas, en `public/thumbs/<presentación>/N.jpg`; la cinta las lee
+del `thumbsDir` que el generador escribe en la cabecera. En macOS, `npm run thumbs`. En
+cualquier otro sistema, con la construcción servida en el puerto 4173:
+
+```bash
+npm run build && npx serve dist -l 4173 &
+node tools/thumbs_linux.mjs
+```
+
+## Los códigos QR
+
+```bash
+python3 tools/make_qr.py    # -> public/figures/qr-*.svg
+```
+
+Hay que volver a lanzarlo si cambia el nombre del repositorio o la cuenta. Para comprobar
+que cada código lleva a donde dice, se leen de la propia diapositiva construida:
+
+```bash
+python3 - <<'EOF'
+import cv2
+ok, datos, *_ = cv2.QRCodeDetector().detectAndDecodeMulti(cv2.imread('shots3/A-09.png'))
+print(datos if ok else 'no se ha leído ninguno')
+EOF
+```
+
+## Figuras
+
+Las diez figuras de datos salen del dossier, no se dibujan aquí. En
+`claude_analysis_2026-09-18`:
+
+```bash
+PAU_LANG=es PAU_DECK=1 python3 scripts/03_plots.py            # datos-serie, datos-nueve
+PAU_LANG=es PAU_DECK=1 python3 scripts/22_subject_decomposition.py
+PAU_LANG=es PAU_DECK=1 python3 scripts/25_statement_budget.py
+PAU_LANG=es PAU_DECK=1 python3 scripts/34_competency_path.py
+PAU_LANG=es PAU_DECK=1 python3 scripts/36_catalunya_event.py
+PAU_LANG=es PAU_DECK=1 python3 scripts/37_cycle_and_reversion.py
+PAU_LANG=es PAU_DECK=1 python3 scripts/40_timetable_weights.py
+PAU_LANG=es PAU_DECK=1 PAU_PAPER=1 python3 scripts/21_decay_decomposition.py
+cp plots/deck/*.png <esta carpeta>/public/figures/
+```
+
+`PAU_DECK=1` quita el encabezado de figura — una diapositiva que dice «Figura 26 —» señala un
+documento que nadie tiene en la sala — y escribe en `plots/deck/` con los nombres que usan
+estas diapositivas. No cambia nada más, así que una figura del deck y la del dossier de la
+que sale no pueden decir cosas distintas.
+
+## Altura de las figuras en una diapositiva
+
+`.fig` sola deja que la imagen decida lo alta que es la diapositiva. Eso vale para las tiras
+anchas de 3:1 y no vale para nada más cuadrado: lo que va debajo se sale por abajo y queda
+detrás de la cinta, donde no es feo, es invisible. Por eso hay `.fit-lg`, `.fit-md`, `.fit-sm`
+y `.fit-xs`, que topan la altura de la imagen. Se elige por cuánto texto va debajo.
+
+Para comprobarlo, con la construcción servida:
+
+```bash
+node measure3.mjs /index.html 8
+node measure3.mjs /enunciados/index.html 11
+node measure3.mjs /hallazgos/index.html 14
+```
+
+---
 
 ## Qué es MDC
 
