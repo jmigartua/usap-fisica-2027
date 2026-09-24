@@ -1,5 +1,53 @@
 # USaP Física 2027 · tres presentaciones desde un solo fondo de diapositivas
 
+## Qué se edita a mano, y qué no
+
+La regla de una línea: **se editan los bloques, nunca los ficheros de entrada.**
+
+`slides.md`, `enunciados.md`, `hallazgos.md` y `bilingue.md` los escribe
+`tools/build_decks.mjs` cada vez que corre `npm run decks`, que es al arrancar
+*cualquiera* de los `npm run dev*` y al construir. Todo lo que se teclee ahí
+desaparece en la siguiente pasada, sin aviso y sin copia. Por eso los cuatro
+llevan un aviso dentro de la cabecera, con la lista de los bloques que sí se
+editan.
+
+Dónde tocar cada cosa:
+
+| Quiero cambiar… | Fichero |
+|---|---|
+| El texto de una diapositiva | `bloques/<nombre>.md` — el nombre sale del aviso en la cabecera del fichero generado |
+| Qué diapositivas lleva cada presentación, y en qué orden | `decks.json`, lista `blocks` |
+| El título de una presentación, su rótulo de cinta, su texto de ocasión | `decks.json`, entrada de esa presentación |
+| Colores, tamaños, espaciados, los dos temas | `style.css` |
+| La cinta inferior: autor, ocasión, lugar, fecha, para **todas** | `ribbon.json` |
+| La cinta de **una sola** presentación | `decks.json`, bloque `ribbon:` de esa entrada |
+| Tipografías, proporción, transición por defecto, esquema de color | `headmatter/_base.yml` |
+| La tabla de datos y constantes | `data/constantes-2026.json` |
+| Un componente (tabla de constantes, barras, modal de saberes, panel de la banda) | `components/*.vue` |
+
+Y las dos diapositivas de la informativa bilingüe que no son texto suelto:
+
+- Los saberes básicos que abre el «+» de cada bloque: `bloques/bi-estructura.md`,
+  dentro de cada `::saber-modal`.
+- Los pasos con que se marca la tabla de constantes: `bloques/bi-constantes.md`.
+  Cada `::div{.step v-click="k"}` enciende la celda `k` de la tabla; los índices
+  van emparejados entre las dos mitades, y por eso el castellano y el euskera
+  aparecen a la vez.
+
+En las diapositivas bilingües el orden del fichero es «toda la mitad castellana,
+luego toda la vasca», y la rejilla las vuelve a emparejar por filas. Si se añade
+un objeto a una mitad hay que añadir su gemelo a la otra, y darle el **mismo**
+`v-click="k"`: sin número, Slidev numera por orden de fichero y el euskera se
+queda pasos por detrás.
+
+Después de editar un bloque:
+
+```bash
+npm run decks            # vuelve a montar los cuatro ficheros de entrada
+npm run dev:bilingue     # o dev / dev:enunciados / dev:hallazgos
+```
+
+
 Hay **tres** presentaciones y **un** fondo común de diapositivas. Los tres ficheros de
 entrada se generan; no se editan a mano.
 
@@ -134,10 +182,37 @@ y `.fit-xs`, que topan la altura de la imagen. Se elige por cuánto texto va deb
 Para comprobarlo, con la construcción servida:
 
 ```bash
-node measure3.mjs /index.html 8
-node measure3.mjs /enunciados/index.html 11
-node measure3.mjs /hallazgos/index.html 14
+# con la construcción servida bajo el prefijo real, p. ej.
+#   BASE=/usap-fisica-2027/ node tools/build_all.mjs
+#   python3 -m http.server 4173 --directory <raíz que contiene usap-fisica-2027/>
+export DECK_ORIGIN=http://localhost:4173
+node measure3.mjs /usap-fisica-2027/            9   # nada se mete bajo la cinta
+node measure3.mjs /usap-fisica-2027/enunciados/ 12
+node measure3.mjs /usap-fisica-2027/hallazgos/  15
+node measure3.mjs /usap-fisica-2027/bilingue/   9
 ```
+
+Y cuatro comprobaciones más, que existen porque cada una cazó algo que leer el
+código no cazaba:
+
+```bash
+node sanity.mjs /usap-fisica-2027/#3 /usap-fisica-2027/enunciados/#3   # ¿renderiza de verdad?
+node biclick.mjs  /usap-fisica-2027/bilingue/ 9   # ES y EU se revelan a la vez
+node bicheck.mjs  /usap-fisica-2027/bilingue/ 9   # no queda castellano en cinta ni portada
+node controls.mjs /usap-fisica-2027/bilingue/ 9   # los controles se pueden usar
+node contrast.mjs                                 # todo texto pasa su umbral AA (claro)
+DARK=1 node contrast.mjs                          # y en oscuro
+```
+
+- `sanity.mjs` existe porque `measure3.mjs` da «todo libre» en una página cuyo
+  JavaScript no llegó a correr: no encuentra diapositiva que medir, y no
+  encontrar nada no es lo mismo que estar bien.
+- `controls.mjs` existe porque un deslizador aplastado a once píxeles sigue
+  pintando su mango y sigue midiendo dentro de la diapositiva. Pasaba todas las
+  comprobaciones siendo, en pantalla, un punto verde.
+- Los arneses pasan por `about:blank` entre diapositivas: ir de `#/4` a `#/5` es
+  un cambio de fragmento, no de documento, y la aplicación no vuelve a leer nada
+  —ni la preferencia de color—, así que las capturas «en oscuro» salían en claro.
 
 ---
 

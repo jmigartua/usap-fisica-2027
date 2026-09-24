@@ -1087,3 +1087,21 @@ html.dark .consttab { border-color: transparent; }
    near-paper needs a drawn edge or the figure has no boundary at all. */
 .fig { border: 1px solid var(--line); }
 html.dark .fig { border-color: transparent; }
+
+/* ── The band control in a narrow container ────────────────────
+   `.bandctl` was laid out for the full width of a slide: two sliders side by
+   side and, in a third `auto` column, the read-out "banda 150–175 palabras"
+   with `white-space: nowrap`. Inside the tool panel it only has half a slide,
+   and that nowrap column takes its width first — which left each slider
+   eleven pixels wide. A range input eleven pixels wide still paints its thumb,
+   so the control did not disappear; it turned into a green dot, and the tool
+   read as broken rather than as missing.
+
+   So: a hard floor on the input, and, inside the panel, one slider per row
+   with the read-out allowed to wrap. */
+.bandctl input[type="range"] { min-width: 5rem; height: 1.1rem; }
+
+.toolpanel-body .bandctl { grid-template-columns: 1fr; gap: 0.4rem 0; margin: 0; }
+.toolpanel-body .bandctl label { grid-template-columns: 4.4rem minmax(6rem, 1fr) 2.6rem; gap: 0.5rem; }
+.toolpanel-body .bandctl-out { white-space: normal; margin-top: 0.15rem; }
+.toolpanel-body .bandtot { margin-top: 0.55rem; }
