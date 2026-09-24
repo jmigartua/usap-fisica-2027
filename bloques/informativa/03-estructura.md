@@ -1,13 +1,14 @@
 transition: slide-up
 section: "Estructura"
+class: wide
 ...
 [Estructura · igual que en 2026]{.kicker}
 
-# Cuatro problemas, cuatro bloques
+# $4$ problemas, $4$ bloques
 
-::::div{.grid.grid-cols-4.gap-4.mt-4}
+:::div{.grid.grid-cols-4.gap-4.mt-4.cards-tall}
 
-:::div{.card}
+::div{.card v-click="1"}
 ### 1 · Bloque A
 ::saber-modal{title="Bloque A · Campo gravitatorio"}
 - **A1** Campo gravitatorio de un sistema de masas: cálculo vectorial; efectos cinemáticos y dinámicos.
@@ -19,12 +20,10 @@ section: "Estructura"
 
 [sin opción]{.chip.coral}
 
-Campo gravitatorio
+Campo gravitatorio · $2.50$
+::
 
-$2.50$ puntos
-:::
-
-:::div{.card}
+::div{.card v-click="2"}
 ### 2 · Bloque B
 ::saber-modal{title="Bloque B · Campo electromagnético"}
 - **B1** Campos eléctrico y magnético: tratamiento vectorial; cargas libres en presencia de campos; fuerza de Lorentz.
@@ -37,12 +36,10 @@ $2.50$ puntos
 
 [sin opción]{.chip.coral}
 
-Campo electromagnético
+Campo electromagnético · $2.50$
+::
 
-$2.50$ puntos
-:::
-
-:::div{.card.teal}
+::div{.card.teal v-click="3"}
 ### 3 · Bloque C
 ::saber-modal{title="Bloque C · Vibraciones y ondas"}
 - **C1** Movimiento oscilatorio: MAS, ley de Hooke, conservación de la energía.
@@ -54,14 +51,12 @@ $2.50$ puntos
 
 [opción a o b]{.chip.teal}
 
-Ondas · Óptica
+Ondas · Óptica · $2.50$
+::
 
-$2.50$ puntos
-:::
-
-:::div{.card.teal}
+::div{.card.teal v-click="4"}
 ### 4 · Bloque D
-::saber-modal{title="Bloque D · Física relativista, cuántica, nuclear y de partículas"}
+::saber-modal{title="Bloque D · Relativista, cuántica, nuclear y de partículas"}
 - **D1** Relatividad especial: postulados, contracción de la longitud, dilatación del tiempo, masa y energía.
 - **D2** Dualidad onda-corpúsculo y cuantización: efecto fotoeléctrico, De Broglie, incertidumbre.
 - **D3** Modelo estándar: partículas fundamentales, interacciones, aceleradores.
@@ -70,25 +65,15 @@ $2.50$ puntos
 
 [opción a o b]{.chip.teal}
 
-Nuclear · Cuántica
-
-$2.50$ puntos
-:::
-
-::::
-
-:::div{.grid.grid-cols-2.gap-6.mt-5}
-
-::div{.card.kpi v-click}
-[$4 \times 2.50 = 10$]{.kpi-value}
-
-[puntos en total · respuestas de más: se corrigen en orden]{.kpi-label}
+Nuclear · Cuántica · $2.50$
 ::
 
-::div{v-click}
-[Condiciones de la prueba, sin cambios:]{.note-line}
+:::
 
+::div{.note-line.mt-2}
+$4 \times 2.50 = 10$ · respuestas de más, se corrigen en orden
+::
+
+::div{.chip-row}
 [calculadora científica]{.chip.amber} [tabla de datos y constantes]{.chip.amber} [solo datos de tabla y enunciado]{.chip.amber} [código en cada cuadernillo]{.chip.amber}
 ::
-
-:::

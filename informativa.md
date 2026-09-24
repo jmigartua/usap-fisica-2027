@@ -2,16 +2,16 @@
 # ===========================================================================
 #  GENERATED FILE — DO NOT EDIT   ·   FITXATEGI SORTUA — EZ EDITATU
 #
-#  slides.md is assembled by tools/build_decks.mjs from bloques/ + decks.json.
+#  informativa.md is assembled by tools/build_decks.mjs from bloques/ + decks.json.
 #  Anything typed here is destroyed by the next `npm run decks`.
 #  Edit the slide instead — number = slide number:
 #    01  bloques/informativa/01-portada-informativa.md
 #    02  bloques/informativa/02-mensaje.md
 #    03  bloques/informativa/03-estructura.md
 #    04  bloques/informativa/04-evaluacion.md
-#    05  bloques/informativa/05-cambio-enunciados.md  ->  bloques/comun/cambio-enunciados.md
-#    06  bloques/informativa/06-ref-vistazo.md  ->  bloques/comun/ref-vistazo.md
-#    07  bloques/informativa/07-ref-constantes.md  ->  bloques/comun/ref-constantes.md
+#    05  bloques/informativa/05-cambio-enunciados.md
+#    06  bloques/informativa/06-ref-vistazo.md
+#    07  bloques/informativa/07-ref-constantes.md
 #    08  bloques/informativa/08-cierre-informativa.md
 #    09  bloques/informativa/09-enlaces.md  ->  bloques/comun/enlaces.md
 # ===========================================================================
@@ -47,7 +47,7 @@ ribbon:
 [USaP · Física · Coordinación · edición 2027]{.kicker}
 
 ::div{.cover-title}
-Física 2027:<br>nada cambia
+Física 2027:<br>(casi) nada cambiará
 ::
 
 ::div{.cover-sub}
@@ -61,51 +61,46 @@ Misma estructura, contenidos, rúbrica que en 2026.<br>Cambio: enunciados más c
 ---
 transition: fade
 section: "El mensaje"
+class: wide
 blockSrc: "bloques/informativa/02-mensaje.md"
 ---
 [El mensaje]{.kicker}
 
 # 2027 es 2026
 
-:::div{.grid.grid-cols-3.gap-5.mt-6}
-
-::div{.card.kpi.eq-tile v-click}
-[$=$]{.kpi-value.teal}
-
-[**Estructura**<br>cuatro problemas · $2.50$ cada uno]{.kpi-label}
+::div{.card.eq-row.mt-4 v-click}
+[$=$]{.eq}
+[**Estructura** · cuatro problemas, $2.50$ cada uno]{.t}
 ::
 
-::div{.card.kpi.eq-tile v-click}
-[$=$]{.kpi-value.teal}
-
-[**Contenidos**<br>mismos cuatro bloques de saberes]{.kpi-label}
+::div{.card.eq-row.mt-3 v-click}
+[$=$]{.eq}
+[**Contenidos** · los mismos cuatro bloques de saberes]{.t}
 ::
 
-::div{.card.kpi.eq-tile v-click}
-[$=$]{.kpi-value.teal}
-
-[**Evaluación**<br>misma rúbrica, mismos criterios]{.kpi-label}
+::div{.card.eq-row.mt-3 v-click}
+[$=$]{.eq}
+[**Evaluación** · misma rúbrica, mismos criterios]{.t}
 ::
 
-:::
-
-::div{.card.amber.mt-6 v-click}
-### Un solo cambio, y es de estilo
-Enunciados **más cortos** · mismas competencias, datos y rúbrica<br>competencia lectora → competencias en física
+::div{.card.amber.mt-4 v-click}
+### Un solo cambio
+Enunciados **más cortos** · mismas competencias, *datos* y rúbrica<br>competencia lectora → competencias en física
 ::
 
 ---
 transition: slide-up
 section: "Estructura"
+class: wide
 blockSrc: "bloques/informativa/03-estructura.md"
 ---
 [Estructura · igual que en 2026]{.kicker}
 
-# Cuatro problemas, cuatro bloques
+# $4$ problemas, $4$ bloques
 
-::::div{.grid.grid-cols-4.gap-4.mt-4}
+:::div{.grid.grid-cols-4.gap-4.mt-4.cards-tall}
 
-:::div{.card}
+::div{.card v-click="1"}
 ### 1 · Bloque A
 ::saber-modal{title="Bloque A · Campo gravitatorio"}
 - **A1** Campo gravitatorio de un sistema de masas: cálculo vectorial; efectos cinemáticos y dinámicos.
@@ -117,12 +112,10 @@ blockSrc: "bloques/informativa/03-estructura.md"
 
 [sin opción]{.chip.coral}
 
-Campo gravitatorio
+Campo gravitatorio · $2.50$
+::
 
-$2.50$ puntos
-:::
-
-:::div{.card}
+::div{.card v-click="2"}
 ### 2 · Bloque B
 ::saber-modal{title="Bloque B · Campo electromagnético"}
 - **B1** Campos eléctrico y magnético: tratamiento vectorial; cargas libres en presencia de campos; fuerza de Lorentz.
@@ -135,12 +128,10 @@ $2.50$ puntos
 
 [sin opción]{.chip.coral}
 
-Campo electromagnético
+Campo electromagnético · $2.50$
+::
 
-$2.50$ puntos
-:::
-
-:::div{.card.teal}
+::div{.card.teal v-click="3"}
 ### 3 · Bloque C
 ::saber-modal{title="Bloque C · Vibraciones y ondas"}
 - **C1** Movimiento oscilatorio: MAS, ley de Hooke, conservación de la energía.
@@ -152,14 +143,12 @@ $2.50$ puntos
 
 [opción a o b]{.chip.teal}
 
-Ondas · Óptica
+Ondas · Óptica · $2.50$
+::
 
-$2.50$ puntos
-:::
-
-:::div{.card.teal}
+::div{.card.teal v-click="4"}
 ### 4 · Bloque D
-::saber-modal{title="Bloque D · Física relativista, cuántica, nuclear y de partículas"}
+::saber-modal{title="Bloque D · Relativista, cuántica, nuclear y de partículas"}
 - **D1** Relatividad especial: postulados, contracción de la longitud, dilatación del tiempo, masa y energía.
 - **D2** Dualidad onda-corpúsculo y cuantización: efecto fotoeléctrico, De Broglie, incertidumbre.
 - **D3** Modelo estándar: partículas fundamentales, interacciones, aceleradores.
@@ -168,204 +157,162 @@ $2.50$ puntos
 
 [opción a o b]{.chip.teal}
 
-Nuclear · Cuántica
-
-$2.50$ puntos
-:::
-
-::::
-
-:::div{.grid.grid-cols-2.gap-6.mt-5}
-
-::div{.card.kpi v-click}
-[$4 \times 2.50 = 10$]{.kpi-value}
-
-[puntos en total · respuestas de más: se corrigen en orden]{.kpi-label}
+Nuclear · Cuántica · $2.50$
 ::
 
-::div{v-click}
-[Condiciones de la prueba, sin cambios:]{.note-line}
+:::
 
+::div{.note-line.mt-2}
+$4 \times 2.50 = 10$ · respuestas de más, se corrigen en orden
+::
+
+::div{.chip-row}
 [calculadora científica]{.chip.amber} [tabla de datos y constantes]{.chip.amber} [solo datos de tabla y enunciado]{.chip.amber} [código en cada cuadernillo]{.chip.amber}
 ::
-
-:::
 
 ---
 transition: slide-left
 section: "Evaluación"
+class: wide
 blockSrc: "bloques/informativa/04-evaluacion.md"
 ---
 [Evaluación · igual que en 2026]{.kicker}
 
-# Misma rúbrica, mismos criterios
+# rúbrica, criterios: $=$ 
 
-::::div{.grid.grid-cols-5.gap-6.mt-3}
-
-:::div{.col-span-2}
-
-::div{.step v-click}
-[a]{.n}
-
-$2.50$ por problema<br>**tres apartados**, con su peso
+::div{.sum3}
+- $2.50$ / problema
+- 3 apartados · $1.00 + 1.00 + 0.50$
+- precisión $0.25$
 ::
 
-::div{.step v-click}
-[·]{.n}
+:::div{.grid.grid-cols-4.gap-4.mt-4}
 
-**subapartados** de $1.00$, $1.00$ y $0.50$<br>precisión $0.25$
+::div{.card v-click="1"}
+### Simbólico, numérico
+plantear, despejar, sustituir
 ::
 
-::div{.step v-click}
-[✓]{.n}
-
-solucionario **orientativo**<br>qué se puntúa, no un único camino
-::
-
-:::
-
-:::div{.col-span-3.grid.grid-cols-2.gap-3}
-
-::div{.card v-click}
-### Simbólico, luego numérico
-planteamiento, despejar, sustituir
-::
-
-::div{.card.coral v-click}
+::div{.card.coral v-click="2"}
 ### Descuentos de $0.1$
-- unidades
-- carácter vectorial
-- redondeo y decimales
-
+unidades · carácter vectorial · redondeo y decimales
 ::
 
-::div{.card.coral v-click}
+::div{.card.coral v-click="3"}
 ### Errores graves
-- ecuación incorrecta
-- confusión escalar/vectorial
-- invalidan el apartado
+ecuación incorrecta · confusión escalar/vectorial
+
+[invalidan el apartado]{.note-line}
 ::
 
-::div{.card.teal v-click}
+::div{.card.teal v-click="4"}
 ### Se arrastra el valor
-- valor del alumno, si hace falta
-- salvo resultado absurdo
+el valor del alumno, si hace falta
+
+[salvo resultado absurdo]{.note-line}
 ::
 
 :::
-
-::::
 
 ---
 transition: slide-up
 section: "El cambio"
-blockSrc: "bloques/informativa/05-cambio-enunciados.md -> bloques/comun/cambio-enunciados.md"
+class: wide
+blockSrc: "bloques/informativa/05-cambio-enunciados.md"
 ---
-[El único cambio]{.kicker}
+[El cambio]{.kicker}
 
 # Enunciados más cortos
 
-::::div{.grid.grid-cols-5.gap-6.mt-2}
+::::div{.grid.grid-cols-5.gap-6.mt-3}
 
 :::div{.col-span-3}
 
 ::div{.note}
-Longitud de los enunciados de 2026, en palabras, sin los pesos de cada apartado:
+Longitud de los enunciados de 2026, en palabras
 ::
 
-::word-bars{:rows='[["A1",295],["B1",408],["C1",150],["C2",242],["D1",163],["D2",214]]' :total="408" :sums='[["C1+C2",392],["D1+D2",377]]' :short='["B1′",90]' :target="$clicks >= 5"}
+::word-bars{:rows='[["A1",295],["B1",408],["C1",150],["C2",242],["D1",163],["D2",214]]' :total="408" :sums='[["C1+C2",392],["D1+D2",377]]' :target="$clicks >= 3"}
 ::
 
-:::div{v-click="5"}
+:::
 
+:::div{.col-span-2}
+
+::tool-panel{label="Ajustar la banda"}
 ::band-controls
 ::
 
 ::band-totals{:read="1472" :answered="[1016, 1159]" :n-read="6" :n-answered="4"}
 ::
-
-:::
-
-::div{.note.mt-1 v-click="2"}
-B1′: la manera habitual (anexo) · C1+C2, D1+D2: lo que lee quien tiene opción
 ::
 
-:::
-
-:::div{.col-span-2}
-
-::div{.card.teal v-click="3"}
+::div{.card.teal.mt-4 v-click="1"}
 ### Se conserva
-- contexto real, da sentido al problema
-- datos y tabla de constantes
-- verbos, en cada apartado
-- rúbrica y pesos
+contexto · datos y constantes · verbos · rúbrica
 ::
 
-::div{.card.coral.mt-2 v-click="4"}
+::div{.card.coral.mt-3 v-click="2"}
 ### Se recorta
-- narrativa
-- preguntas repetidas entre apartados
-- instrucciones de formato redundantes
-::
-
-::div{.card.lime.mt-2 v-click="5"}
-### Objetivo 2027
-<kx :tex="`${$lo}\\text{–}${$hi}`" /> palabras · media <kx :tex="$band.mean" />
+narrativa · repeticiones · formato
 ::
 
 :::
 
 ::::
 
+::div{.note-line.mt-3.text-center v-click="3"}
+**Objetivo 2027** — <kx :tex="`${$lo}\\text{–}${$hi}`" /> palabras · media <kx :tex="$band.mean" />
+::
+
 ---
 transition: fade
 section: Referencia
-class: dense
+class: dense wide
 ribbonTitle: "La prueba de 2026"
-blockSrc: "bloques/informativa/06-ref-vistazo.md -> bloques/comun/ref-vistazo.md"
+blockSrc: "bloques/informativa/06-ref-vistazo.md"
 ---
-[Anexo · por si se pregunta]{.kicker}
-
 # 2026 de un vistazo
 
-| Bloque | Problema | Tema | Reparto a) + b) + c) | Palabras |
-|:--|:--|:--|:--|--:|
-| A · sin opción | A1 | Campo gravitatorio: satélite en órbita geoestacionaria y caída sobre la Tierra | $1.00 + 1.00 + 0.50$ | $295$ |
-| B · sin opción | B1 | Inducción electromagnética: espira en campo variable y en modo generador | $0.50 + 1.00 + 1.00$ | $408$ |
-| C · opción a | C1 | Ondas estacionarias y sonido: cuerda de violín, nivel en decibelios | $0.50 + 1.00 + 1.00$ | $150$ |
-| C · opción b | C2 | Óptica geométrica: lente proyectora, aumento y tipo de imagen | $1.00 + 0.50 + 1.00$ | $242$ |
-| D · opción a | D1 | Efecto fotoeléctrico: potencial de frenado, función trabajo, metal oxidado | $0.50 + 1.00 + 1.00$ | $163$ |
-| D · opción b | D2 | Desintegración radiactiva: datación por carbono-14 | $1.00 + 0.50 + 1.00$ | $214$ |
+| Problema | Tema | Reparto |
+|:--|:--|:--|
+| A1 · sin opción | Campo gravitatorio · órbita y caída | $1.00 + 1.00 + 0.50$ |
+| B1 · sin opción | Inducción · espira y generador | $0.50 + 1.00 + 1.00$ |
+| C1 · opción a | Ondas y sonido · cuerda, decibelios | $0.50 + 1.00 + 1.00$ |
+| C2 · opción b | Óptica · lente, aumento, imagen | $1.00 + 0.50 + 1.00$ |
+| D1 · opción a | Efecto fotoeléctrico · función trabajo | $0.50 + 1.00 + 1.00$ |
+| D2 · opción b | Datación · carbono-14 | $1.00 + 0.50 + 1.00$ |
 
 ::div{.note.mt-3}
-Cada problema, $2.50$ · subapartados de $0.25$ o $0.50$, con su contenido en el solucionario
-
-Palabras: enunciado en castellano, sin los pesos
+Cada problema, $2.50$ · subapartados de $1.00 + 1.00 + 0.50$ puntos
 ::
 
 ---
 transition: slide-up
 section: Referencia
-class: dense
+class: dense wide
 ribbonTitle: "Datos y constantes"
-blockSrc: "bloques/informativa/07-ref-constantes.md -> bloques/comun/ref-constantes.md"
+blockSrc: "bloques/informativa/07-ref-constantes.md"
 ---
 [Anexo · la tabla de datos y constantes]{.kicker}
 
-# Once entradas: ocho se usan, tres nunca
+# $11$ entradas: $8$ se usan, $3$ nunca
 
 ::const-table{name="constantes-2026" :clicks="$clicks" .big}
 ::
 
-::::div{.grid.grid-cols-4.gap-4.mt-3}
-
-:::div
+:::div{.grid.grid-cols-4.gap-x-6.gap-y-1.mt-3}
 
 ::div{.step v-click="1"}
 [A1]{.n.u-a}
 
 gravitatorio: $G$, $M_{\mathrm{T}}$, $R_{\mathrm{T}}$
+::
+
+::div{.step v-click="5"}
+[D1]{.n.u-d}
+
+fotoeléctrico: $h$, $c$, $|q_e|$
 ::
 
 ::div{.step v-click="2"}
@@ -374,14 +321,22 @@ gravitatorio: $G$, $M_{\mathrm{T}}$, $R_{\mathrm{T}}$
 inducción: nada
 ::
 
-:::
+::div{.step v-click="6"}
+[D2]{.n.u-b}
 
-:::div
+datación: nada
+::
 
 ::div{.step v-click="3"}
 [C1]{.n.u-c}
 
 sonido: $v_{\mathrm{sonido}}$, $I_0$
+::
+
+::div{.step v-click="7"}
+[×]{.n.u-x}
+
+nunca: $K$, $m_p$, $m_e$
 ::
 
 ::div{.step v-click="4"}
@@ -390,44 +345,13 @@ sonido: $v_{\mathrm{sonido}}$, $I_0$
 óptica: nada
 ::
 
-:::
+::div{.step v-click="8"}
+[=]{.n}
 
-:::div
-
-::div{.step v-click="5"}
-[D1]{.n.u-d}
-
-fotoeléctrico: $h$, $c$, $|q_e|$
-::
-
-::div{.step v-click="6"}
-[D2]{.n.u-b}
-
-datación: nada, $T_{1/2}$ dada
+**se evalúa elegir**
 ::
 
 :::
-
-:::div
-
-::div{.step v-click="7"}
-[×]{.n.u-x}
-
-nunca: $K$, $m_p$, $m_e$
-::
-
-::div{.card.amber v-click="8"}
-### Se evalúa elegir
-la tabla trae de más
-::
-
-:::
-
-::::
-
-::div{.note.mt-2}
-Tal como aparece en el examen de 2026 · la misma tabla en 2027
-::
 
 ---
 layout: center
@@ -439,20 +363,15 @@ blockSrc: "bloques/informativa/08-cierre-informativa.md"
 [Para llevar]{.kicker.text-center}
 
 ::div{.section-title.text-center}
-Nada cambia.
+Nada cambia
 ::
 
 ::div{.section-title.text-center.amber v-click}
-Salvo que se leerá menos.
-::
-
-::div{.section-sub.text-center.mt-6.mx-auto v-click}
-Misma estructura, contenidos y corrección.<br>Enunciados más cortos, misma rúbrica.
+Se leerá menos
 ::
 
 ::div{.card.amber.mt-6.mx-auto v-click}
-Sabemos lo bastante para **no tocar la prueba**, y no lo bastante para **tocarla**:
-por eso 2027 cambia una sola cosa, la longitud de los enunciados.
+Misma estructura, contenidos y corrección. Enunciados más cortos, misma rúbrica
 ::
 
 ---
@@ -477,7 +396,7 @@ Qué se mantiene de 2026 y el único cambio de 2027.
 <img src="/figures/qr-informativa.svg" alt="Código QR de la presentación informativa" />
 ::
 
-[<a href="https://jmigartua.github.io/usap-fisica-2027/" target="_blank" rel="noopener">jmigartua.github.io/<br>usap-fisica-2027/</a>]{.lk-url}
+[<a href="https://jmigartua.github.io/usap-fisica-2027/informativa/" target="_blank" rel="noopener">jmigartua.github.io/<br>usap-fisica-2027/informativa/</a>]{.lk-url}
 ::
 
 ::div{.card.lk.lk-enunciados}

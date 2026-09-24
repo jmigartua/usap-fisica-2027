@@ -6,15 +6,15 @@
 #  Anything typed here is destroyed by the next `npm run decks`.
 #  Edit the slide instead — number = slide number:
 #    01  bloques/enunciados/01-portada-enunciados.md
-#    02  bloques/enunciados/02-cambio-enunciados.md  ->  bloques/comun/cambio-enunciados.md
-#    03  bloques/enunciados/03-ref-vistazo.md  ->  bloques/comun/ref-vistazo.md
+#    02  bloques/enunciados/02-cambio-enunciados.md
+#    03  bloques/enunciados/03-ref-vistazo.md
 #    04  bloques/enunciados/04-enun-paso-a-paso.md
 #    05  bloques/enunciados/05-enun-como-debio.md
 #    06  bloques/enunciados/06-enun-competencial.md
 #    07  bloques/enunciados/07-enun-verbos-antes.md
 #    08  bloques/enunciados/08-enun-niveles.md
 #    09  bloques/enunciados/09-enun-respuestas.md
-#    10  bloques/enunciados/10-ref-constantes.md  ->  bloques/comun/ref-constantes.md
+#    10  bloques/enunciados/10-ref-constantes.md
 #    11  bloques/enunciados/11-cierre-enunciados.md
 #    12  bloques/enunciados/12-enlaces.md  ->  bloques/comun/enlaces.md
 # ===========================================================================
@@ -65,7 +65,7 @@ De dónde salen las palabras de más y cómo se quitan sin tocar<br>la rúbrica,
 transition: slide-up
 section: "El objetivo"
 ribbonTitle: "La banda objetivo"
-blockSrc: "bloques/enunciados/02-cambio-enunciados.md -> bloques/comun/cambio-enunciados.md"
+blockSrc: "bloques/enunciados/02-cambio-enunciados.md"
 ---
 [El único cambio]{.kicker}
 
@@ -129,7 +129,7 @@ transition: fade
 section: "El punto de partida"
 class: dense
 ribbonTitle: "La prueba de 2026"
-blockSrc: "bloques/enunciados/03-ref-vistazo.md -> bloques/comun/ref-vistazo.md"
+blockSrc: "bloques/enunciados/03-ref-vistazo.md"
 ---
 [Anexo · por si se pregunta]{.kicker}
 
@@ -1013,7 +1013,7 @@ transition: slide-up
 section: "Datos y constantes"
 class: dense
 ribbonTitle: "Datos y constantes"
-blockSrc: "bloques/enunciados/10-ref-constantes.md -> bloques/comun/ref-constantes.md"
+blockSrc: "bloques/enunciados/10-ref-constantes.md"
 ---
 [Anexo · la tabla de datos y constantes]{.kicker}
 
@@ -1152,7 +1152,7 @@ Qué se mantiene de 2026 y el único cambio de 2027.
 <img src="/figures/qr-informativa.svg" alt="Código QR de la presentación informativa" />
 ::
 
-[<a href="https://jmigartua.github.io/usap-fisica-2027/" target="_blank" rel="noopener">jmigartua.github.io/<br>usap-fisica-2027/</a>]{.lk-url}
+[<a href="https://jmigartua.github.io/usap-fisica-2027/informativa/" target="_blank" rel="noopener">jmigartua.github.io/<br>usap-fisica-2027/informativa/</a>]{.lk-url}
 ::
 
 ::div{.card.lk.lk-enunciados}

@@ -1105,3 +1105,32 @@ html.dark .fig { border-color: transparent; }
 .toolpanel-body .bandctl label { grid-template-columns: 4.4rem minmax(6rem, 1fr) 2.6rem; gap: 0.5rem; }
 .toolpanel-body .bandctl-out { white-space: normal; margin-top: 0.15rem; }
 .toolpanel-body .bandtot { margin-top: 0.55rem; }
+
+/* ── One language, full width ──────────────────────────────────────────────
+   The informativa now carries the same text as one half of the bilingual deck.
+   Text shaped to fill half a slide leaves a third of a full one empty, and an
+   empty lower third reads as an unfinished slide rather than as breathing room.
+   The space goes into size: this deck is projected and read from the back of a
+   room, so larger is also better. Applied per slide with `class: wide`. */
+.slidev-layout.wide h1 { font-size: 2.55rem; margin-bottom: 0.9rem; }
+.slidev-layout.wide .kicker { font-size: 0.8rem; }
+.slidev-layout.wide p, .slidev-layout.wide li { font-size: 1.08rem; }
+.slidev-layout.wide .card { padding: 1.15rem 1.35rem; }
+.slidev-layout.wide .card h3 { font-size: 1.18rem; margin-bottom: 0.45rem; }
+.slidev-layout.wide .eq-row { padding: 0.95rem 1.25rem; }
+.slidev-layout.wide .eq-row .eq { font-size: 2.1rem; }
+.slidev-layout.wide .eq-row .t { font-size: 1.1rem; }
+.slidev-layout.wide .sum3 li { font-size: 1.08rem; padding: 0.45rem 1rem; margin: 0.4rem 0; }
+.slidev-layout.wide .note, .slidev-layout.wide .note-line,
+.slidev-layout.wide .note p, .slidev-layout.wide .note-line p { font-size: 0.95rem; }
+.slidev-layout.wide .chip { font-size: 0.78rem; padding: 0.24rem 0.78rem; }
+.slidev-layout.wide table { font-size: 1.0rem; }
+.slidev-layout.wide th { font-size: 0.95rem; }
+.slidev-layout.wide .step p { font-size: 1.0rem; }
+.slidev-layout.wide .step .n { width: 2.2rem; height: 2.2rem; font-size: 0.8rem; }
+.slidev-layout.wide .bar-row .lab, .slidev-layout.wide .bar-row .val { font-size: 0.95rem; }
+.slidev-layout.wide .bar-row .track { height: 1.25rem; }
+/* A six-row table and a row of four short cards are the two shapes that still
+   leave a full-width slide half empty; the rows and the cards take the space. */
+.slidev-layout.wide td, .slidev-layout.wide th { padding: 0.72rem 0.6rem; }
+.slidev-layout.wide .cards-tall > .card { min-height: 10.5rem; }
