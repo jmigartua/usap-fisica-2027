@@ -24,8 +24,8 @@ ribbonTitle: "Mezua"
 ::
 
 ::div{.card.amber.mt-2 v-click="4"}
-### Un solo cambio, y es de estilo
-Enunciados **más cortos** · mismas competencias, datos y rúbrica<br>competencia lectora → competencias en física
+### Un solo cambio
+Enunciados **más cortos** · mismas competencias, *datos* y rúbrica<br>competencia lectora → competencias en física
 ::
 
 [Mezua]{.kicker}
@@ -49,7 +49,7 @@ Enunciados **más cortos** · mismas competencias, datos y rúbrica<br>competenc
 
 ::div{.card.amber.mt-2 v-click="4"}
 ### Aldaketa bakarra, eta estilokoa
-Enuntziatu **laburragoak** · gaitasun, datu eta errubrika berberak<br>irakurmena → fisikako gaitasunak
+Enuntziatu **laburragoak** · gaitasunak, *datu* eta errubrika berberak<br>irakurmena → fisikako gaitasunak
 ::
 
 ::::

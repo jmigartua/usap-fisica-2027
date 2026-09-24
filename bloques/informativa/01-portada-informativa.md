@@ -6,7 +6,7 @@ Física 2027:<br>nada cambia
 ::
 
 ::div{.cover-sub}
-Misma estructura, contenidos y corrección que en 2026.<br>Un único cambio: enunciados más cortos.
+Misma estructura, contenidos, rúbrica que en 2026.<br>Cambio: enunciados más cortos.
 ::
 
 ::div{.cover-meta}

@@ -4,11 +4,11 @@ ribbonTitle: "Aldaketa"
 ...
 ::::div{.bi2.rows-2.mb-1}
 
-[El único cambio]{.kicker}
+[El cambio]{.kicker}
 
 # Enunciados más cortos
 
-[Aldaketa bakarra]{.kicker}
+[Aldaketa]{.kicker}
 
 # Enuntziatu laburragoak
 
@@ -56,12 +56,12 @@ narrativa · repeticiones · formato
 :::div{.grid.grid-cols-2.gap-3}
 
 ::div{.card.teal v-click="1"}
-### Mantentzen da
+### Mantenduko da
 testuingurua · datuak eta konstanteak · aditzak · errubrika
 ::
 
 ::div{.card.coral v-click="2"}
-### Moztu egiten da
+### Moztuko da
 narratiba · errepikapenak · formatua
 ::
 
@@ -70,5 +70,5 @@ narratiba · errepikapenak · formatua
 ::::
 
 ::div{.note-line.mt-2.nolang.text-center v-click="3"}
-**Objetivo 2027 · 2027ko helburua** — <kx :tex="`${$lo}\\text{–}${$hi}`" /> palabras · hitz  ·  media · batez beste <kx :tex="$band.mean" />
+**Objetivo 2027 · 2027ko helburua** — <kx :tex="`${$lo}\\text{–}${$hi}`" /> palabras · hitz  ·  media · batez bestean <kx :tex="$band.mean" />
 ::

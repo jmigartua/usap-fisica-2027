@@ -6,7 +6,7 @@ Fisika 2027:<br>ez da (ia) ezer aldatuko
 ::
 
 ::div{.cover-sub}
-2026ko egitura, edukiak eta zuzenketa berberak.<br>Aldaketa bakarra: enuntziatu laburragoak.
+2026ko egitura, edukiak, errubrika berberak.<br>Aldaketa: enuntziatu laburragoak.
 ::
 
 ::div{.cover-meta.mt-6}

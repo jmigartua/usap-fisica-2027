@@ -4,11 +4,7 @@ ribbonTitle: "Eranskina · taula"
 ...
 ::::div{.bi2.rows-2.mb-1}
 
-[Anexo · por si se pregunta]{.kicker}
-
 # 2026 de un vistazo
-
-[Eranskina · galdetzen bada]{.kicker}
 
 # 2026 begirada batean
 
@@ -26,11 +22,11 @@ ribbonTitle: "Eranskina · taula"
 ::div{.bi2.rows-1.mt-2}
 
 ::div{.note}
-Cada problema, $2.50$ · subapartados de $0.25$ o $0.50$
+Cada problema, $2.50$ · subapartados de $1.00 + 1.00 + 0.50$ puntos
 ::
 
 ::div{.note}
-Problema bakoitza, $2{,}50$ · $0{,}25$ eta $0{,}50$-eko azpiatalak
+Problema bakoitza, $2{,}50$ · $1{,}00 + 1{,}00 + 0{,}50$ puntuko azpiatalak
 ::
 
 ::

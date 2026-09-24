@@ -6,7 +6,7 @@ ribbonTitle: "Egitura"
 
 [Estructura · igual que en 2026]{.kicker}
 
-# Cuatro problemas, cuatro bloques
+# $4$ problemas, $4$ bloques
 
 :::div{.grid.grid-cols-2.gap-3}
 
@@ -80,9 +80,9 @@ $4 \times 2.50 = 10$ · respuestas de más, se corrigen en orden
 [calculadora científica]{.chip.amber} [tabla de datos y constantes]{.chip.amber} [solo datos de tabla y enunciado]{.chip.amber} [código en cada cuadernillo]{.chip.amber}
 ::
 
-[Egitura · 2026an bezala]{.kicker}
+[Egitura · 2026koa]{.kicker}
 
-# Lau problema, lau bloke
+# $4$ problema, $4$ bloke
 
 :::div{.grid.grid-cols-2.gap-3}
 

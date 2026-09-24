@@ -6,11 +6,11 @@ ribbonTitle: "Datuak eta konstanteak"
 
 [Anexo · la tabla de datos y constantes]{.kicker}
 
-# Once entradas: ocho se usan, tres nunca
+# $11$ entradas: $8$ se usan<br> $3$ nunca
 
 [Eranskina · datu eta konstanteen taula]{.kicker}
 
-# Hamaika sarrera: zortzi erabiltzen dira, hiru inoiz ez
+# $11$ sarrera: $8$ erabiltzen dira<br> $3$ inoiz ez
 
 ::::
 

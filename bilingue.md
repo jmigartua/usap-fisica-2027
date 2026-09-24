@@ -54,7 +54,7 @@ Fisika 2027:<br>ez da (ia) ezer aldatuko
 ::
 
 ::div{.cover-sub}
-2026ko egitura, edukiak eta zuzenketa berberak.<br>Aldaketa bakarra: enuntziatu laburragoak.
+2026ko egitura, edukiak, errubrika berberak.<br>Aldaketa: enuntziatu laburragoak.
 ::
 
 ::div{.cover-meta.mt-6}
@@ -89,8 +89,8 @@ blockSrc: "bloques/bilingue/02-bi-mensaje.md"
 ::
 
 ::div{.card.amber.mt-2 v-click="4"}
-### Un solo cambio, y es de estilo
-Enunciados **más cortos** · mismas competencias, datos y rúbrica<br>competencia lectora → competencias en física
+### Un solo cambio
+Enunciados **más cortos** · mismas competencias, *datos* y rúbrica<br>competencia lectora → competencias en física
 ::
 
 [Mezua]{.kicker}
@@ -114,7 +114,7 @@ Enunciados **más cortos** · mismas competencias, datos y rúbrica<br>competenc
 
 ::div{.card.amber.mt-2 v-click="4"}
 ### Aldaketa bakarra, eta estilokoa
-Enuntziatu **laburragoak** · gaitasun, datu eta errubrika berberak<br>irakurmena → fisikako gaitasunak
+Enuntziatu **laburragoak** · gaitasunak, *datu* eta errubrika berberak<br>irakurmena → fisikako gaitasunak
 ::
 
 ::::
@@ -129,7 +129,7 @@ blockSrc: "bloques/bilingue/03-bi-estructura.md"
 
 [Estructura · igual que en 2026]{.kicker}
 
-# Cuatro problemas, cuatro bloques
+# $4$ problemas, $4$ bloques
 
 :::div{.grid.grid-cols-2.gap-3}
 
@@ -203,9 +203,9 @@ $4 \times 2.50 = 10$ · respuestas de más, se corrigen en orden
 [calculadora científica]{.chip.amber} [tabla de datos y constantes]{.chip.amber} [solo datos de tabla y enunciado]{.chip.amber} [código en cada cuadernillo]{.chip.amber}
 ::
 
-[Egitura · 2026an bezala]{.kicker}
+[Egitura · 2026koa]{.kicker}
 
-# Lau problema, lau bloke
+# $4$ problema, $4$ bloke
 
 :::div{.grid.grid-cols-2.gap-3}
 
@@ -291,7 +291,7 @@ blockSrc: "bloques/bilingue/04-bi-evaluacion.md"
 
 [Evaluación · igual que en 2026]{.kicker}
 
-# Misma rúbrica, mismos criterios
+# Rúbrica, criterios: $=$
 
 ::div{.sum3}
 - $2.50$ / problema
@@ -329,7 +329,7 @@ el valor del alumno, si hace falta
 
 [Ebaluazioa · 2026an bezala]{.kicker}
 
-# Errubrika bera, irizpide berberak
+# Errubrika, irizpideak: $=$
 
 ::div{.sum3}
 - $2{,}50$ / problema
@@ -341,7 +341,7 @@ el valor del alumno, si hace falta
 
 ::div{.card v-click="1"}
 ### Sinbolikoa, zenbakizkoa
-planteatu, askatu, ordeztu
+planteatu, askatu, ordezkatu
 ::
 
 ::div{.card.coral v-click="2"}
@@ -360,7 +360,7 @@ ekuazio okerra · eskalar/bektore nahasketa
 ### Balioa eramaten da
 ikaslearen balioa, behar izanez gero
 
-[emaitza absurdua ez bada]{.note-line}
+[emaitza zentzugabekoa ez bada]{.note-line}
 ::
 
 :::
@@ -375,11 +375,11 @@ blockSrc: "bloques/bilingue/05-bi-cambio.md"
 ---
 ::::div{.bi2.rows-2.mb-1}
 
-[El único cambio]{.kicker}
+[El cambio]{.kicker}
 
 # Enunciados más cortos
 
-[Aldaketa bakarra]{.kicker}
+[Aldaketa]{.kicker}
 
 # Enuntziatu laburragoak
 
@@ -427,12 +427,12 @@ narrativa · repeticiones · formato
 :::div{.grid.grid-cols-2.gap-3}
 
 ::div{.card.teal v-click="1"}
-### Mantentzen da
+### Mantenduko da
 testuingurua · datuak eta konstanteak · aditzak · errubrika
 ::
 
 ::div{.card.coral v-click="2"}
-### Moztu egiten da
+### Moztuko da
 narratiba · errepikapenak · formatua
 ::
 
@@ -441,7 +441,7 @@ narratiba · errepikapenak · formatua
 ::::
 
 ::div{.note-line.mt-2.nolang.text-center v-click="3"}
-**Objetivo 2027 · 2027ko helburua** — <kx :tex="`${$lo}\\text{–}${$hi}`" /> palabras · hitz  ·  media · batez beste <kx :tex="$band.mean" />
+**Objetivo 2027 · 2027ko helburua** — <kx :tex="`${$lo}\\text{–}${$hi}`" /> palabras · hitz  ·  media · batez bestean <kx :tex="$band.mean" />
 ::
 
 ---
@@ -452,11 +452,7 @@ blockSrc: "bloques/bilingue/06-bi-vistazo.md"
 ---
 ::::div{.bi2.rows-2.mb-1}
 
-[Anexo · por si se pregunta]{.kicker}
-
 # 2026 de un vistazo
-
-[Eranskina · galdetzen bada]{.kicker}
 
 # 2026 begirada batean
 
@@ -474,11 +470,11 @@ blockSrc: "bloques/bilingue/06-bi-vistazo.md"
 ::div{.bi2.rows-1.mt-2}
 
 ::div{.note}
-Cada problema, $2.50$ · subapartados de $0.25$ o $0.50$
+Cada problema, $2.50$ · subapartados de $1.00 + 1.00 + 0.50$ puntos
 ::
 
 ::div{.note}
-Problema bakoitza, $2{,}50$ · $0{,}25$ eta $0{,}50$-eko azpiatalak
+Problema bakoitza, $2{,}50$ · $1{,}00 + 1{,}00 + 0{,}50$ puntuko azpiatalak
 ::
 
 ::
@@ -493,11 +489,11 @@ blockSrc: "bloques/bilingue/07-bi-constantes.md"
 
 [Anexo · la tabla de datos y constantes]{.kicker}
 
-# Once entradas: ocho se usan, tres nunca
+# $11$ entradas: $8$ se usan<br> $3$ nunca
 
 [Eranskina · datu eta konstanteen taula]{.kicker}
 
-# Hamaika sarrera: zortzi erabiltzen dira, hiru inoiz ez
+# $11$ sarrera: $8$ erabiltzen dira<br> $3$ inoiz ez
 
 ::::
 
@@ -624,33 +620,29 @@ blockSrc: "bloques/bilingue/08-bi-cierre.md"
 [Para llevar]{.kicker}
 
 ::div{.section-title}
-Nada cambia.
+Nada cambia
 ::
 
 ::div{.section-title.amber v-click="1"}
-Salvo que se leerá menos.
+Se leerá menos
 ::
 
 ::div{.card.amber.mt-4 v-click="2"}
-Misma estructura, contenidos y corrección. Enunciados más cortos, misma rúbrica.
-
-Sabemos lo bastante para **no tocar la prueba**, y no lo bastante para **tocarla**.
+Misma estructura, contenidos y corrección. Enunciados más cortos, misma rúbrica
 ::
 
 [Etxerako]{.kicker}
 
 ::div{.section-title}
-Ez da ezer aldatzen.
+Ez da ezer aldatuko
 ::
 
 ::div{.section-title.amber v-click="1"}
-Gutxiago irakurriko dela izan ezik.
+Gutxiago irakurriko da
 ::
 
 ::div{.card.amber.mt-4 v-click="2"}
-Egitura, edukiak eta zuzenketa berberak. Enuntziatu laburragoak, errubrika bera.
-
-Nahikoa dakigu proba **ez ukitzeko**, eta ez nahikoa **ukitzeko**.
+Egitura, edukiak eta zuzenketa berberak. Enuntziatu laburragoak, errubrika bera
 ::
 
 ::::
@@ -659,6 +651,7 @@ Nahikoa dakigu proba **ez ukitzeko**, eta ez nahikoa **ukitzeko**.
 transition: fade
 class: dense bi-bg
 ribbonTitle: "Non dago zer"
+hide: true
 blockSrc: "bloques/bilingue/09-bi-enlaces.md"
 ---
 ::::div{.bi2.rows-2.mb-1}

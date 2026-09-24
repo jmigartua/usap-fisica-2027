@@ -51,7 +51,7 @@ Física 2027:<br>nada cambia
 ::
 
 ::div{.cover-sub}
-Misma estructura, contenidos y corrección que en 2026.<br>Un único cambio: enunciados más cortos.
+Misma estructura, contenidos, rúbrica que en 2026.<br>Cambio: enunciados más cortos.
 ::
 
 ::div{.cover-meta}
@@ -213,7 +213,7 @@ $2.50$ por problema<br>**tres apartados**, con su peso
 ::div{.step v-click}
 [·]{.n}
 
-**subapartados** de $0.25$ y $0.50$<br>un contenido cada uno
+**subapartados** de $1.00$, $1.00$ y $0.50$<br>precisión $0.25$
 ::
 
 ::div{.step v-click}
@@ -228,7 +228,7 @@ solucionario **orientativo**<br>qué se puntúa, no un único camino
 
 ::div{.card v-click}
 ### Simbólico, luego numérico
-planteamiento y despeje primero
+planteamiento, despejar, sustituir
 ::
 
 ::div{.card.coral v-click}
@@ -237,7 +237,6 @@ planteamiento y despeje primero
 - carácter vectorial
 - redondeo y decimales
 
-[no cifras significativas · se corrige]{.note-line}
 ::
 
 ::div{.card.coral v-click}

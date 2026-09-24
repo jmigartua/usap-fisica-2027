@@ -6,7 +6,7 @@ ribbonTitle: "Ebaluazioa"
 
 [Evaluación · igual que en 2026]{.kicker}
 
-# Misma rúbrica, mismos criterios
+# Rúbrica, criterios: $=$
 
 ::div{.sum3}
 - $2.50$ / problema
@@ -44,7 +44,7 @@ el valor del alumno, si hace falta
 
 [Ebaluazioa · 2026an bezala]{.kicker}
 
-# Errubrika bera, irizpide berberak
+# Errubrika, irizpideak: $=$
 
 ::div{.sum3}
 - $2{,}50$ / problema
@@ -56,7 +56,7 @@ el valor del alumno, si hace falta
 
 ::div{.card v-click="1"}
 ### Sinbolikoa, zenbakizkoa
-planteatu, askatu, ordeztu
+planteatu, askatu, ordezkatu
 ::
 
 ::div{.card.coral v-click="2"}
@@ -75,7 +75,7 @@ ekuazio okerra · eskalar/bektore nahasketa
 ### Balioa eramaten da
 ikaslearen balioa, behar izanez gero
 
-[emaitza absurdua ez bada]{.note-line}
+[emaitza zentzugabekoa ez bada]{.note-line}
 ::
 
 :::

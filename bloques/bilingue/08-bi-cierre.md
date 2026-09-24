@@ -8,33 +8,29 @@ ribbonTitle: "Etxerako"
 [Para llevar]{.kicker}
 
 ::div{.section-title}
-Nada cambia.
+Nada cambia
 ::
 
 ::div{.section-title.amber v-click="1"}
-Salvo que se leerá menos.
+Se leerá menos
 ::
 
 ::div{.card.amber.mt-4 v-click="2"}
-Misma estructura, contenidos y corrección. Enunciados más cortos, misma rúbrica.
-
-Sabemos lo bastante para **no tocar la prueba**, y no lo bastante para **tocarla**.
+Misma estructura, contenidos y corrección. Enunciados más cortos, misma rúbrica
 ::
 
 [Etxerako]{.kicker}
 
 ::div{.section-title}
-Ez da ezer aldatzen.
+Ez da ezer aldatuko
 ::
 
 ::div{.section-title.amber v-click="1"}
-Gutxiago irakurriko dela izan ezik.
+Gutxiago irakurriko da
 ::
 
 ::div{.card.amber.mt-4 v-click="2"}
-Egitura, edukiak eta zuzenketa berberak. Enuntziatu laburragoak, errubrika bera.
-
-Nahikoa dakigu proba **ez ukitzeko**, eta ez nahikoa **ukitzeko**.
+Egitura, edukiak eta zuzenketa berberak. Enuntziatu laburragoak, errubrika bera
 ::
 
 ::::
