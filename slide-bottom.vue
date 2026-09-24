@@ -28,6 +28,12 @@ const slideTitle = computed(() => {
   return cleanTitle(($frontmatter as any)?.ribbonTitle ?? route?.meta?.slide?.title ?? '')
 })
 const occasion = computed(() => [r.value.event, r.value.place, r.value.date].filter(Boolean).join(' · '))
+
+// Which file this slide came from. The assembler writes `src:` into every
+// slide's frontmatter; showing it while developing means never having to work
+// back from a slide on screen to the file that produced it. Never in a build:
+// `import.meta.env.DEV` is false there, so it cannot reach the room or Pages.
+const srcFile = computed(() => (import.meta.env.DEV ? ((($frontmatter as any)?.blockSrc) ?? '') : ''))
 const progress = computed(() => total.value ? ($page.value / total.value) * 100 : 0)
 const show = computed(() => {
   const hidden: number[] = r.value.hideOnPages ?? [1]
@@ -56,6 +62,7 @@ function go(no: number) {
 </script>
 
 <template>
+  <div v-if="srcFile" class="srcbadge" :title="'Edita este fichero: ' + srcFile">{{ srcFile }}</div>
   <footer v-if="show" class="ribbon">
     <div v-if="r.showProgress !== false" class="ribbon-progress" :style="{ width: progress + '%' }" />
     <div class="ribbon-zone ribbon-left">
@@ -164,5 +171,18 @@ function go(no: number) {
 .tile-title { color: var(--fg-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .navpop-enter-active, .navpop-leave-active { transition: opacity .16s ease, transform .16s ease; }
 .navpop-enter-from, .navpop-leave-to { opacity: 0; transform: translateY(4px); }
-@media print { .ribbon-nav { display: none; } }
+/* Only ever rendered by the dev server (see srcFile above). */
+.srcbadge {
+  position: absolute; right: 0.5rem; bottom: 1.75rem; z-index: 6;
+  font: 400 0.52rem/1 'Roboto Mono', ui-monospace, monospace;
+  letter-spacing: 0.02em;
+  color: var(--amber);
+  background: var(--ink-3);
+  border: 1px solid var(--line); border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  opacity: 0.45; pointer-events: auto;
+  transition: opacity .2s ease;
+}
+.srcbadge:hover { opacity: 1; }
+@media print { .ribbon-nav, .srcbadge { display: none; } }
 </style>

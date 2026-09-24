@@ -2,20 +2,54 @@
 
 ## Qué se edita a mano, y qué no
 
-La regla de una línea: **se editan los bloques, nunca los ficheros de entrada.**
+**La carpeta es el guion.** Cada presentación tiene la suya, y dentro el número
+del fichero *es* el número de la diapositiva:
 
-`slides.md`, `enunciados.md`, `hallazgos.md` y `bilingue.md` los escribe
-`tools/build_decks.mjs` cada vez que corre `npm run decks`, que es al arrancar
-*cualquiera* de los `npm run dev*` y al construir. Todo lo que se teclee ahí
-desaparece en la siguiente pasada, sin aviso y sin copia. Por eso los cuatro
-llevan un aviso dentro de la cabecera, con la lista de los bloques que sí se
-editan.
+```
+bloques/
+  informativa/  01-portada-informativa.md … 09-enlaces.md
+  enunciados/   01-portada-enunciados.md  … 12-enlaces.md
+  hallazgos/    01-portada-hallazgos.md   … 15-enlaces.md
+  bilingue/     01-bi-portada.md          … 09-bi-enlaces.md
+  comun/        las cuatro diapositivas que usan varias presentaciones
+```
+
+¿La diapositiva 7 de la bilingüe? `bloques/bilingue/07-bi-constantes.md`. Y si
+la tienes delante en `npm run dev`, el fichero aparece escrito en la esquina
+inferior derecha: no hay que buscarlo. Ese rótulo solo existe en el servidor de
+desarrollo; en la construcción no se genera.
+
+**Las cuatro compartidas.** `cambio-enunciados`, `ref-vistazo`, `ref-constantes`
+y `enlaces` salen en dos o tres presentaciones, con distinto número en cada una
+—`enlaces` es la 9, la 12 y la 15—, así que no pueden llevar un número. Su texto
+vive una sola vez en `comun/`, y cada presentación guarda en su sitio un fichero
+numerado que solo dice dónde está:
+
+```
+bloques/informativa/09-enlaces.md
+    -> comun/enlaces.md
+```
+
+Así ninguna carpeta tiene huecos y el texto sigue existiendo una sola vez. Se
+edita el de `comun/`: se cambia una vez y cambia en las tres.
+
+**Los números se mantienen solos.** El orden lo manda `decks.json`; los números
+de los ficheros son consecuencia. Si cambias el orden ahí, `npm run decks`
+renombra los ficheros y dice cuáles ha movido. No hay que renumerar a mano.
+
+**Lo que no se toca.** `slides.md`, `enunciados.md`, `hallazgos.md` y
+`bilingue.md` los escribe `tools/build_decks.mjs` en cada `npm run decks`, que
+corre al arrancar *cualquiera* de los `npm run dev*` y al construir. Lo que se
+teclee ahí desaparece en la siguiente pasada, sin aviso y sin copia. Los cuatro
+llevan dentro de la cabecera la lista numerada de sus diapositivas con el
+fichero de cada una.
 
 Dónde tocar cada cosa:
 
 | Quiero cambiar… | Fichero |
 |---|---|
-| El texto de una diapositiva | `bloques/<nombre>.md` — el nombre sale del aviso en la cabecera del fichero generado |
+| El texto de la diapositiva *n* de una presentación | `bloques/<presentación>/<n>-*.md` |
+| Una de las cuatro compartidas | `bloques/comun/<nombre>.md` |
 | Qué diapositivas lleva cada presentación, y en qué orden | `decks.json`, lista `blocks` |
 | El título de una presentación, su rótulo de cinta, su texto de ocasión | `decks.json`, entrada de esa presentación |
 | Colores, tamaños, espaciados, los dos temas | `style.css` |
@@ -25,91 +59,40 @@ Dónde tocar cada cosa:
 | La tabla de datos y constantes | `data/constantes-2026.json` |
 | Un componente (tabla de constantes, barras, modal de saberes, panel de la banda) | `components/*.vue` |
 
-Y las dos diapositivas de la informativa bilingüe que no son texto suelto:
+Dos diapositivas de la bilingüe que no son texto suelto:
 
-- Los saberes básicos que abre el «+» de cada bloque: `bloques/bi-estructura.md`,
-  dentro de cada `::saber-modal`.
-- Los pasos con que se marca la tabla de constantes: `bloques/bi-constantes.md`.
-  Cada `::div{.step v-click="k"}` enciende la celda `k` de la tabla; los índices
-  van emparejados entre las dos mitades, y por eso el castellano y el euskera
-  aparecen a la vez.
+- Los saberes básicos que abre el «+» de cada bloque:
+  `bloques/bilingue/03-bi-estructura.md`, dentro de cada `::saber-modal`.
+- Los pasos con que se marca la tabla de constantes:
+  `bloques/bilingue/07-bi-constantes.md`. Cada `::div{.step v-click="k"}`
+  enciende la celda `k` de la tabla.
 
-En las diapositivas bilingües el orden del fichero es «toda la mitad castellana,
-luego toda la vasca», y la rejilla las vuelve a emparejar por filas. Si se añade
-un objeto a una mitad hay que añadir su gemelo a la otra, y darle el **mismo**
-`v-click="k"`: sin número, Slidev numera por orden de fichero y el euskera se
+**La trampa de las bilingües.** El orden del fichero es «toda la mitad
+castellana, luego toda la vasca», y la rejilla las vuelve a emparejar por filas.
+Si añades un objeto a una mitad, añade su gemelo a la otra y dale el **mismo**
+`v-click="k"`. Sin número, Slidev numera por orden de fichero y el euskera se
 queda pasos por detrás.
 
-Después de editar un bloque:
+Después de editar:
 
 ```bash
 npm run decks            # vuelve a montar los cuatro ficheros de entrada
 npm run dev:bilingue     # o dev / dev:enunciados / dev:hallazgos
 ```
 
-
-Hay **tres** presentaciones y **un** fondo común de diapositivas. Los tres ficheros de
-entrada se generan; no se editan a mano.
-
-| Fichero | Qué es | Diapositivas | En línea |
-|---|---|---|---|
-| `slides.md` | **La informativa** — la que se proyecta en la reunión | 9 | [`/usap-fisica-2027/`](https://jmigartua.github.io/usap-fisica-2027/) |
-| `enunciados.md` | Apoyo: cómo se construyen las versiones de los problemas | 12 | [`/enunciados/`](https://jmigartua.github.io/usap-fisica-2027/enunciados/) |
-| `hallazgos.md` | Apoyo: qué dicen los datos de 2026 | 15 | [`/hallazgos/`](https://jmigartua.github.io/usap-fisica-2027/hallazgos/) |
-
-Las tres se publican juntas en cada `push` a `main`, con
-`.github/workflows/deploy.yml`, y las tres terminan en la misma diapositiva de enlaces:
-las tres direcciones, con su código QR, y la que se está viendo marcada con «estás aquí»
-(la marca la pone `decks.json` con una clase; la diapositiva es una sola).
-
-Esos enlaces son **absolutos** a propósito. Escritos como rutas relativas funcionaban en la
-construcción y **no** en `npm run dev`: el servidor de desarrollo responde a cualquier ruta
-con la misma presentación, así que el enlace llevaba a donde ya estabas. Absolutos se
-comportan igual en desarrollo, en la construcción y en Pages. El precio es que el nombre del
-repositorio sí está escrito dentro; si cambia, hay que tocar `bloques/enlaces.md` y volver a
-generar los QR.
-
-```bash
-npm run decks            # regenera los tres desde bloques/ + decks.json
-npm run dev              # la informativa
-npm run dev:enunciados   # la de los enunciados
-npm run dev:hallazgos    # la de los hallazgos
-npm run build            # los tres: dist/, dist/enunciados/, dist/hallazgos/
-npm run preview          # los tres, construidos y servidos en el 4173
-npm run export           # tres PDF
-```
-
-Los enlaces entre presentaciones solo funcionan sobre la **construcción**, no en
-`npm run dev`: el servidor de desarrollo sirve una sola presentación en la raíz. Para
-verlos, `npm run preview`.
-
-Para reproducir en local exactamente lo que se publica, con el mismo prefijo:
-
-```bash
-BASE=/usap-fisica-2027/ npm run build
-mkdir -p /tmp/pages && cp -r dist /tmp/pages/usap-fisica-2027
-(cd /tmp/pages && python3 -m http.server 4180)
-# http://localhost:4180/usap-fisica-2027/
-```
-
-Un error de prefijo no se ve sirviendo `dist/` en la raíz — solo aparece aquí. Hay dos
-comprobaciones para eso, con esa construcción servida:
-
-```bash
-node pagescheck.mjs      # las tres bajo /usap-fisica-2027/: peticiones fallidas,
-                         # miniaturas, y a dónde van los enlaces entre ellas
-node clickcheck.mjs      # y que esos enlaces de verdad llevan a la otra presentación
-```
-
 ## Por qué un fondo común
 
-Tres diapositivas las quieren dos presentaciones a la vez: **la banda objetivo de los
-enunciados**, **la tabla de la prueba de 2026** y **la tabla de datos y constantes**. Como
-tres copias se separarían — es exactamente lo que ya pasó una vez, cuando el deck llevaba una
-figura que el dossier había corregido tres días antes — hay una sola copia de cada una.
+Cuatro diapositivas las quieren dos o tres presentaciones a la vez: **la banda objetivo de
+los enunciados**, **la tabla de la prueba de 2026**, **la tabla de datos y constantes** y **la
+de enlaces**. Como las copias se separarían — es exactamente lo que ya pasó una vez, cuando el
+deck llevaba una figura que el dossier había corregido tres días antes — hay una sola copia de
+cada una, en `bloques/comun/`, y cada presentación guarda un fichero numerado que apunta a
+ella.
 
-- `bloques/<nombre>.md` — una diapositiva. Primero su cabecera YAML, luego una línea con
-  `...`, luego el cuerpo. Las portadas no tienen cabecera y empiezan por `...`.
+- `bloques/<presentación>/NN-<nombre>.md` — una diapositiva, donde `NN` es su número en esa
+  presentación. Primero su cabecera YAML, luego una línea con `...`, luego el cuerpo. Las
+  portadas no tienen cabecera y empiezan por `...`. Si la primera línea del fichero es
+  `-> comun/<nombre>.md`, es un puntero: el texto está allí.
 - `decks.json` — qué diapositivas lleva cada presentación y en qué orden. Una entrada puede
   ser el nombre a secas o un objeto `{"b": "nombre", "section": "…", "ribbonTitle": "…"}`:
   la misma diapositiva es «Anexo» en una presentación y el argumento principal en otra, y la

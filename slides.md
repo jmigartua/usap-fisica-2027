@@ -4,16 +4,16 @@
 #
 #  slides.md is assembled by tools/build_decks.mjs from bloques/ + decks.json.
 #  Anything typed here is destroyed by the next `npm run decks`.
-#  Edit the block instead:
-#    bloques/portada-informativa.md
-#    bloques/mensaje.md
-#    bloques/estructura.md
-#    bloques/evaluacion.md
-#    bloques/cambio-enunciados.md
-#    bloques/ref-vistazo.md
-#    bloques/ref-constantes.md
-#    bloques/cierre-informativa.md
-#    bloques/enlaces.md
+#  Edit the slide instead — number = slide number:
+#    01  bloques/informativa/01-portada-informativa.md
+#    02  bloques/informativa/02-mensaje.md
+#    03  bloques/informativa/03-estructura.md
+#    04  bloques/informativa/04-evaluacion.md
+#    05  bloques/informativa/05-cambio-enunciados.md  ->  bloques/comun/cambio-enunciados.md
+#    06  bloques/informativa/06-ref-vistazo.md  ->  bloques/comun/ref-vistazo.md
+#    07  bloques/informativa/07-ref-constantes.md  ->  bloques/comun/ref-constantes.md
+#    08  bloques/informativa/08-cierre-informativa.md
+#    09  bloques/informativa/09-enlaces.md  ->  bloques/comun/enlaces.md
 # ===========================================================================
 theme: default
 title: "USaP Física 2027"
@@ -61,6 +61,7 @@ Misma estructura, contenidos y corrección que en 2026.<br>Un único cambio: enu
 ---
 transition: fade
 section: "El mensaje"
+blockSrc: "bloques/informativa/02-mensaje.md"
 ---
 [El mensaje]{.kicker}
 
@@ -96,6 +97,7 @@ Enunciados **más cortos** · mismas competencias, datos y rúbrica<br>competenc
 ---
 transition: slide-up
 section: "Estructura"
+blockSrc: "bloques/informativa/03-estructura.md"
 ---
 [Estructura · igual que en 2026]{.kicker}
 
@@ -192,6 +194,7 @@ $2.50$ puntos
 ---
 transition: slide-left
 section: "Evaluación"
+blockSrc: "bloques/informativa/04-evaluacion.md"
 ---
 [Evaluación · igual que en 2026]{.kicker}
 
@@ -257,6 +260,7 @@ planteamiento y despeje primero
 ---
 transition: slide-up
 section: "El cambio"
+blockSrc: "bloques/informativa/05-cambio-enunciados.md -> bloques/comun/cambio-enunciados.md"
 ---
 [El único cambio]{.kicker}
 
@@ -320,6 +324,7 @@ transition: fade
 section: Referencia
 class: dense
 ribbonTitle: "La prueba de 2026"
+blockSrc: "bloques/informativa/06-ref-vistazo.md -> bloques/comun/ref-vistazo.md"
 ---
 [Anexo · por si se pregunta]{.kicker}
 
@@ -345,6 +350,7 @@ transition: slide-up
 section: Referencia
 class: dense
 ribbonTitle: "Datos y constantes"
+blockSrc: "bloques/informativa/07-ref-constantes.md -> bloques/comun/ref-constantes.md"
 ---
 [Anexo · la tabla de datos y constantes]{.kicker}
 
@@ -429,6 +435,7 @@ layout: center
 transition: view-transition
 section: "Cierre"
 ribbonTitle: "Para llevar"
+blockSrc: "bloques/informativa/08-cierre-informativa.md"
 ---
 [Para llevar]{.kicker.text-center}
 
@@ -454,6 +461,7 @@ transition: fade
 section: "Las tres"
 class: "dense here-informativa"
 ribbonTitle: "Dónde está cada cosa"
+blockSrc: "bloques/informativa/09-enlaces.md -> bloques/comun/enlaces.md"
 ---
 [Las tres presentaciones]{.kicker}
 

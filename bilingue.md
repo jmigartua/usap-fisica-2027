@@ -4,16 +4,16 @@
 #
 #  bilingue.md is assembled by tools/build_decks.mjs from bloques/ + decks.json.
 #  Anything typed here is destroyed by the next `npm run decks`.
-#  Edit the block instead:
-#    bloques/bi-portada.md
-#    bloques/bi-mensaje.md
-#    bloques/bi-estructura.md
-#    bloques/bi-evaluacion.md
-#    bloques/bi-cambio.md
-#    bloques/bi-vistazo.md
-#    bloques/bi-constantes.md
-#    bloques/bi-cierre.md
-#    bloques/bi-enlaces.md
+#  Edit the slide instead — number = slide number:
+#    01  bloques/bilingue/01-bi-portada.md
+#    02  bloques/bilingue/02-bi-mensaje.md
+#    03  bloques/bilingue/03-bi-estructura.md
+#    04  bloques/bilingue/04-bi-evaluacion.md
+#    05  bloques/bilingue/05-bi-cambio.md
+#    06  bloques/bilingue/06-bi-vistazo.md
+#    07  bloques/bilingue/07-bi-constantes.md
+#    08  bloques/bilingue/08-bi-cierre.md
+#    09  bloques/bilingue/09-bi-enlaces.md
 # ===========================================================================
 theme: default
 title: "Fisika 2027 · USaP"
@@ -65,6 +65,7 @@ Fisika 2027:<br>ez da (ia) ezer aldatuko
 transition: fade
 class: dense bi-bg
 ribbonTitle: "Mezua"
+blockSrc: "bloques/bilingue/02-bi-mensaje.md"
 ---
 ::::div{.bi2.rows-6}
 
@@ -122,6 +123,7 @@ Enuntziatu **laburragoak** · gaitasun, datu eta errubrika berberak<br>irakurmen
 transition: slide-up
 class: dense bi-bg
 ribbonTitle: "Egitura"
+blockSrc: "bloques/bilingue/03-bi-estructura.md"
 ---
 ::::div{.bi2.rows-5}
 
@@ -283,6 +285,7 @@ $4 \times 2{,}50 = 10$ · soberako erantzunak, hurrenez hurren zuzentzen dira
 transition: slide-left
 class: dense bi-bg
 ribbonTitle: "Ebaluazioa"
+blockSrc: "bloques/bilingue/04-bi-evaluacion.md"
 ---
 ::::div{.bi2.rows-4}
 
@@ -368,6 +371,7 @@ ikaslearen balioa, behar izanez gero
 transition: slide-up
 class: dense bi-bg
 ribbonTitle: "Aldaketa"
+blockSrc: "bloques/bilingue/05-bi-cambio.md"
 ---
 ::::div{.bi2.rows-2.mb-1}
 
@@ -444,6 +448,7 @@ narratiba · errepikapenak · formatua
 transition: fade
 class: dense tight bitab-slide bi-bg
 ribbonTitle: "Eranskina · taula"
+blockSrc: "bloques/bilingue/06-bi-vistazo.md"
 ---
 ::::div{.bi2.rows-2.mb-1}
 
@@ -482,6 +487,7 @@ Problema bakoitza, $2{,}50$ · $0{,}25$ eta $0{,}50$-eko azpiatalak
 transition: slide-up
 class: dense bi-bg
 ribbonTitle: "Datuak eta konstanteak"
+blockSrc: "bloques/bilingue/07-bi-constantes.md"
 ---
 ::::div{.bi2.rows-2.mb-1}
 
@@ -611,6 +617,7 @@ layout: center
 transition: view-transition
 class: bi-bg
 ribbonTitle: "Etxerako"
+blockSrc: "bloques/bilingue/08-bi-cierre.md"
 ---
 ::::div{.bi2.rows-4}
 
@@ -652,6 +659,7 @@ Nahikoa dakigu proba **ez ukitzeko**, eta ez nahikoa **ukitzeko**.
 transition: fade
 class: dense bi-bg
 ribbonTitle: "Non dago zer"
+blockSrc: "bloques/bilingue/09-bi-enlaces.md"
 ---
 ::::div{.bi2.rows-2.mb-1}
 

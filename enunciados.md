@@ -4,19 +4,19 @@
 #
 #  enunciados.md is assembled by tools/build_decks.mjs from bloques/ + decks.json.
 #  Anything typed here is destroyed by the next `npm run decks`.
-#  Edit the block instead:
-#    bloques/portada-enunciados.md
-#    bloques/cambio-enunciados.md
-#    bloques/ref-vistazo.md
-#    bloques/enun-paso-a-paso.md
-#    bloques/enun-como-debio.md
-#    bloques/enun-competencial.md
-#    bloques/enun-verbos-antes.md
-#    bloques/enun-niveles.md
-#    bloques/enun-respuestas.md
-#    bloques/ref-constantes.md
-#    bloques/cierre-enunciados.md
-#    bloques/enlaces.md
+#  Edit the slide instead — number = slide number:
+#    01  bloques/enunciados/01-portada-enunciados.md
+#    02  bloques/enunciados/02-cambio-enunciados.md  ->  bloques/comun/cambio-enunciados.md
+#    03  bloques/enunciados/03-ref-vistazo.md  ->  bloques/comun/ref-vistazo.md
+#    04  bloques/enunciados/04-enun-paso-a-paso.md
+#    05  bloques/enunciados/05-enun-como-debio.md
+#    06  bloques/enunciados/06-enun-competencial.md
+#    07  bloques/enunciados/07-enun-verbos-antes.md
+#    08  bloques/enunciados/08-enun-niveles.md
+#    09  bloques/enunciados/09-enun-respuestas.md
+#    10  bloques/enunciados/10-ref-constantes.md  ->  bloques/comun/ref-constantes.md
+#    11  bloques/enunciados/11-cierre-enunciados.md
+#    12  bloques/enunciados/12-enlaces.md  ->  bloques/comun/enlaces.md
 # ===========================================================================
 theme: default
 title: "Los enunciados, problema a problema"
@@ -65,6 +65,7 @@ De dónde salen las palabras de más y cómo se quitan sin tocar<br>la rúbrica,
 transition: slide-up
 section: "El objetivo"
 ribbonTitle: "La banda objetivo"
+blockSrc: "bloques/enunciados/02-cambio-enunciados.md -> bloques/comun/cambio-enunciados.md"
 ---
 [El único cambio]{.kicker}
 
@@ -128,6 +129,7 @@ transition: fade
 section: "El punto de partida"
 class: dense
 ribbonTitle: "La prueba de 2026"
+blockSrc: "bloques/enunciados/03-ref-vistazo.md -> bloques/comun/ref-vistazo.md"
 ---
 [Anexo · por si se pregunta]{.kicker}
 
@@ -152,6 +154,7 @@ Palabras: enunciado en castellano, sin los pesos
 transition: slide-left
 section: "Cómo se llegó a 2026"
 class: dense
+blockSrc: "bloques/enunciados/04-enun-paso-a-paso.md"
 ---
 <div class="kicker">Anexo · problema 2 de 2026 · de izquierda a derecha: cómo se llegó al enunciado de 2026</div>
 
@@ -296,6 +299,7 @@ De lo habitual a lo competencial, con narrativa y repeticiones · $408$ palabras
 transition: fade
 section: "Cómo debió ser"
 class: dense tight
+blockSrc: "bloques/enunciados/05-enun-como-debio.md"
 ---
 <div class="kicker">Anexo · ingeniería inversa · paso 3 → 2 · problema 2 completo</div>
 
@@ -556,6 +560,7 @@ Un microgenerador consiste en una espira circular plana de radio $R = 6.0$ cm qu
 transition: fade
 section: "La forma pura"
 class: dense tight
+blockSrc: "bloques/enunciados/06-enun-competencial.md"
 ---
 <div class="kicker">Anexo · ingeniería inversa · paso 2 → 1 · de lo que debió ser a la forma competencial ideal</div>
 
@@ -701,6 +706,7 @@ La más corta de leer y la más difícil de entender: todo lo intermedio queda a
 transition: fade
 section: "Lo que se pedía antes"
 class: dense tight
+blockSrc: "bloques/enunciados/07-enun-verbos-antes.md"
 ---
 <div class="kicker">Anexo · ingeniería inversa · último paso · de la forma competencial ideal al enunciado habitual</div>
 
@@ -887,6 +893,7 @@ Recuadros: los tres cálculos habituales, <span class="bx-flux on">flujo</span>,
 ---
 transition: slide-up
 section: "Los cuatro niveles"
+blockSrc: "bloques/enunciados/08-enun-niveles.md"
 ---
 [Anexo · los verbos de la competencia]{.kicker}
 
@@ -955,6 +962,7 @@ Acortar: un verbo por nivel, sin repeticiones entre apartados · la escalera no 
 ---
 transition: fade
 section: "Las respuestas"
+blockSrc: "bloques/enunciados/09-enun-respuestas.md"
 ---
 [Anexo · preguntas previsibles]{.kicker}
 
@@ -1005,6 +1013,7 @@ transition: slide-up
 section: "Datos y constantes"
 class: dense
 ribbonTitle: "Datos y constantes"
+blockSrc: "bloques/enunciados/10-ref-constantes.md -> bloques/comun/ref-constantes.md"
 ---
 [Anexo · la tabla de datos y constantes]{.kicker}
 
@@ -1089,6 +1098,7 @@ transition: fade
 section: "Cierre"
 class: dense
 ribbonTitle: "Para llevar"
+blockSrc: "bloques/enunciados/11-cierre-enunciados.md"
 ---
 [Para llevar]{.kicker}
 
@@ -1125,6 +1135,7 @@ transition: fade
 section: "Las tres"
 class: "dense here-enunciados"
 ribbonTitle: "Dónde está cada cosa"
+blockSrc: "bloques/enunciados/12-enlaces.md -> bloques/comun/enlaces.md"
 ---
 [Las tres presentaciones]{.kicker}
 
