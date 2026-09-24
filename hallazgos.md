@@ -1,4 +1,26 @@
 ---
+# ===========================================================================
+#  GENERATED FILE — DO NOT EDIT   ·   FITXATEGI SORTUA — EZ EDITATU
+#
+#  hallazgos.md is assembled by tools/build_decks.mjs from bloques/ + decks.json.
+#  Anything typed here is destroyed by the next `npm run decks`.
+#  Edit the block instead:
+#    bloques/portada-hallazgos.md
+#    bloques/datos-serie.md
+#    bloques/datos-materias.md
+#    bloques/datos-semana.md
+#    bloques/datos-presupuesto.md
+#    bloques/datos-catalunya.md
+#    bloques/anx-rutas.md
+#    bloques/anx-inercia.md
+#    bloques/anx-2024.md
+#    bloques/anx-ponderaciones.md
+#    bloques/anx-que-hizo.md
+#    bloques/cierre-prediccion.md
+#    bloques/cierre-peticion.md
+#    bloques/cierre-hallazgos.md
+#    bloques/enlaces.md
+# ===========================================================================
 theme: default
 title: "Qué sabemos de 2026, y qué no"
 titleTemplate: '%s · Coordinación'

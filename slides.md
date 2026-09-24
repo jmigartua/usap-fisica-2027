@@ -1,4 +1,20 @@
 ---
+# ===========================================================================
+#  GENERATED FILE — DO NOT EDIT   ·   FITXATEGI SORTUA — EZ EDITATU
+#
+#  slides.md is assembled by tools/build_decks.mjs from bloques/ + decks.json.
+#  Anything typed here is destroyed by the next `npm run decks`.
+#  Edit the block instead:
+#    bloques/portada-informativa.md
+#    bloques/mensaje.md
+#    bloques/estructura.md
+#    bloques/evaluacion.md
+#    bloques/cambio-enunciados.md
+#    bloques/ref-vistazo.md
+#    bloques/ref-constantes.md
+#    bloques/cierre-informativa.md
+#    bloques/enlaces.md
+# ===========================================================================
 theme: default
 title: "USaP Física 2027"
 titleTemplate: '%s · Coordinación'

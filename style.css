@@ -716,3 +716,230 @@
 .card.coral .tel .v, .card.coral .v { color: var(--coral); }
 .card.lime  .tel .v, .card.lime  .v { color: var(--lime); }
 .slidev-layout .note-line .v { font-weight: 500; }
+
+/* ── Bilingüe ──────────────────────────────────────────────────────────────
+   Las dos lenguas pesan lo mismo: mismo cuerpo, mismo color, misma jerarquía.
+   Lo único que las distingue es una etiqueta pequeña y la línea que las separa.
+   Teñir el euskera de gris lo convertiría en una nota al pie, que es
+   exactamente lo que no es.
+
+   Dos tratamientos, para decidir mirándolos:
+
+   .bi        dos columnas, castellano a la izquierda y euskera a la derecha.
+              Cumple «mitad y mitad», y solo funciona si lo que hay dentro es
+              texto: una rejilla de tres tarjetas o una tabla a media anchura
+              deja de leerse.
+
+   .bi-stack  el elemento no se toca y el bilingüe ocurre dentro: castellano,
+              filete, euskera. La distribución de la diapositiva queda intacta;
+              lo que crece es el alto. */
+.bi {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  column-gap: 1.6rem;
+  align-items: start;
+}
+.bi > .rule { background: var(--line); align-self: stretch; }
+
+.lang {
+  display: inline-block;
+  font-size: 0.56rem;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.02rem 0.3rem;
+  margin-bottom: 0.35rem;
+  vertical-align: middle;
+}
+
+/* filete entre las dos lenguas dentro de un mismo elemento */
+/* Bloque, no inline: como span, el filete se dibujaba alrededor del texto y
+   parecía tacharlo. */
+.bi-stack .eu {
+  display: block;
+  margin-top: 0.42rem;
+  padding-top: 0.42rem;
+  border-top: 1px solid var(--line);
+}
+.card.kpi .bi-stack .eu { margin-top: 0.3rem; padding-top: 0.3rem; }
+
+/* la etiqueta, cuando va en línea delante del texto */
+.lang.inline { margin-bottom: 0; margin-right: 0.4rem; }
+
+/* una tabla bilingüe: la fila en euskera va pegada a la suya en castellano */
+tr.eu td { border-top: none; padding-top: 0; }
+tr.eu td, tr.eu th { color: #cfd6e4; }
+tr.es td { padding-bottom: 0; }
+
+/* ── Variante A · dos columnas espejo ──────────────────────────────────────
+   Media diapositiva por lengua, y las dos mitades tienen que ser la misma
+   figura: quien lee en castellano mira siempre a la izquierda y encuentra el
+   elemento k en el mismo sitio en el que quien lee en euskera lo encuentra a la
+   derecha. Si no, hay que recorrer la diapositiva entera para localizar lo
+   suyo, que es justo lo que una diapositiva no debe pedir.
+
+   Dos columnas independientes NO lo consiguen: el euskera ocupa otras líneas,
+   las tarjetas crecen distinto y las parejas se desalinean. Por eso las dos
+   mitades son una sola rejilla. `grid-auto-flow: column` llena primero la
+   columna de la izquierda y después la de la derecha, de modo que el orden en
+   el fichero sigue siendo «todo el castellano, luego todo el euskera» —
+   legible— mientras que la pareja k comparte fila y, por tanto, alto.
+
+       ::::div{.bi2.rows-4}
+       …cuatro elementos en castellano…
+       …los cuatro en euskera…
+       ::::
+
+   El filete central es un fondo, no un elemento: así no ocupa una celda ni
+   descuadra el reparto. */
+.bi2 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.3rem;
+  row-gap: 0.55rem;
+  align-items: stretch;
+  background: linear-gradient(var(--line), var(--line)) center top / 1px 100% no-repeat;
+}
+.bi2.rows-1 { grid-template-rows: repeat(1, auto); }
+.bi2.rows-2 { grid-template-rows: repeat(2, auto); }
+.bi2.rows-3 { grid-template-rows: repeat(3, auto); }
+.bi2.rows-4 { grid-template-rows: repeat(4, auto); }
+.bi2.rows-5 { grid-template-rows: repeat(5, auto); }
+.bi2.rows-6 { grid-template-rows: repeat(6, auto); }
+.bi2 > * { min-width: 0; }
+
+/* La etiqueta de lengua encabeza cada mitad y es la primera fila de la rejilla,
+   para que las dos empiecen a la misma altura. */
+.bi2 .lang { justify-self: start; margin-bottom: 0; }
+
+/* Cada mitad lleva su propio antetítulo y su propio título: el castellano
+   encima del castellano y el euskera encima del euskera. Un título bilingüe
+   centrado obliga a leer las dos lenguas para saber cuál es la tuya. */
+/* Los hijos de texto se anclan arriba de su fila y llevan márgenes fijos. Sin
+   esto uno de los dos antetítulos se estiraba para llenar la fila y recogía un
+   margen negativo de la hoja del tema, de modo que los dos quedaban a alturas
+   distintas: precisamente el desajuste que la rejilla compartida existe para
+   evitar. Las tarjetas siguen estirándose, que es lo que iguala su alto. */
+.bi2 > p, .bi2 > h1 { align-self: start; margin-top: 0; }
+.bi2 > p { margin-bottom: 0.1rem; }
+.bi2 > h1 { margin-bottom: 0.4rem; }
+.bi2 > p > .kicker { margin-bottom: 0; }
+
+/* El tema trae `.slidev-layout h1+p { opacity: .5; margin-top: -.5rem }`, pensado
+   para un subtítulo bajo un titular. En una diapositiva bilingüe el antetítulo
+   de la segunda lengua ES un `h1 + p`, así que se dibujaba a media opacidad y
+   medio renglón más arriba que el de la primera: el euskera atenuado por un
+   efecto secundario. Las dos lenguas pesan lo mismo. */
+.slidev-layout .bi2 > h1 + p { opacity: 1; margin-top: 0; margin-bottom: 0.1rem; }
+/* una fila de etiquetas pegada a lo que encabeza */
+.bi2.rows-1 { row-gap: 0; }
+.bi2.mb-1 { margin-bottom: 0.25rem; }
+
+/* Fichas compactas: a media anchura la fila de tres no cabe, así que cada una
+   pasa a una fila con el signo a la izquierda. Misma forma en las dos mitades. */
+.eq-row {
+  display: grid;
+  grid-template-columns: 2.1rem 1fr;
+  column-gap: 0.75rem;
+  align-items: center;
+  padding: 0.6rem 0.9rem;
+}
+.eq-row .eq { font-size: 1.7rem; line-height: 1; color: var(--teal); text-align: center; }
+.eq-row .t b, .eq-row .t strong { color: #f1f4f9; font-weight: 500; }
+.eq-row .t { font-size: 0.84rem; line-height: 1.34; color: var(--muted); }
+
+/* Una tabla espejo: UNA sola tabla con las columnas duplicadas, no dos tablas.
+   Dos tablas se reparten el ancho según lo que lleven dentro y sus filas dejan
+   de coincidir; una sola tabla con `table-layout: fixed` fija los anchos y
+   comparte el alto de cada fila entre las dos mitades por construcción. */
+/* Slidev no deja poner clase a una tabla escrita en markdown, así que la
+   diapositiva la marca con `class: bitab-slide` y el estilo cuelga de ahí. */
+.bitab-slide table, .bitab { table-layout: fixed; width: 100%; font-size: 0.74rem; }
+.bitab-slide table td, .bitab td, .bitab-slide table th, .bitab th { padding: 0.28rem 0.45rem; vertical-align: top; }
+.bitab-slide td:nth-child(4), .bitab-slide th:nth-child(4), .bitab td:nth-child(4), .bitab th:nth-child(4) {
+  border-left: 1px solid var(--line);
+  padding-left: 1.15rem;
+}
+.bitab-slide th:nth-child(1), .bitab-slide td:nth-child(1),
+.bitab-slide th:nth-child(4), .bitab-slide td:nth-child(4) { width: 15.5%; }
+.bitab-slide th:nth-child(3), .bitab-slide td:nth-child(3),
+.bitab-slide th:nth-child(6), .bitab-slide td:nth-child(6) { width: 15%; white-space: nowrap; }
+
+/* un objeto que no tiene lengua —una figura, la tabla de constantes, un QR—
+   no se duplica: se queda entero y centrado, y lo bilingüe es lo que lo rodea */
+.nolang { max-width: 100%; margin-left: auto; margin-right: auto; }
+
+/* Una tabla a media anchura: el cuerpo baja un punto y la columna de números
+   no parte, porque «1.00 + 1.00 +» y un «0.50» suelto en la línea siguiente se
+   lee como dos cosas distintas. */
+.bi table { font-size: 0.74rem; }
+.bi td:last-child, .bi th:last-child { white-space: nowrap; }
+.bi td, .bi th { padding: 0.26rem 0.4rem; }
+
+/* ── Fondo por lengua ──────────────────────────────────────────────────────
+   Cada mitad sobre un fondo distinto, para que la mirada caiga en su lado sin
+   tener que leer la etiqueta. Un degradado, no un corte: una frontera dura
+   partiría la diapositiva en dos diapositivas, y el paso suave se lee como
+   ambiente y no como borde.
+
+   El fondo del tema ya tiene dos halos —turquesa arriba a la derecha, ámbar
+   abajo a la izquierda—, así que el lavado va en ese mismo sentido en lugar de
+   pelearse con él: la izquierda, un punto más oscura y cálida; la derecha, un
+   punto más clara y fría. La izquierda queda claramente más oscura y la derecha
+   claramente más clara; el paso sigue siendo suave, pero los extremos se
+   distinguen sin mirarlos dos veces. El primer intento era tan tenue que no
+   hacía nada.
+
+   Los dos halos del tema se reducen a uno y a la mitad de fuerza en estas
+   diapositivas: con dos degradados más variando a lo ancho, el de la lengua se
+   leía como más de lo mismo en vez de como una frontera.
+
+   Solo luminancia, sin tinte: el ámbar, el turquesa y el coral ya significan
+   algo en estas diapositivas, y teñir media diapositiva de uno de ellos le
+   daría un sentido que no tiene.
+
+   Va como primera capa, antes de los dos halos y del color base, de modo que
+   el resto del tema se conserva intacto. */
+.slidev-layout.bi-bg {
+  background:
+    linear-gradient(90deg,
+      rgba(0, 0, 0, 0.34) 0%,
+      rgba(0, 0, 0, 0.33) 30%,
+      rgba(0, 0, 0, 0.00) 50%,
+      rgba(255, 255, 255, 0.085) 70%,
+      rgba(255, 255, 255, 0.092) 100%),
+    radial-gradient(900px 480px at 88% -12%, rgba(63, 208, 201, 0.10), transparent 62%),
+    var(--ink);
+}
+
+/* Con el lavado detrás, el filete central sobra: la frontera ya está dibujada
+   por el propio fondo. Se deja mucho más tenue, solo como referencia. */
+.bi-bg .bi2 {
+  background: linear-gradient(rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.055))
+              center top / 1px 100% no-repeat;
+}
+
+/* ── Bilingual halves: a chip row, and a three-line summary ────────
+   The conditions of the exam read as pills, not as a run-on sentence: four
+   short noun phrases, each its own object. `.sum3` is the same idea applied to
+   the scoring summary — one claim per line instead of one line of four claims
+   separated by middle dots, which at this size nobody parses. */
+.chip-row { display: flex; flex-wrap: wrap; gap: 0.3rem 0; margin-top: 0.45rem; }
+.chip-row .chip { margin-right: 0.3rem; }
+
+.slidev-layout .sum3 ul,
+.slidev-layout ul.sum3 { list-style: none; padding-left: 0; margin: 0.45rem 0 0; }
+.slidev-layout .sum3 li {
+  font-size: 0.86rem;
+  line-height: 1.32;
+  color: var(--fg);
+  margin: 0.2rem 0;
+  padding: 0.24rem 0.7rem;
+  border-left: 2px solid rgba(63,208,201,0.55);
+  background: rgba(255,255,255,0.03);
+  border-radius: 0 8px 8px 0;
+}
+.slidev-layout .sum3 li strong { color: var(--amber); font-weight: 500; }

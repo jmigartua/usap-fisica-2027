@@ -42,7 +42,12 @@ for (const deck of manifest.decks) {
   head = head.replace(/^title:.*$/m, `title: ${JSON.stringify(deck.title)}`)
   head = head.replace(/^info: \|\n(?:  .*\n)+/m,
     `info: |\n  ## ${deck.title}\n  ${deck.info}\n  Generada por tools/build_decks.mjs desde bloques/ — no editar a mano.\n`)
-  head += `\nribbon:\n  title: ${JSON.stringify(deck.ribbonTitle)}\n  thumbsDir: ${JSON.stringify(deck.thumbs)}\n`
+  // Ribbon: the deck's own title and thumbnail directory, plus any further
+  // ribbon field the manifest overrides for this deck alone (the bilingual deck
+  // carries a Basque occasion, the Spanish ones the project-wide one).
+  const ribbon = { title: deck.ribbonTitle, thumbsDir: deck.thumbs, ...(deck.ribbon ?? {}) }
+  head += '\nribbon:\n' + Object.entries(ribbon)
+    .map(([k, v]) => `  ${k}: ${JSON.stringify(v)}`).join('\n') + '\n'
 
   let doc = head
   blocks.forEach(({ b, ...over }, n) => {
@@ -53,6 +58,22 @@ for (const deck of manifest.decks) {
     for (const [k, v] of Object.entries(over)) fm = setKey(fm, k, v)
     doc += n === 0 ? `\n---\n${blk.body}\n` : `\n---\n${fm}\n---\n${blk.body}\n`
   })
+  // A banner, because the one thing that has actually cost work in this project
+  // is someone editing the generated file and losing it on the next assembly.
+  // It has to live INSIDE the headmatter as YAML comments: Slidev requires the
+  // frontmatter fence to be the first thing in the file, so an HTML comment
+  // above it would break the parse.
+  const banner = [
+    '# ===========================================================================',
+    '#  GENERATED FILE — DO NOT EDIT   ·   FITXATEGI SORTUA — EZ EDITATU',
+    '#',
+    `#  ${deck.out} is assembled by tools/build_decks.mjs from bloques/ + decks.json.`,
+    '#  Anything typed here is destroyed by the next `npm run decks`.',
+    '#  Edit the block instead:',
+    ...blocks.map(b => `#    bloques/${b.b}.md`),
+    '# ===========================================================================',
+  ].join('\n')
+  doc = doc.replace(/^---\n/, `---\n${banner}\n`)
   writeFileSync(join(root, deck.out), doc)
   console.log(`${deck.out.padEnd(16)} ${String(blocks.length).padStart(2)} slides`)
 }

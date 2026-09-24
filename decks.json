@@ -1,5 +1,5 @@
 {
-  "_comment": "Three presentations from one pool of slides. Each entry names a block in bloques/ and may override that block's `section:`, `ribbonTitle:`, `class:` or `transition:` for this deck — the same slide is 'Anexo' in one deck and the main argument in another. Build with `npm run decks`; never edit slides.md, enunciados.md or hallazgos.md by hand, they are generated.",
+  "_comment": "Three presentations from one pool of slides. Each entry names a block in bloques/ and may override that block's `section:`, `ribbonTitle:`, `class:` or `transition:` for this deck — the same slide is 'Anexo' in one deck and the main argument in another. Build with `npm run decks`; never edit slides.md, enunciados.md or hallazgos.md by hand, they are generated. Una presentación con \"draft\": true se genera con npm run decks pero no se construye ni se publica: sirve para trabajar en ella sin tocar las tres vivas.",
   "decks": [
     {
       "out": "slides.md",
@@ -147,6 +147,30 @@
           "class": "dense here-hallazgos"
         }
       ]
+    },
+    {
+      "out": "bilingue.md",
+      "draft": true,
+      "title": "Fisika 2027 · USaP",
+      "ribbonTitle": "USaP Fisika 2027",
+      "thumbs": "thumbs/bilingue",
+      "info": "Informatiboa, euskaraz eta gaztelaniaz, erdi eta erdi diapositiba bakoitzean.",
+      "blocks": [
+        "bi-portada",
+        "bi-mensaje",
+        "bi-estructura",
+        "bi-evaluacion",
+        "bi-cambio",
+        "bi-vistazo",
+        "bi-constantes",
+        "bi-cierre",
+        "bi-enlaces"
+      ],
+      "ribbon": {
+        "event": "Koordinazio-bilera",
+        "place": "EHU",
+        "date": "2026–27 ikasturtea"
+      }
     }
   ]
 }

@@ -1,4 +1,23 @@
 ---
+# ===========================================================================
+#  GENERATED FILE — DO NOT EDIT   ·   FITXATEGI SORTUA — EZ EDITATU
+#
+#  enunciados.md is assembled by tools/build_decks.mjs from bloques/ + decks.json.
+#  Anything typed here is destroyed by the next `npm run decks`.
+#  Edit the block instead:
+#    bloques/portada-enunciados.md
+#    bloques/cambio-enunciados.md
+#    bloques/ref-vistazo.md
+#    bloques/enun-paso-a-paso.md
+#    bloques/enun-como-debio.md
+#    bloques/enun-competencial.md
+#    bloques/enun-verbos-antes.md
+#    bloques/enun-niveles.md
+#    bloques/enun-respuestas.md
+#    bloques/ref-constantes.md
+#    bloques/cierre-enunciados.md
+#    bloques/enlaces.md
+# ===========================================================================
 theme: default
 title: "Los enunciados, problema a problema"
 titleTemplate: '%s · Coordinación'

@@ -1,7 +1,18 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 
-defineProps<{ title: string }>()
+// `kicker` / `aria` / `close` are props so the bilingual deck can open the same
+// modal in Basque on its right-hand half; the Spanish decks get the defaults.
+withDefaults(defineProps<{
+  title: string
+  kicker?: string
+  aria?: string
+  close?: string
+}>(), {
+  kicker: 'Saberes básicos · orientaciones 2025/26, § 2',
+  aria: 'Saberes básicos',
+  close: 'Cerrar',
+})
 
 const open = ref(false)
 
@@ -20,8 +31,8 @@ onUnmounted(() => window.removeEventListener('keydown', onKey, true))
   <button
     class="saber-btn"
     type="button"
-    :aria-label="'Saberes básicos: ' + title"
-    title="Saberes básicos del bloque"
+    :aria-label="aria + ': ' + title"
+    :title="aria"
     @click.stop="open = true"
   >
     +
@@ -31,10 +42,10 @@ onUnmounted(() => window.removeEventListener('keydown', onKey, true))
       <div class="saber-modal" role="dialog" :aria-label="title">
         <div class="saber-head">
           <div>
-            <div class="saber-kicker">Saberes básicos · orientaciones 2025/26, § 2</div>
+            <div class="saber-kicker">{{ kicker }}</div>
             <div class="saber-title">{{ title }}</div>
           </div>
-          <button class="saber-close" type="button" aria-label="Cerrar" @click="open = false">×</button>
+          <button class="saber-close" type="button" :aria-label="close" @click="open = false">×</button>
         </div>
         <div class="saber-body">
           <slot />
