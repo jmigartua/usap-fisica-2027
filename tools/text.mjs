@@ -10,7 +10,10 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { createHash } from 'node:crypto'
 
-const SLIDES = 'informativa.md'
+// Sobre qué mazo trabaja la hoja: `site.textDeck` en decks.json, y si no está,
+// el primero que no sea borrador. Ningún nombre de mazo vive en este fichero.
+const MANIFEST = JSON.parse(readFileSync('decks.json', 'utf8'))
+const SLIDES = MANIFEST.site?.textDeck ?? MANIFEST.decks.find(d => !d.draft).out
 const SHEET = 'TEXT.md'
 const MAP = '.text-map.json'
 

@@ -97,6 +97,59 @@ export function assemble() {
     for (const r of renames) console.log('  ' + r)
   }
 
+  // ── la trampa de las diapositivas bilingües ─────────────────────────────────
+  //
+  // En una diapositiva `.bi2` el fichero lleva primero toda la mitad castellana
+  // y luego toda la vasca; la rejilla las vuelve a emparejar por filas. Los
+  // revelados sólo caen a la vez si cada objeto y su gemelo llevan el MISMO
+  // `v-click="k"` escrito a mano: un `v-click` sin número lo numera Slidev por
+  // orden de fichero, y el euskera se queda pasos por detrás.
+  //
+  // Eso no rompe nada al construir. Se ve en la sala, proyectando, cuando media
+  // diapositiva aparece antes que la otra. Aquí se convierte en un error de
+  // montaje, que es donde se puede arreglar.
+  function checkBilingualClicks(rel, body) {
+    if (!/\{[^}]*\.bi2\b/.test(body)) return
+
+    const bare = []          // v-click sin número
+    const counts = new Map() // número → cuántas veces aparece
+    const lines = body.split('\n')
+    lines.forEach((line, i) => {
+      // `.nolang` marca lo que no pertenece a un idioma sino a los dos: una línea
+      // centrada bajo las dos mitades, una tabla común. No tiene gemelo, y no
+      // debe tenerlo.
+      if (/\.nolang\b/.test(line)) return
+      for (const m of line.matchAll(/v-click(?:=("|')([^"']*)\1)?/g)) {
+        const val = m[2]
+        if (val === undefined) { bare.push(i + 1); continue }
+        const n = Number(val)
+        if (!Number.isFinite(n)) continue   // v-click="$clicks >= 3" y similares
+        counts.set(n, (counts.get(n) ?? 0) + 1)
+      }
+    })
+
+    const problems = []
+    if (bare.length) {
+      problems.push(
+        `v-click sin número en la${bare.length > 1 ? 's' : ''} línea${bare.length > 1 ? 's' : ''} ` +
+        `${bare.join(', ')} — en una .bi2 cada revelado necesita su número`)
+    }
+    const odd = [...counts.entries()].filter(([, c]) => c !== 2).sort((a, b) => a[0] - b[0])
+    if (odd.length) {
+      problems.push(
+        'revelados sin pareja: ' +
+        odd.map(([n, c]) => `v-click="${n}" aparece ${c} ${c === 1 ? 'vez' : 'veces'}`).join(', ') +
+        ' — cada uno debe aparecer 2 veces, una por idioma')
+    }
+
+    if (problems.length) {
+      throw new Error(
+        `${rel}: diapositiva bilingüe descuadrada\n` +
+        problems.map(p => `    · ${p}`).join('\n') +
+        '\n    (si el desajuste es intencionado, quita .bi2 de esa diapositiva)')
+    }
+  }
+
   // ── assemble ────────────────────────────────────────────────────────────────
   function setKey(fm, key, value) {
     const line = `${key}: ${/^[\w-]+$/.test(String(value)) ? value : JSON.stringify(value)}`
@@ -134,6 +187,7 @@ export function assemble() {
       // file as the slide's content*. Naming it `src` quietly pulled each block
       // file back into its own slide, and eight slides overflowed.
       if (n > 0) fm = setKey(fm, 'blockSrc', rel === entry ? rel : `${entry} -> ${rel}`)
+      checkBilingualClicks(rel, body)
       sources.push(`${String(n + 1).padStart(2, '0')}  ${entry}${rel === entry ? '' : `  ->  ${rel}`}`)
       doc += n === 0 ? `\n---\n${body}\n` : `\n---\n${fm}\n---\n${body}\n`
     })

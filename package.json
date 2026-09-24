@@ -20,7 +20,13 @@
     "preview": "npm run build && npx serve dist -l 4173",
     "dev:bilingue": "node tools/dev.mjs bilingue.md --open",
     "decks:watch": "node tools/build_decks.mjs --watch",
-    "dev:informativa": "node tools/dev.mjs informativa.md --open"
+    "dev:informativa": "node tools/dev.mjs informativa.md --open",
+    "hooks": "git config core.hooksPath .githooks && echo \"hooks activados (.githooks)\"",
+    "ship": "git add bloques decks.json headmatter ribbon.json style.css components composables setup data public tools .github .githooks package.json README.md && git commit",
+    "watch:push": "zsh tools/autopush.sh",
+    "watch:push:bg": "nohup zsh tools/autopush.sh > /dev/null 2>&1 & echo $! > .autopush.pid; echo \"vigilante en pid $(cat .autopush.pid) · log en .autopush.log\"",
+    "watch:push:stop": "kill $(cat .autopush.pid) 2>/dev/null && rm -f .autopush.pid && echo \"vigilante parado\" || echo \"no había vigilante\"",
+    "watch:push:status": "ps -p $(cat .autopush.pid 2>/dev/null) > /dev/null 2>&1 && echo \"vigilante vivo (pid $(cat .autopush.pid))\" || echo \"vigilante PARADO — npm run watch:push:bg\""
   },
   "dependencies": {
     "@slidev/cli": "^52.19.1",

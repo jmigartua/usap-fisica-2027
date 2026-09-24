@@ -100,6 +100,20 @@ npm run dev              # la bilingüe, la que se publica en la raíz
 npm run dev:informativa  # o dev:enunciados / dev:hallazgos
 ```
 
+**Al clonar, una vez:** `npm run hooks`. Activa `.githooks/pre-commit`, que monta
+los ficheros de entrada y los mete en el commit cuando éste toca `bloques/`,
+`decks.json`, `headmatter/` o `ribbon.json`. Sin eso, un fichero de entrada viejo
+llega al commit, el push sale bien y el despliegue falla en Actions —una pestaña
+que nadie mira— dejando el sitio en la versión anterior. Para saltárselo en un
+commit concreto, `git commit --no-verify`.
+
+**Para publicar**, `npm run ship` (monta, añade las rutas del proyecto y abre el
+editor del mensaje) y el vigilante empuja solo. `npm run watch:push:status` dice
+si el vigilante está vivo; `watch:push:bg` lo arranca y `watch:push:stop` lo para.
+`ship` añade rutas explícitas y no `-A` a propósito: hay más de una sesión
+trabajando sobre este repositorio, y `-A` se lleva por delante lo que otra tenga
+a medias.
+
 Hasta ahora no era así, y costó una mañana: Slidev vigila el fichero de entrada
 —`bilingue.md`—, no `bloques/`. El servidor mostraba lo que hubiera montado el
 último `npm run decks` al arrancar, de modo que editar el bloque correcto no

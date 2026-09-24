@@ -1,0 +1,30 @@
+#!/bin/zsh
+# Regenera los ficheros de entrada y los añade al commit que se está haciendo.
+#
+# Existe por un fallo que no avisa: si editas un bloque y haces commit sin correr
+# `npm run decks`, el commit y el push salen bien y el despliegue falla en Actions
+# —una pestaña que nadie mira— dejando el sitio en la versión anterior. Con esto,
+# un fichero de entrada viejo ya no puede llegar a un commit.
+#
+# Se activa una sola vez, por repositorio:  npm run hooks
+# Se salta para un commit concreto:         git commit --no-verify
+set -e
+cd "$(git rev-parse --show-toplevel)"
+
+# Nada que montar si el commit no toca la fuente de las diapositivas.
+if git diff --cached --name-only | grep -qE '^(bloques/|decks\.json|headmatter/|ribbon\.json)'; then
+  echo "[pre-commit] npm run decks"
+  npm run --silent decks >/dev/null
+
+  entradas=$(node -e "
+    const m = require('./decks.json');
+    console.log(m.decks.map(d => d.out).join(' '));
+  ")
+  # Sólo se añaden los que de verdad han cambiado, para no ensuciar el commit.
+  for f in ${=entradas}; do
+    if [[ -f "$f" ]] && ! git diff --quiet -- "$f"; then
+      git add "$f"
+      echo "[pre-commit] añadido $f (estaba viejo)"
+    fi
+  done
+fi

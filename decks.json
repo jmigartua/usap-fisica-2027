@@ -1,5 +1,13 @@
 {
   "_comment": "Presentations from one pool of slides. Each entry names a block in bloques/ and may override that block's `section:`, `ribbonTitle:`, `class:`, `transition:` or `hide:` for this deck — the same slide is 'Anexo' in one deck and the main argument in another. EL ORDEN MANDA: la primera presentación no borrador se publica en la raíz del sitio y las demás cuelgan de ella en /<nombre>/, donde <nombre> es su fichero sin .md. Build con `npm run decks`; nunca se editan a mano los ficheros de salida, son generados. Una presentación con \"draft\": true se genera con npm run decks pero no se construye ni se publica: sirve para trabajar en ella sin tocar las vivas.",
+  "_site": "Lo único que nombra a este proyecto. Todo lo demás se deriva: las direcciones salen de baseUrl + el orden de `decks`, y textDeck dice sobre qué mazo trabaja la hoja de textos (npm run text). Para reutilizar la maquinaria en otra presentación, esto es lo que se cambia.",
+  "site": {
+    "owner": "jmigartua",
+    "repo": "usap-fisica-2027",
+    "baseUrl": "https://jmigartua.github.io/usap-fisica-2027/",
+    "languages": ["es", "eu"],
+    "textDeck": "informativa.md"
+  },
   "decks": [
     {
       "out": "bilingue.md",
