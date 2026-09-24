@@ -597,7 +597,7 @@ Qué se mantiene de 2026 y el único cambio de 2027.
 <img src="/figures/qr-informativa.svg" alt="Código QR de la presentación informativa" />
 ::
 
-[<a href="https://jmigartua.github.io/usap-fisica-2027/" target="_blank" rel="noopener">jmigartua.github.io/<br>usap-fisica-2027/</a>]{.lk-url}
+[<a href="https://jmigartua.github.io/usap-fisica-2027/informativa/" target="_blank" rel="noopener">jmigartua.github.io/<br>usap-fisica-2027/informativa/</a>]{.lk-url}
 ::
 
 ::div{.card.lk.lk-enunciados}

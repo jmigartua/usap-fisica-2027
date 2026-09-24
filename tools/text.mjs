@@ -10,7 +10,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { createHash } from 'node:crypto'
 
-const SLIDES = 'slides.md'
+const SLIDES = 'informativa.md'
 const SHEET = 'TEXT.md'
 const MAP = '.text-map.json'
 

@@ -15,8 +15,11 @@ import qrcode
 import qrcode.image.svg
 
 BASE = "https://jmigartua.github.io/usap-fisica-2027/"
+# Keep these in step with decks.json: the first non-draft deck is served at BASE
+# and the rest at BASE + <file without .md> + "/".
 DECKS = {
-    "qr-informativa": BASE,
+    "qr-bilingue": BASE,
+    "qr-informativa": BASE + "informativa/",
     "qr-enunciados": BASE + "enunciados/",
     "qr-hallazgos": BASE + "hallazgos/",
 }

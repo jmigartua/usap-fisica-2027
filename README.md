@@ -1,4 +1,4 @@
-# USaP Física 2027 · tres presentaciones desde un solo fondo de diapositivas
+# USaP Física 2027 · cuatro presentaciones desde un solo fondo de diapositivas
 
 ## Qué se edita a mano, y qué no
 
@@ -37,8 +37,25 @@ edita el de `comun/`: se cambia una vez y cambia en las tres.
 de los ficheros son consecuencia. Si cambias el orden ahí, `npm run decks`
 renombra los ficheros y dice cuáles ha movido. No hay que renumerar a mano.
 
-**Lo que no se toca.** `slides.md`, `enunciados.md`, `hallazgos.md` y
-`bilingue.md` los escribe `tools/build_decks.mjs` en cada `npm run decks`, que
+**Y el orden de `decks.json` también manda las direcciones.** La primera
+presentación que no sea borrador se publica en la raíz del sitio, y las demás
+cuelgan de ella en `/<fichero sin .md>/`:
+
+| Dirección | Presentación |
+|---|---|
+| `jmigartua.github.io/usap-fisica-2027/` | `bilingue.md` — la que se proyecta en la reunión |
+| `…/informativa/` | `informativa.md` — la misma, solo en castellano |
+| `…/enunciados/` | `enunciados.md` — apoyo: cómo se construyen los enunciados |
+| `…/hallazgos/` | `hallazgos.md` — apoyo: qué dicen los datos de 2026 |
+
+Para mover una presentación a la raíz se reordena `decks.json` y nada más:
+`tools/build_all.mjs` lo lee, y el despliegue lo llama a él en vez de repetir
+los pasos de construcción. Tres cosas hay que mover a mano detrás: las
+direcciones absolutas de `bloques/comun/enlaces.md`, las de `tools/make_qr.py`
+—y volver a generar los códigos— y el nombre del fichero en `tools/text.mjs`.
+
+**Lo que no se toca.** `bilingue.md`, `informativa.md`, `enunciados.md` y
+`hallazgos.md` los escribe `tools/build_decks.mjs` en cada `npm run decks`, que
 corre al arrancar *cualquiera* de los `npm run dev*` y al construir. Lo que se
 teclee ahí desaparece en la siguiente pasada, sin aviso y sin copia. Los cuatro
 llevan dentro de la cabecera la lista numerada de sus diapositivas con el
@@ -79,7 +96,8 @@ fichero de entrada se vuelve a montar y la página se recarga sola, en menos de
 un segundo.
 
 ```bash
-npm run dev:bilingue     # o dev / dev:enunciados / dev:hallazgos
+npm run dev              # la bilingüe, la que se publica en la raíz
+npm run dev:informativa  # o dev:enunciados / dev:hallazgos
 ```
 
 Hasta ahora no era así, y costó una mañana: Slidev vigila el fichero de entrada
@@ -184,20 +202,20 @@ Para comprobarlo, con la construcción servida:
 #   BASE=/usap-fisica-2027/ node tools/build_all.mjs
 #   python3 -m http.server 4173 --directory <raíz que contiene usap-fisica-2027/>
 export DECK_ORIGIN=http://localhost:4173
-node measure3.mjs /usap-fisica-2027/            9   # nada se mete bajo la cinta
-node measure3.mjs /usap-fisica-2027/enunciados/ 12
-node measure3.mjs /usap-fisica-2027/hallazgos/  15
-node measure3.mjs /usap-fisica-2027/bilingue/   9
+node measure3.mjs /usap-fisica-2027/             8   # nada se mete bajo la cinta
+node measure3.mjs /usap-fisica-2027/informativa/ 9
+node measure3.mjs /usap-fisica-2027/enunciados/  12
+node measure3.mjs /usap-fisica-2027/hallazgos/   15
 ```
 
 Y cuatro comprobaciones más, que existen porque cada una cazó algo que leer el
 código no cazaba:
 
 ```bash
-node sanity.mjs /usap-fisica-2027/#3 /usap-fisica-2027/enunciados/#3   # ¿renderiza de verdad?
-node biclick.mjs  /usap-fisica-2027/bilingue/ 9   # ES y EU se revelan a la vez
-node bicheck.mjs  /usap-fisica-2027/bilingue/ 9   # no queda castellano en cinta ni portada
-node controls.mjs /usap-fisica-2027/bilingue/ 9   # los controles se pueden usar
+node sanity.mjs /usap-fisica-2027/#3 /usap-fisica-2027/informativa/#3  # ¿renderiza de verdad?
+node biclick.mjs  /usap-fisica-2027/ 8   # ES y EU se revelan a la vez
+node bicheck.mjs  /usap-fisica-2027/ 8   # no queda castellano en cinta ni portada
+node controls.mjs /usap-fisica-2027/ 8   # los controles se pueden usar
 node contrast.mjs                                 # todo texto pasa su umbral AA (claro)
 DARK=1 node contrast.mjs                          # y en oscuro
 ```
@@ -323,10 +341,10 @@ Va al final del anexo: coreografía del problema 2 en 8–11, verbos en 12, resp
 
 ```bash
 npm run text          # escribe TEXT.md: una línea por texto, agrupadas por diapositiva, con id
-npm run text:apply    # devuelve a slides.md las líneas cambiadas y lista cada cambio
+npm run text:apply    # devuelve a informativa.md las líneas cambiadas y lista cada cambio
 ```
 
-En `TEXT.md` se edita solo lo que va después del id (`5.7  rúbrica y pesos`). Se conservan tal cual `$…$`, `[…]{.clase}`, `<br>` y `{{ }}`; una línea por id, sin añadir ni quitar ids. La estructura (tarjetas, clics, viñetas) no se toca desde aquí. El mapa `.text-map.json` guarda de dónde salió cada línea; si `slides.md` cambió entre medias, el script busca cada línea por su texto original y avisa de lo que no encuentra. Tras aplicar, la hoja se regenera sola.
+En `TEXT.md` se edita solo lo que va después del id (`5.7  rúbrica y pesos`). Se conservan tal cual `$…$`, `[…]{.clase}`, `<br>` y `{{ }}`; una línea por id, sin añadir ni quitar ids. La estructura (tarjetas, clics, viñetas) no se toca desde aquí. El mapa `.text-map.json` guarda de dónde salió cada línea; si `informativa.md` cambió entre medias, el script busca cada línea por su texto original y avisa de lo que no encuentra. Tras aplicar, la hoja se regenera sola.
 
 ## Diferencias con el original
 

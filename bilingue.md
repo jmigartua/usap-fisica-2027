@@ -651,6 +651,7 @@ Egitura, edukiak eta zuzenketa berberak. Enuntziatu laburragoak, errubrika bera
 transition: fade
 class: dense bi-bg
 ribbonTitle: "Non dago zer"
+hide: true
 blockSrc: "bloques/bilingue/09-bi-enlaces.md"
 ---
 ::::div{.bi2.rows-2.mb-1}

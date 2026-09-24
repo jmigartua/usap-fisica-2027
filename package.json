@@ -6,9 +6,9 @@
     "node": "^22.12.0 || >=24.0.0"
   },
   "scripts": {
-    "dev": "node tools/dev.mjs slides.md --open",
+    "dev": "node tools/dev.mjs bilingue.md --open",
     "build": "npm run decks && node tools/build_all.mjs",
-    "export": "npm run decks && slidev export slides.md --per-slide --wait 2500 --timeout 300000 --output 2027-usap-informativa.pdf && slidev export enunciados.md --per-slide --wait 2500 --timeout 300000 --output 2027-usap-enunciados.pdf && slidev export hallazgos.md --per-slide --wait 2500 --timeout 300000 --output 2027-usap-hallazgos.pdf",
+    "export": "npm run decks && slidev export bilingue.md --per-slide --wait 2500 --timeout 300000 --output 2027-usap-bilingue.pdf && slidev export informativa.md --per-slide --wait 2500 --timeout 300000 --output 2027-usap-informativa.pdf && slidev export enunciados.md --per-slide --wait 2500 --timeout 300000 --output 2027-usap-enunciados.pdf && slidev export hallazgos.md --per-slide --wait 2500 --timeout 300000 --output 2027-usap-hallazgos.pdf",
     "export:png": "slidev export --format png --wait 2500 --timeout 120000 --output png",
     "thumbs": "npm run export:png && node tools/thumbs.mjs",
     "publish": "git add -A && git commit -m \"update deck\" ; git push origin main",
@@ -19,7 +19,8 @@
     "dev:hallazgos": "node tools/dev.mjs hallazgos.md --open",
     "preview": "npm run build && npx serve dist -l 4173",
     "dev:bilingue": "node tools/dev.mjs bilingue.md --open",
-    "decks:watch": "node tools/build_decks.mjs --watch"
+    "decks:watch": "node tools/build_decks.mjs --watch",
+    "dev:informativa": "node tools/dev.mjs informativa.md --open"
   },
   "dependencies": {
     "@slidev/cli": "^52.19.1",

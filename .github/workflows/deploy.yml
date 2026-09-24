@@ -1,14 +1,20 @@
 name: Deploy to GitHub Pages
 
-# Three presentations, one site. The informativa is served at the repository
-# root and the two companions one level down, so they share a deploy and the
-# links between them are plain relative paths that need no base baked in:
+# Several presentations, one site. decks.json decides the URLs and nothing else
+# does: the first non-draft deck in the manifest takes the repository root and
+# the rest hang off it at /<file without .md>/, so they share a deploy and the
+# links between them need no base baked in:
 #
-#   https://<owner>.github.io/<repo>/              la informativa
+#   https://<owner>.github.io/<repo>/              la bilingüe (primera del manifiesto)
+#   https://<owner>.github.io/<repo>/informativa/  la informativa, en castellano
 #   https://<owner>.github.io/<repo>/enunciados/   cómo se escriben los enunciados
 #   https://<owner>.github.io/<repo>/hallazgos/    qué dicen los datos de 2026
 #
-# The three entry files are generated from bloques/ + decks.json, so the build
+# To move a deck to the root, reorder decks.json — do NOT add build steps here.
+# The build runs tools/build_all.mjs, the same script `npm run build` uses, so a
+# local build and a deploy cannot disagree about which deck owns the root.
+#
+# The entry files are generated from bloques/ + decks.json, so the build
 # regenerates them first: a slide edited in the pool reaches every deck that
 # uses it, and a stale committed entry file cannot be published by accident.
 
@@ -40,28 +46,25 @@ jobs:
           cache: npm
       - run: npm ci --no-audit --no-fund
 
-      - name: Regenerate the three entry files from the slide pool
+      - name: Regenerate the entry files from the slide pool
         run: npm run decks
 
+      # `npm run decks` writes only the entry files named in decks.json, so any
+      # difference at all means one of them was committed stale.
       - name: Fail if a generated entry file was committed stale
         run: |
-          if ! git diff --quiet -- slides.md enunciados.md hallazgos.md; then
-            echo "::error::slides.md / enunciados.md / hallazgos.md differ from what bloques/ + decks.json generate."
+          if ! git diff --quiet; then
+            echo "::error::A generated entry file differs from what bloques/ + decks.json generate."
             echo "Run 'npm run decks' and commit the result."
-            git --no-pager diff --stat -- slides.md enunciados.md hallazgos.md
+            git --no-pager diff --stat
             exit 1
           fi
 
-      # The informativa is built first: it writes the site root and Vite empties
-      # the output directory, which would take the companions with it.
-      - name: Build la informativa
-        run: npx slidev build slides.md --base "$BASE" --out dist
-
-      - name: Build los enunciados
-        run: npx slidev build enunciados.md --base "${BASE}enunciados/" --out dist/enunciados
-
-      - name: Build los hallazgos
-        run: npx slidev build hallazgos.md --base "${BASE}hallazgos/" --out dist/hallazgos
+      # Root first, then the companions: Vite empties its output directory, so
+      # building the root last would take the others with it. build_all.mjs
+      # handles that ordering from decks.json.
+      - name: Build every non-draft deck
+        run: node tools/build_all.mjs
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
