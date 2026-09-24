@@ -73,11 +73,26 @@ Si añades un objeto a una mitad, añade su gemelo a la otra y dale el **mismo**
 `v-click="k"`. Sin número, Slidev numera por orden de fichero y el euskera se
 queda pasos por detrás.
 
-Después de editar:
+**Mientras editas no hace falta hacer nada.** `npm run dev:bilingue` —y sus
+hermanos— levantan el servidor con el fondo vigilado: al guardar un bloque, el
+fichero de entrada se vuelve a montar y la página se recarga sola, en menos de
+un segundo.
 
 ```bash
-npm run decks            # vuelve a montar los cuatro ficheros de entrada
 npm run dev:bilingue     # o dev / dev:enunciados / dev:hallazgos
+```
+
+Hasta ahora no era así, y costó una mañana: Slidev vigila el fichero de entrada
+—`bilingue.md`—, no `bloques/`. El servidor mostraba lo que hubiera montado el
+último `npm run decks` al arrancar, de modo que editar el bloque correcto no
+cambiaba nada en pantalla. Ahora `tools/dev.mjs` corre el montador en modo
+vigilancia junto a Slidev, en el mismo grupo de procesos; Ctrl-C para los dos.
+
+Si en algún momento quieres montar a mano, sin servidor:
+
+```bash
+npm run decks            # una pasada
+npm run decks:watch      # vigilando, sin Slidev
 ```
 
 ## Por qué un fondo común

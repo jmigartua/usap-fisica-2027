@@ -6,7 +6,7 @@
     "node": "^22.12.0 || >=24.0.0"
   },
   "scripts": {
-    "dev": "npm run decks && slidev --open",
+    "dev": "node tools/dev.mjs slides.md --open",
     "build": "npm run decks && node tools/build_all.mjs",
     "export": "npm run decks && slidev export slides.md --per-slide --wait 2500 --timeout 300000 --output 2027-usap-informativa.pdf && slidev export enunciados.md --per-slide --wait 2500 --timeout 300000 --output 2027-usap-enunciados.pdf && slidev export hallazgos.md --per-slide --wait 2500 --timeout 300000 --output 2027-usap-hallazgos.pdf",
     "export:png": "slidev export --format png --wait 2500 --timeout 120000 --output png",
@@ -15,10 +15,11 @@
     "text": "node tools/text.mjs extract",
     "text:apply": "node tools/text.mjs apply",
     "decks": "node tools/build_decks.mjs",
-    "dev:enunciados": "npm run decks && slidev enunciados.md --open",
-    "dev:hallazgos": "npm run decks && slidev hallazgos.md --open",
+    "dev:enunciados": "node tools/dev.mjs enunciados.md --open",
+    "dev:hallazgos": "node tools/dev.mjs hallazgos.md --open",
     "preview": "npm run build && npx serve dist -l 4173",
-    "dev:bilingue": "npm run decks && slidev bilingue.md --open"
+    "dev:bilingue": "node tools/dev.mjs bilingue.md --open",
+    "decks:watch": "node tools/build_decks.mjs --watch"
   },
   "dependencies": {
     "@slidev/cli": "^52.19.1",
