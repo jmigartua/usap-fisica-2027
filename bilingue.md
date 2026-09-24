@@ -24,7 +24,7 @@ info: |
   Generada por tools/build_decks.mjs desde bloques/ — no editar a mano.
 author: Asier Lopez-Eiguren, J. M. Igartua
 lang: es
-colorSchema: dark
+colorSchema: auto
 aspectRatio: 16/9
 canvasWidth: 980
 fonts:
@@ -50,7 +50,7 @@ ribbon:
 [USaP · Fisika · Koordinazioa · 2027ko edizioa]{.kicker}
 
 ::div{.cover-title}
-Fisika 2027:<br>ez da ezer aldatzen
+Fisika 2027:<br>ez da (ia) ezer aldatuko
 ::
 
 ::div{.cover-sub}
@@ -306,8 +306,6 @@ plantear, despejar, sustituir
 ::div{.card.coral v-click="2"}
 ### Descuentos de $0.1$
 unidades · carácter vectorial · redondeo y decimales
-
-[decimales, no cifras significativas]{.note-line}
 ::
 
 ::div{.card.coral v-click="3"}
@@ -346,8 +344,6 @@ planteatu, askatu, ordeztu
 ::div{.card.coral v-click="2"}
 ### $0{,}1$eko kenkariak
 unitateak · izaera bektoriala · biribiltzea eta hamartarrak
-
-[hamartarrak, ez zifra esangarriak]{.note-line}
 ::
 
 ::div{.card.coral v-click="3"}
@@ -385,12 +381,28 @@ ribbonTitle: "Aldaketa"
 
 ::::
 
-::div{.note.nolang}
-Longitud de los enunciados de 2026, en palabras · 2026ko enuntziatuen luzera, hitzetan
+::::div{.bi2.rows-2.mt-1}
+
+::div{.note}
+Longitud de los enunciados de 2026, en palabras
 ::
 
-::word-bars{:rows='[["A1",295],["B1",408],["C1",150],["C2",242],["D1",163],["D2",214]]' :total="408" :sums='[["C1+C2",392],["D1+D2",377]]' :short='["B1′",90]' :target="$clicks >= 3"}
+::word-bars{:rows='[["A1",295],["B1",408],["C1",150],["C2",242],["D1",163],["D2",214]]' :total="408" :sums='[["C1+C2",392],["D1+D2",377]]' :target="$clicks >= 3"}
 ::
+
+::div{.note}
+2026ko enuntziatuen luzera, hitzetan
+::
+
+::tool-panel{label="Ajustar la banda · Banda doitu"}
+::band-controls
+::
+
+::band-totals{:read="1472" :answered="[1016, 1159]" :n-read="6" :n-answered="4"}
+::
+::
+
+::::
 
 ::::div{.bi2.rows-1.mt-2}
 
@@ -486,23 +498,111 @@ ribbonTitle: "Datuak eta konstanteak"
 ::const-table{name="constantes-2026" :clicks="$clicks" .big .nolang}
 ::
 
-::::div{.bi2.rows-2.mt-3}
+::::div{.bi2.rows-1.mt-2}
 
-::div{.note-line}
-**A1** gravitatorio: $G$, $M_{\mathrm{T}}$, $R_{\mathrm{T}}$ · **C1** sonido: $v_{\mathrm{sonido}}$, $I_0$ · **D1** fotoeléctrico: $h$, $c$, $|q_e|$
+:::div{.grid.grid-cols-2.gap-x-5.gap-y-1}
+
+::div{.step v-click="1"}
+[A1]{.n.u-a}
+
+gravitatorio: $G$, $M_{\mathrm{T}}$, $R_{\mathrm{T}}$
 ::
 
-::div{.note-line}
-**B1**, **C2**, **D2** no usan la tabla · nunca se usan $K$, $m_p$, $m_e$ — **se evalúa elegir**
+::div{.step v-click="5"}
+[D1]{.n.u-d}
+
+fotoeléctrico: $h$, $c$, $|q_e|$
 ::
 
-::div{.note-line}
-**A1** grabitatorioa: $G$, $M_{\mathrm{L}}$, $R_{\mathrm{L}}$ · **C1** soinua: $v_{\mathrm{soinua}}$, $I_0$ · **D1** fotoelektrikoa: $h$, $c$, $|q_e|$
+::div{.step v-click="2"}
+[B1]{.n.u-b}
+
+inducción: nada
 ::
 
-::div{.note-line}
-**B1**, **C2**, **D2** taula ez dute erabiltzen · $K$, $m_p$, $m_e$ inoiz ez — **aukeratzea ebaluatzen da**
+::div{.step v-click="6"}
+[D2]{.n.u-b}
+
+datación: nada
 ::
+
+::div{.step v-click="3"}
+[C1]{.n.u-c}
+
+sonido: $v_{\mathrm{sonido}}$, $I_0$
+::
+
+::div{.step v-click="7"}
+[×]{.n.u-x}
+
+nunca: $K$, $m_p$, $m_e$
+::
+
+::div{.step v-click="4"}
+[C2]{.n.u-b}
+
+óptica: nada
+::
+
+::div{.step v-click="8"}
+[=]{.n}
+
+**se evalúa elegir**
+::
+
+:::
+
+:::div{.grid.grid-cols-2.gap-x-5.gap-y-1}
+
+::div{.step v-click="1"}
+[A1]{.n.u-a}
+
+grabitatorioa: $G$, $M_{\mathrm{L}}$, $R_{\mathrm{L}}$
+::
+
+::div{.step v-click="5"}
+[D1]{.n.u-d}
+
+fotoelektrikoa: $h$, $c$, $|q_e|$
+::
+
+::div{.step v-click="2"}
+[B1]{.n.u-b}
+
+indukzioa: ezer ez
+::
+
+::div{.step v-click="6"}
+[D2]{.n.u-b}
+
+datazioa: ezer ez
+::
+
+::div{.step v-click="3"}
+[C1]{.n.u-c}
+
+soinua: $v_{\mathrm{soinua}}$, $I_0$
+::
+
+::div{.step v-click="7"}
+[×]{.n.u-x}
+
+inoiz ez: $K$, $m_p$, $m_e$
+::
+
+::div{.step v-click="4"}
+[C2]{.n.u-b}
+
+optika: ezer ez
+::
+
+::div{.step v-click="8"}
+[=]{.n}
+
+**aukeratzea ebaluatzen da**
+::
+
+:::
 
 ::::
 

@@ -14,12 +14,28 @@ ribbonTitle: "Aldaketa"
 
 ::::
 
-::div{.note.nolang}
-Longitud de los enunciados de 2026, en palabras · 2026ko enuntziatuen luzera, hitzetan
+::::div{.bi2.rows-2.mt-1}
+
+::div{.note}
+Longitud de los enunciados de 2026, en palabras
 ::
 
-::word-bars{:rows='[["A1",295],["B1",408],["C1",150],["C2",242],["D1",163],["D2",214]]' :total="408" :sums='[["C1+C2",392],["D1+D2",377]]' :short='["B1′",90]' :target="$clicks >= 3"}
+::word-bars{:rows='[["A1",295],["B1",408],["C1",150],["C2",242],["D1",163],["D2",214]]' :total="408" :sums='[["C1+C2",392],["D1+D2",377]]' :target="$clicks >= 3"}
 ::
+
+::div{.note}
+2026ko enuntziatuen luzera, hitzetan
+::
+
+::tool-panel{label="Ajustar la banda · Banda doitu"}
+::band-controls
+::
+
+::band-totals{:read="1472" :answered="[1016, 1159]" :n-read="6" :n-answered="4"}
+::
+::
+
+::::
 
 ::::div{.bi2.rows-1.mt-2}
 

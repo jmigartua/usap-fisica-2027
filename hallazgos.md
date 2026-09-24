@@ -30,7 +30,7 @@ info: |
   Generada por tools/build_decks.mjs desde bloques/ — no editar a mano.
 author: Asier Lopez-Eiguren, J. M. Igartua
 lang: es
-colorSchema: dark
+colorSchema: auto
 aspectRatio: 16/9
 canvasWidth: 980
 fonts:

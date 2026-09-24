@@ -18,7 +18,7 @@ const sides = () => p.evaluate(() => {
   const sb = slide.getBoundingClientRect(), mid = sb.left + sb.width / 2
   let l = 0, r = 0
   // Only objects that a click can reveal: Slidev leaves the others untouched.
-  for (const el of slide.querySelectorAll('.card, .section-title, .chip-row, .sum3')) {
+  for (const el of slide.querySelectorAll('.card, .section-title, .chip-row, .sum3, .step')) {
     const st = getComputedStyle(el)
     if (st.display === 'none' || st.visibility === 'hidden' || Number(st.opacity) < 0.5) continue
     const q = el.getBoundingClientRect()

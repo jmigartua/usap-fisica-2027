@@ -2,7 +2,7 @@
 [USaP · Fisika · Koordinazioa · 2027ko edizioa]{.kicker}
 
 ::div{.cover-title}
-Fisika 2027:<br>ez da ezer aldatzen
+Fisika 2027:<br>ez da (ia) ezer aldatuko
 ::
 
 ::div{.cover-sub}

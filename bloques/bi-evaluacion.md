@@ -24,8 +24,6 @@ plantear, despejar, sustituir
 ::div{.card.coral v-click="2"}
 ### Descuentos de $0.1$
 unidades · carácter vectorial · redondeo y decimales
-
-[decimales, no cifras significativas]{.note-line}
 ::
 
 ::div{.card.coral v-click="3"}
@@ -64,8 +62,6 @@ planteatu, askatu, ordeztu
 ::div{.card.coral v-click="2"}
 ### $0{,}1$eko kenkariak
 unitateak · izaera bektoriala · biribiltzea eta hamartarrak
-
-[hamartarrak, ez zifra esangarriak]{.note-line}
 ::
 
 ::div{.card.coral v-click="3"}
