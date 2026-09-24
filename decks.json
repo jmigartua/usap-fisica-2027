@@ -164,7 +164,10 @@
         "bi-vistazo",
         "bi-constantes",
         "bi-cierre",
-        "bi-enlaces"
+        {
+          "b": "bi-enlaces",
+          "hide": true
+        }
       ],
       "ribbon": {
         "event": "Koordinazio-bilera",

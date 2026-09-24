@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useSlideContext } from '@slidev/client'
+import { useSlideContext, useNav } from '@slidev/client'
 import fileDefaults from './ribbon.json'
 
 // Footer ribbon rendered inside every slide (slide-bottom layer: per-slide $page and
@@ -33,7 +33,15 @@ const occasion = computed(() => [r.value.event, r.value.place, r.value.date].fil
 // slide's frontmatter; showing it while developing means never having to work
 // back from a slide on screen to the file that produced it. Never in a build:
 // `import.meta.env.DEV` is false there, so it cannot reach the room or Pages.
-const srcFile = computed(() => (import.meta.env.DEV ? ((($frontmatter as any)?.blockSrc) ?? '') : ''))
+// `import.meta.env.DEV` alone is not enough: `slidev export` runs a dev server
+// and drives it with a browser, so DEV is true there too and the badge went
+// straight into the PDF handed to the teachers. `isPrintMode` is what tells
+// rendering-for-paper apart from working-at-the-editor.
+const { isPrintMode } = useNav()
+const srcFile = computed(() =>
+  (import.meta.env.DEV && !isPrintMode.value)
+    ? ((($frontmatter as any)?.blockSrc) ?? '')
+    : '')
 const progress = computed(() => total.value ? ($page.value / total.value) * 100 : 0)
 const show = computed(() => {
   const hidden: number[] = r.value.hideOnPages ?? [1]
