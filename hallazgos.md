@@ -7,19 +7,20 @@
 #  Edit the slide instead — number = slide number:
 #    01  bloques/hallazgos/01-portada-hallazgos.md
 #    02  bloques/hallazgos/02-datos-serie.md
-#    03  bloques/hallazgos/03-datos-materias.md
-#    04  bloques/hallazgos/04-datos-semana.md
-#    05  bloques/hallazgos/05-datos-presupuesto.md
-#    06  bloques/hallazgos/06-datos-catalunya.md
-#    07  bloques/hallazgos/07-anx-rutas.md
-#    08  bloques/hallazgos/08-anx-inercia.md
-#    09  bloques/hallazgos/09-anx-2024.md
-#    10  bloques/hallazgos/10-anx-ponderaciones.md
-#    11  bloques/hallazgos/11-anx-que-hizo.md
-#    12  bloques/hallazgos/12-cierre-prediccion.md
-#    13  bloques/hallazgos/13-cierre-peticion.md
-#    14  bloques/hallazgos/14-cierre-hallazgos.md
-#    15  bloques/hallazgos/15-enlaces.md  ->  bloques/comun/enlaces.md
+#    03  bloques/hallazgos/03-datos-perfil.md
+#    04  bloques/hallazgos/04-datos-materias.md
+#    05  bloques/hallazgos/05-datos-semana.md
+#    06  bloques/hallazgos/06-datos-presupuesto.md
+#    07  bloques/hallazgos/07-datos-catalunya.md
+#    08  bloques/hallazgos/08-anx-rutas.md
+#    09  bloques/hallazgos/09-anx-inercia.md
+#    10  bloques/hallazgos/10-anx-2024.md
+#    11  bloques/hallazgos/11-anx-ponderaciones.md
+#    12  bloques/hallazgos/12-anx-que-hizo.md
+#    13  bloques/hallazgos/13-cierre-prediccion.md
+#    14  bloques/hallazgos/14-cierre-peticion.md
+#    15  bloques/hallazgos/15-cierre-hallazgos.md
+#    16  bloques/hallazgos/16-enlaces.md  ->  bloques/comun/enlaces.md
 # ===========================================================================
 theme: default
 title: "Qué sabemos de 2026, y qué no"
@@ -68,27 +69,38 @@ La caída, separada en las partes que la componen: lo que se acota,<br>lo que no
 transition: slide-up
 section: "Los datos"
 ribbonTitle: "Qué pasó"
-class: dense tight
+class: dense
 blockSrc: "bloques/hallazgos/02-datos-serie.md"
 ---
 [Los datos · qué pasó en 2026]{.kicker}
 
 # Los datos de 2026
 
-:::div{.figrow.grid.grid-cols-2.gap-4.mt-1}
+:::div{.figrow.grid.grid-cols-2.gap-4.mt-3}
 
-::div{.fig.fit-xs}
+::div{.fig}
 <img src="/figures/datos-serie.png" alt="Serie de Física en Euskadi, 2010–2026: 3.99 en 2026, el valor más bajo en dieciséis años" />
 ::
 
-::div{.fig.fit-xs}
+::div{.fig}
 <img src="/figures/datos-nueve.png" alt="Las nueve comunidades con resultado publicado, 2025 a 2026: seis suben, tres bajan" />
 ::
 
 :::
 
-::div{.fig.fit-xs.mt-2 v-click}
-<img src="/figures/datos-perfil.png" alt="Perfil de contextualización de cada prueba: dos barras por comunidad, 2025 y 2026, divididas en competencial, contexto con sustancia y contexto decorativo; bajo cada comunidad, su cambio de nota" />
+---
+transition: fade
+section: "Los datos"
+ribbonTitle: "El perfil de cada prueba"
+class: dense
+blockSrc: "bloques/hallazgos/03-datos-perfil.md"
+---
+[Los datos · qué cambió en cada prueba]{.kicker}
+
+# El perfil de cada prueba
+
+::div{.fig.fit-lg.mt-2}
+<img src="/figures/datos-perfil.png" alt="Perfil de contextualización de cada prueba: dos barras por comunidad, 2025 en claro y 2026 en sólido, divididas en competencial, contexto con sustancia y contexto decorativo; bajo cada comunidad, su cambio de nota" />
 ::
 
 ---
@@ -96,7 +108,7 @@ transition: slide-up
 section: "Los datos"
 ribbonTitle: "De qué está hecha"
 class: dense
-blockSrc: "bloques/hallazgos/03-datos-materias.md"
+blockSrc: "bloques/hallazgos/04-datos-materias.md"
 ---
 [Los datos · de qué está hecha la caída]{.kicker}
 
@@ -137,7 +149,7 @@ transition: slide-up
 section: "Los datos"
 ribbonTitle: "La semana"
 class: dense tight
-blockSrc: "bloques/hallazgos/04-datos-semana.md"
+blockSrc: "bloques/hallazgos/05-datos-semana.md"
 ---
 [Los datos · la semana, no solo la prueba]{.kicker}
 
@@ -177,7 +189,7 @@ transition: slide-up
 section: "Los datos"
 ribbonTitle: "Qué no sabemos"
 class: dense
-blockSrc: "bloques/hallazgos/05-datos-presupuesto.md"
+blockSrc: "bloques/hallazgos/06-datos-presupuesto.md"
 ---
 [Los datos · lo que puede y lo que no puede decirse]{.kicker}
 
@@ -214,7 +226,7 @@ transition: slide-up
 section: "Los datos"
 ribbonTitle: "Cataluña"
 class: dense tight
-blockSrc: "bloques/hallazgos/06-datos-catalunya.md"
+blockSrc: "bloques/hallazgos/07-datos-catalunya.md"
 ---
 [Los datos · el único sistema comparable]{.kicker}
 
@@ -255,7 +267,7 @@ transition: slide-up
 section: "Los datos"
 class: dense
 ribbonTitle: "El recorrido de cada una"
-blockSrc: "bloques/hallazgos/07-anx-rutas.md"
+blockSrc: "bloques/hallazgos/08-anx-rutas.md"
 ---
 [Anexo]{.kicker}
 
@@ -288,7 +300,7 @@ transition: fade
 section: "Lo que había antes"
 class: dense
 ribbonTitle: "Quince años de inercia"
-blockSrc: "bloques/hallazgos/08-anx-inercia.md"
+blockSrc: "bloques/hallazgos/09-anx-inercia.md"
 ---
 [Anexo]{.kicker}
 
@@ -344,7 +356,7 @@ transition: fade
 section: "Lo que había antes"
 class: dense tight
 ribbonTitle: "2024, antes del modelo"
-blockSrc: "bloques/hallazgos/09-anx-2024.md"
+blockSrc: "bloques/hallazgos/10-anx-2024.md"
 ---
 [Anexo]{.kicker}
 
@@ -387,7 +399,7 @@ transition: fade
 section: "Lo que había antes"
 class: dense
 ribbonTitle: "La regla de las ponderaciones"
-blockSrc: "bloques/hallazgos/10-anx-ponderaciones.md"
+blockSrc: "bloques/hallazgos/11-anx-ponderaciones.md"
 ---
 [Anexo]{.kicker}
 
@@ -423,7 +435,7 @@ transition: fade
 section: "La prueba de 2026"
 class: dense
 ribbonTitle: "Qué hizo la prueba"
-blockSrc: "bloques/hallazgos/11-anx-que-hizo.md"
+blockSrc: "bloques/hallazgos/12-anx-que-hizo.md"
 ---
 [Anexo]{.kicker}
 
@@ -464,7 +476,7 @@ transition: fade
 section: "La predicción"
 ribbonTitle: "La predicción"
 class: dense
-blockSrc: "bloques/hallazgos/12-cierre-prediccion.md"
+blockSrc: "bloques/hallazgos/13-cierre-prediccion.md"
 ---
 [Cierre · para que esto pueda equivocarse]{.kicker}
 
@@ -511,7 +523,7 @@ transition: fade
 section: "Lo que pedimos"
 ribbonTitle: "Lo que pedimos"
 class: dense
-blockSrc: "bloques/hallazgos/13-cierre-peticion.md"
+blockSrc: "bloques/hallazgos/14-cierre-peticion.md"
 ---
 [Cierre · lo que pedimos]{.kicker}
 
@@ -546,7 +558,7 @@ layout: center
 transition: view-transition
 section: "Cierre"
 ribbonTitle: "Para llevar"
-blockSrc: "bloques/hallazgos/14-cierre-hallazgos.md"
+blockSrc: "bloques/hallazgos/15-cierre-hallazgos.md"
 ---
 [Para llevar]{.kicker.text-center}
 
@@ -573,7 +585,7 @@ transition: fade
 section: "Las tres"
 class: "dense here-hallazgos"
 ribbonTitle: "Dónde está cada cosa"
-blockSrc: "bloques/hallazgos/15-enlaces.md -> bloques/comun/enlaces.md"
+blockSrc: "bloques/hallazgos/16-enlaces.md -> bloques/comun/enlaces.md"
 ---
 [Las tres presentaciones]{.kicker}
 
