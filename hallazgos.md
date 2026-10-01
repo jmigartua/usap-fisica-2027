@@ -87,8 +87,8 @@ blockSrc: "bloques/hallazgos/02-datos-serie.md"
 
 :::
 
-::div{.fig.fit-sm.mt-2 v-click}
-<img src="/figures/datos-papel.png" alt="Qué cambió en la prueba frente a qué cambió en la nota, nueve comunidades: las que suben no añadieron contenido competencial; Euskadi pasó del 25 al 50 por ciento y es el punto de la derecha" />
+::div{.fig.fit-xs.mt-2 v-click}
+<img src="/figures/datos-competencial.png" alt="Proporción de los puntos codificados como competenciales en cada comunidad, 2025 en gris y 2026 en color: seis comunidades a cero los dos años, Cataluña baja y Euskadi es la única que sube" />
 ::
 
 ---
