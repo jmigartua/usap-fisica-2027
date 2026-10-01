@@ -88,7 +88,7 @@ blockSrc: "bloques/hallazgos/02-datos-serie.md"
 :::
 
 ::div{.fig.fit-xs.mt-2 v-click}
-<img src="/figures/datos-competencial.png" alt="Proporción de los puntos codificados como competenciales en cada comunidad, 2025 en gris y 2026 en color: seis comunidades a cero los dos años, Cataluña baja y Euskadi es la única que sube" />
+<img src="/figures/datos-perfil.png" alt="Perfil de contextualización de cada prueba: dos barras por comunidad, 2025 y 2026, divididas en competencial, contexto con sustancia y contexto decorativo; bajo cada comunidad, su cambio de nota" />
 ::
 
 ---

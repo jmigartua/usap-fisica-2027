@@ -187,8 +187,7 @@ Las diez figuras de datos salen del dossier, no se dibujan aquí. En
 
 ```bash
 PAU_LANG=es PAU_DECK=1 python3 scripts/03_plots.py            # datos-serie, datos-nueve
-PAU_LANG=es PAU_DECK=1 python3 scripts/07_exam_coding.py      # datos-papel
-PAU_LANG=es PAU_DECK=1 python3 scripts/23_comparability.py    # datos-competencial
+PAU_LANG=es PAU_DECK=1 python3 scripts/07_exam_coding.py      # datos-perfil
 PAU_LANG=es PAU_DECK=1 python3 scripts/22_subject_decomposition.py
 PAU_LANG=es PAU_DECK=1 python3 scripts/25_statement_budget.py
 PAU_LANG=es PAU_DECK=1 python3 scripts/34_competency_path.py
