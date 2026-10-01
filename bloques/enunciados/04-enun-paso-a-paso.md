@@ -2,7 +2,7 @@ transition: slide-left
 section: "Anexo"
 class: dense
 ...
-<div class="kicker">Anexo · problema 2 de 2026 · de izquierda a derecha: cómo se llegó al enunciado de 2026</div>
+<div class="kicker">Anexo · problema 2 de 2026 · de izquierda a derecha: cómo se construyó el enunciado de 2026</div>
 
 # Del enunciado habitual al de 2026, paso a paso
 
@@ -50,7 +50,7 @@ cada cálculo, por configuración
 </div>
 <div class="stage-arrow">→</div>
 <div :class="{ stage: true, active: $clicks === 3 }">
-<div class="stage-t">3 · 2026, como salió</div>
+<div class="stage-t">3 · 2026, tal como se publicó</div>
 <div class="stage-w">
 
 $408$ palabras

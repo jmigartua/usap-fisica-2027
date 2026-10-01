@@ -23,7 +23,7 @@ title: "Los enunciados, problema a problema"
 titleTemplate: '%s · Coordinación'
 info: |
   ## Los enunciados, problema a problema
-  Material de apoyo: de dónde salen las palabras de más en un enunciado y cómo se quitan.
+  Material de apoyo: cómo se construye un enunciado y dónde se acorta.
   Generada por tools/build_decks.mjs desde bloques/ — no editar a mano.
 author: Asier Lopez-Eiguren, J. M. Igartua
 lang: es
@@ -54,7 +54,7 @@ Los enunciados,<br>problema a problema
 ::
 
 ::div{.cover-sub}
-De dónde salen las palabras de más y cómo se quitan sin tocar<br>la rúbrica, las competencias ni el nivel.
+Cómo se construye un enunciado y dónde se acorta, sin tocar<br>la rúbrica, las competencias ni el nivel.
 ::
 
 ::div{.cover-meta}
@@ -152,11 +152,11 @@ Palabras: enunciado en castellano, sin los pesos
 
 ---
 transition: slide-left
-section: "Cómo se llegó a 2026"
+section: "Cómo se construyó"
 class: dense
 blockSrc: "bloques/enunciados/04-enun-paso-a-paso.md"
 ---
-<div class="kicker">Anexo · problema 2 de 2026 · de izquierda a derecha: cómo se llegó al enunciado de 2026</div>
+<div class="kicker">Anexo · problema 2 de 2026 · de izquierda a derecha: cómo se construyó el enunciado de 2026</div>
 
 # Del enunciado habitual al de 2026, paso a paso
 
@@ -204,7 +204,7 @@ cada cálculo, por configuración
 </div>
 <div class="stage-arrow">→</div>
 <div :class="{ stage: true, active: $clicks === 3 }">
-<div class="stage-t">3 · 2026, como salió</div>
+<div class="stage-t">3 · 2026, tal como se publicó</div>
 <div class="stage-w">
 
 $408$ palabras
@@ -303,7 +303,7 @@ blockSrc: "bloques/enunciados/05-enun-como-debio.md"
 ---
 <div class="kicker">Anexo · ingeniería inversa · paso 3 → 2 · problema 2 completo</div>
 
-# De «2026, como salió» a «más simple»
+# 2026, más simple
 
 <div :class="{ head: true, dim: $clicks >= 1 && $clicks < 32, hl: $clicks >= 30 && $clicks < 32, renewed: $clicks >= 32 }">
 <div class="head-tag">Contexto y configuraciones · común a las cuatro versiones</div>
@@ -327,7 +327,7 @@ Un microgenerador consiste en una espira circular plana de radio $R = 6.0$ cm qu
 
 <div class="grid grid-cols-9 gap-4 mt-2">
 <div class="col-version target col-span-4">
-<div class="col-tag teal-tag">2 · Sin narrativa · se va construyendo · <span class="wc">{{ [0, 156, 156, 156, 167, 167, 167, 167, 215, 215, 215, 215, 215, 215, 215, 215, 255, 255, 255, 271, 271, 271, 296, 296, 296, 339, 339, 367, 367, 367, 367, 367, 287][Math.min($clicks, 32)] }} palabras</span> <span class="wc-save" v-show="$clicks >= 4">· ahorro {{ [0, 0, 0, 0, 12, 12, 12, 12, 21, 21, 21, 21, 21, 21, 21, 21, 31, 31, 31, 36, 36, 36, 39, 39, 39, 41, 41, 41, 41, 41, 41, 41, 121][Math.min($clicks, 32)] }}</span></div>
+<div class="col-tag teal-tag">2 · Narrativa simplificada · se va construyendo · <span class="wc">{{ [0, 156, 156, 156, 167, 167, 167, 167, 215, 215, 215, 215, 215, 215, 215, 215, 255, 255, 255, 271, 271, 271, 296, 296, 296, 339, 339, 367, 367, 367, 367, 367, 287][Math.min($clicks, 32)] }} palabras</span> <span class="wc-save" v-show="$clicks >= 4">· ahorro {{ [0, 0, 0, 0, 12, 12, 12, 12, 21, 21, 21, 21, 21, 21, 21, 21, 31, 31, 31, 36, 36, 36, 39, 39, 39, 41, 41, 41, 41, 41, 41, 41, 121][Math.min($clicks, 32)] }}</span></div>
 
 <div class="ghost arrive" v-click="1">
 
@@ -389,7 +389,7 @@ En **b)** y **c)** se pide lo mismo dos veces, una por configuración: <span cla
 
 </div>
 <div class="col-version source col-span-5">
-<div class="col-tag">3 · 2026, como salió · <span class="wc">408 palabras</span> · referencia fija</div>
+<div class="col-tag">3 · 2026, tal como se publicó · <span class="wc">408 palabras</span> · referencia fija</div>
 
 <div :class="{ q: true, hl: $clicks >= 2 && $clicks < 4, dim: $clicks >= 4 }">
 
@@ -564,7 +564,7 @@ blockSrc: "bloques/enunciados/06-enun-competencial.md"
 ---
 <div class="kicker">Anexo · ingeniería inversa · paso 2 → 1 · de «más simple» a la forma competencial ideal</div>
 
-# De «sin narrativa» a la forma competencial ideal
+# De la narrativa simplificada a la forma competencial ideal
 
 <div :class="{ head: true, dim: $clicks >= 1 }">
 <div class="head-tag">Contexto y configuraciones · común a las cuatro versiones</div>
@@ -606,7 +606,7 @@ Contexto y configuraciones: se mantienen.
 
 </div>
 <div class="col-version source col-span-5">
-<div class="col-tag">2 · Sin narrativa · más simple, en el segundo año · <span class="wc">287 palabras</span> · referencia fija</div>
+<div class="col-tag">2 · Narrativa simplificada · en el segundo año · <span class="wc">287 palabras</span> · referencia fija</div>
 
 <div :class="{ q: true, hl: $clicks >= 2 && $clicks < 4, dim: $clicks >= 4 }">
 
@@ -697,7 +697,7 @@ Contexto y configuraciones: se mantienen.
 
 Cada cálculo habitual, una vez por configuración, y el flujo implícito en «deduce $\varepsilon(t)$». Los tres elementos competenciales, explícitos: <span class="m-comp">justificar</span>, <span class="m-comp">expresar con criterio</span>, <span class="m-comp">decidir</span>.
 
-La más corta de leer y la más difícil de entender: todo lo intermedio queda a cargo del alumno. Por eso 2026, primer año de este saber básico, no salió así.
+La más corta de leer y la más difícil de entender: todo lo intermedio queda a cargo del alumno. Por eso 2026, primer año de este saber básico, no se escribió así.
 
 </div>
 </div>
@@ -1163,7 +1163,7 @@ Qué se mantiene de 2026 y el único cambio de 2027.
 ::div{.card.lk.lk-enunciados}
 ### Los enunciados [estás aquí]{.chip.amber.lk-here}
 
-De dónde salen las palabras de más, problema a problema.
+Cómo se construye un enunciado, problema a problema.
 
 ::div{.qr}
 <img src="/figures/qr-enunciados.svg" alt="Código QR de la presentación sobre los enunciados" />

@@ -4,7 +4,7 @@ class: dense tight
 ...
 <div class="kicker">Anexo · ingeniería inversa · paso 2 → 1 · de «más simple» a la forma competencial ideal</div>
 
-# De «sin narrativa» a la forma competencial ideal
+# De la narrativa simplificada a la forma competencial ideal
 
 <div :class="{ head: true, dim: $clicks >= 1 }">
 <div class="head-tag">Contexto y configuraciones · común a las cuatro versiones</div>
@@ -46,7 +46,7 @@ Contexto y configuraciones: se mantienen.
 
 </div>
 <div class="col-version source col-span-5">
-<div class="col-tag">2 · Sin narrativa · más simple, en el segundo año · <span class="wc">287 palabras</span> · referencia fija</div>
+<div class="col-tag">2 · Narrativa simplificada · en el segundo año · <span class="wc">287 palabras</span> · referencia fija</div>
 
 <div :class="{ q: true, hl: $clicks >= 2 && $clicks < 4, dim: $clicks >= 4 }">
 
@@ -137,7 +137,7 @@ Contexto y configuraciones: se mantienen.
 
 Cada cálculo habitual, una vez por configuración, y el flujo implícito en «deduce $\varepsilon(t)$». Los tres elementos competenciales, explícitos: <span class="m-comp">justificar</span>, <span class="m-comp">expresar con criterio</span>, <span class="m-comp">decidir</span>.
 
-La más corta de leer y la más difícil de entender: todo lo intermedio queda a cargo del alumno. Por eso 2026, primer año de este saber básico, no salió así.
+La más corta de leer y la más difícil de entender: todo lo intermedio queda a cargo del alumno. Por eso 2026, primer año de este saber básico, no se escribió así.
 
 </div>
 </div>

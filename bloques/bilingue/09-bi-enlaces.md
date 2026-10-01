@@ -33,9 +33,9 @@ Qué se mantiene de 2026 y el único cambio de 2027.
 ::div{.card.lk.lk-enunciados}
 ### Los enunciados · Enuntziatuak [estás aquí]{.chip.amber.lk-here}
 
-De dónde salen las palabras de más, problema a problema.
+Cómo se construye un enunciado, problema a problema.
 
-[Soberako hitzak nondik datozen, problemaz problema.]{.note-line}
+[Enuntziatu bat nola eraikitzen den, problemaz problema.]{.note-line}
 
 ::div{.qr}
 <img src="/figures/qr-enunciados.svg" alt="Código QR de la presentación sobre los enunciados" />

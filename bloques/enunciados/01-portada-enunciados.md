@@ -6,7 +6,7 @@ Los enunciados,<br>problema a problema
 ::
 
 ::div{.cover-sub}
-De dónde salen las palabras de más y cómo se quitan sin tocar<br>la rúbrica, las competencias ni el nivel.
+Cómo se construye un enunciado y dónde se acorta, sin tocar<br>la rúbrica, las competencias ni el nivel.
 ::
 
 ::div{.cover-meta}

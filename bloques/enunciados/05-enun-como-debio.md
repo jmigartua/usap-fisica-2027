@@ -4,7 +4,7 @@ class: dense tight
 ...
 <div class="kicker">Anexo · ingeniería inversa · paso 3 → 2 · problema 2 completo</div>
 
-# De «2026, como salió» a «más simple»
+# 2026, más simple
 
 <div :class="{ head: true, dim: $clicks >= 1 && $clicks < 32, hl: $clicks >= 30 && $clicks < 32, renewed: $clicks >= 32 }">
 <div class="head-tag">Contexto y configuraciones · común a las cuatro versiones</div>
@@ -28,7 +28,7 @@ Un microgenerador consiste en una espira circular plana de radio $R = 6.0$ cm qu
 
 <div class="grid grid-cols-9 gap-4 mt-2">
 <div class="col-version target col-span-4">
-<div class="col-tag teal-tag">2 · Sin narrativa · se va construyendo · <span class="wc">{{ [0, 156, 156, 156, 167, 167, 167, 167, 215, 215, 215, 215, 215, 215, 215, 215, 255, 255, 255, 271, 271, 271, 296, 296, 296, 339, 339, 367, 367, 367, 367, 367, 287][Math.min($clicks, 32)] }} palabras</span> <span class="wc-save" v-show="$clicks >= 4">· ahorro {{ [0, 0, 0, 0, 12, 12, 12, 12, 21, 21, 21, 21, 21, 21, 21, 21, 31, 31, 31, 36, 36, 36, 39, 39, 39, 41, 41, 41, 41, 41, 41, 41, 121][Math.min($clicks, 32)] }}</span></div>
+<div class="col-tag teal-tag">2 · Narrativa simplificada · se va construyendo · <span class="wc">{{ [0, 156, 156, 156, 167, 167, 167, 167, 215, 215, 215, 215, 215, 215, 215, 215, 255, 255, 255, 271, 271, 271, 296, 296, 296, 339, 339, 367, 367, 367, 367, 367, 287][Math.min($clicks, 32)] }} palabras</span> <span class="wc-save" v-show="$clicks >= 4">· ahorro {{ [0, 0, 0, 0, 12, 12, 12, 12, 21, 21, 21, 21, 21, 21, 21, 21, 31, 31, 31, 36, 36, 36, 39, 39, 39, 41, 41, 41, 41, 41, 41, 41, 121][Math.min($clicks, 32)] }}</span></div>
 
 <div class="ghost arrive" v-click="1">
 
@@ -90,7 +90,7 @@ En **b)** y **c)** se pide lo mismo dos veces, una por configuración: <span cla
 
 </div>
 <div class="col-version source col-span-5">
-<div class="col-tag">3 · 2026, como salió · <span class="wc">408 palabras</span> · referencia fija</div>
+<div class="col-tag">3 · 2026, tal como se publicó · <span class="wc">408 palabras</span> · referencia fija</div>
 
 <div :class="{ q: true, hl: $clicks >= 2 && $clicks < 4, dim: $clicks >= 4 }">
 

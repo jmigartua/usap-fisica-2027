@@ -69,7 +69,7 @@
       "title": "Los enunciados, problema a problema",
       "ribbonTitle": "Física 2027 · Los enunciados",
       "thumbs": "thumbs/enunciados",
-      "info": "Material de apoyo: de dónde salen las palabras de más en un enunciado y cómo se quitan.",
+      "info": "Material de apoyo: cómo se construye un enunciado y dónde se acorta.",
       "blocks": [
         "portada-enunciados",
         {
@@ -84,7 +84,7 @@
         },
         {
           "b": "enun-paso-a-paso",
-          "section": "Cómo se llegó a 2026"
+          "section": "Cómo se construyó"
         },
         {
           "b": "enun-como-debio",
