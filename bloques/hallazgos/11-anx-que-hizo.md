@@ -3,7 +3,7 @@ section: "Anexo"
 class: dense
 ribbonTitle: "Qué hizo la prueba"
 ...
-[Anexo · por si se pregunta]{.kicker}
+[Anexo]{.kicker}
 
 # Qué hizo la prueba de 2026
 

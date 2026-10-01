@@ -131,7 +131,7 @@ class: dense
 ribbonTitle: "La prueba de 2026"
 blockSrc: "bloques/enunciados/03-ref-vistazo.md"
 ---
-[Anexo · por si se pregunta]{.kicker}
+[Anexo]{.kicker}
 
 # 2026 de un vistazo
 

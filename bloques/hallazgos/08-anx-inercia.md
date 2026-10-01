@@ -3,7 +3,7 @@ section: "Anexo"
 class: dense
 ribbonTitle: "Quince años de inercia"
 ...
-[Anexo · por si se pregunta]{.kicker}
+[Anexo]{.kicker}
 
 # La prueba había sido el temario
 

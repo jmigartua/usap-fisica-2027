@@ -2,7 +2,7 @@ transition: fade
 section: "Anexo"
 class: dense
 ...
-[Anexo · por si se pregunta]{.kicker}
+[Anexo]{.kicker}
 
 # 2026 de un vistazo
 

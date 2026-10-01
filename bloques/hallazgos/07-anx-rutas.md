@@ -3,7 +3,7 @@ section: "Anexo"
 class: dense
 ribbonTitle: "El recorrido de cada una"
 ...
-[Anexo · por si se pregunta]{.kicker}
+[Anexo]{.kicker}
 
 # Seis comunidades no convirtieron nada
 

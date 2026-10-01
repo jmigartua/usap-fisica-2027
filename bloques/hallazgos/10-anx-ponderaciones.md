@@ -3,7 +3,7 @@ section: "Anexo"
 class: dense
 ribbonTitle: "La regla de las ponderaciones"
 ...
-[Anexo · por si se pregunta]{.kicker}
+[Anexo]{.kicker}
 
 # Y una candidata: la regla de las ponderaciones
 

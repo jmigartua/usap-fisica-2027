@@ -264,7 +264,7 @@ class: dense
 ribbonTitle: "El recorrido de cada una"
 blockSrc: "bloques/hallazgos/07-anx-rutas.md"
 ---
-[Anexo · por si se pregunta]{.kicker}
+[Anexo]{.kicker}
 
 # Seis comunidades no convirtieron nada
 
@@ -297,7 +297,7 @@ class: dense
 ribbonTitle: "Quince años de inercia"
 blockSrc: "bloques/hallazgos/08-anx-inercia.md"
 ---
-[Anexo · por si se pregunta]{.kicker}
+[Anexo]{.kicker}
 
 # La prueba había sido el temario
 
@@ -353,7 +353,7 @@ class: dense tight
 ribbonTitle: "2024, antes del modelo"
 blockSrc: "bloques/hallazgos/09-anx-2024.md"
 ---
-[Anexo · por si se pregunta]{.kicker}
+[Anexo]{.kicker}
 
 # 2024 cambió la forma, no el nivel
 
@@ -396,7 +396,7 @@ class: dense
 ribbonTitle: "La regla de las ponderaciones"
 blockSrc: "bloques/hallazgos/10-anx-ponderaciones.md"
 ---
-[Anexo · por si se pregunta]{.kicker}
+[Anexo]{.kicker}
 
 # Y una candidata: la regla de las ponderaciones
 
@@ -432,7 +432,7 @@ class: dense
 ribbonTitle: "Qué hizo la prueba"
 blockSrc: "bloques/hallazgos/11-anx-que-hizo.md"
 ---
-[Anexo · por si se pregunta]{.kicker}
+[Anexo]{.kicker}
 
 # Qué hizo la prueba de 2026
 
