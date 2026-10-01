@@ -1134,3 +1134,34 @@ html.dark .fig { border-color: transparent; }
    leave a full-width slide half empty; the rows and the cards take the space. */
 .slidev-layout.wide td, .slidev-layout.wide th { padding: 0.72rem 0.6rem; }
 .slidev-layout.wide .cards-tall > .card { min-height: 10.5rem; }
+
+/* ── Listas de preguntas (mazo «galderak») ─────────────────────────────────
+   Una pregunta por línea, con su código delante como etiqueta. El código es
+   lo que se usa en la sala para decir «la Q018»: va primero, sin sangrar, y
+   el texto cuelga alineado debajo de sí mismo y no debajo del código. */
+.qlist ul { list-style: none; padding-left: 0; margin: 0; }
+
+.qlist li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.5rem;
+  align-items: baseline;
+  font-size: 0.78rem;
+  line-height: 1.42;
+  padding: 0.26rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.qlist li:last-child { border-bottom: none; }
+
+/* El chip del código no debe encoger ni partirse cuando la pregunta es larga */
+.qlist li .chip { flex: none; white-space: nowrap; font-size: 0.66rem; }
+
+/* Las tarjetas de la diapositiva de tipos: el contador debajo del rótulo, y
+   en una sola línea — en una tarjeta estrecha «6 preguntas» se partía en dos. */
+.bi2 .card .chip {
+  margin-top: 0.35rem;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.62rem;
+}

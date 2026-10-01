@@ -191,6 +191,30 @@
           "class": "dense here-hallazgos"
         }
       ]
+    },
+    {
+      "out": "galderak.md",
+      "title": "Irakasleen galderak · Preguntas del profesorado",
+      "ribbonTitle": "USaP Fisika 2027 · Galderak",
+      "thumbs": "thumbs/galderak",
+      "info": "Las preguntas recibidas del profesorado, por tipo, en euskera y castellano.",
+      "blocks": [
+        "gal-portada",
+        "gal-tipos",
+        "gal-g001",
+        "gal-g002",
+        "gal-g003",
+        "gal-g004",
+        "gal-g005",
+        "gal-g006",
+        "gal-g007",
+        "gal-g008"
+      ],
+      "ribbon": {
+        "event": "Koordinazio-bilera · Reunión de coordinación",
+        "place": "EHU",
+        "date": "2026ko urriaren 1a"
+      }
     }
   ]
 }
