@@ -4,7 +4,7 @@ class: dense tight
 ...
 <div class="kicker">Anexo · ingeniería inversa · paso 3 → 2 · problema 2 completo</div>
 
-# De «2026, como salió» a «como debería haber sido...»
+# De «2026, como salió» a «más simple»
 
 <div :class="{ head: true, dim: $clicks >= 1 && $clicks < 32, hl: $clicks >= 30 && $clicks < 32, renewed: $clicks >= 32 }">
 <div class="head-tag">Contexto y configuraciones · común a las cuatro versiones</div>

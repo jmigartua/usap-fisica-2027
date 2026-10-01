@@ -88,7 +88,7 @@
         },
         {
           "b": "enun-como-debio",
-          "section": "Cómo debió ser"
+          "section": "Más simple"
         },
         {
           "b": "enun-competencial",
@@ -100,21 +100,28 @@
         },
         {
           "b": "enun-niveles",
-          "section": "Los cuatro niveles"
+          "section": "Los cuatro niveles",
+          "hide": true
         },
         {
           "b": "enun-respuestas",
-          "section": "Las respuestas"
+          "section": "Las respuestas",
+          "hide": true
         },
         {
           "b": "ref-constantes",
           "section": "Datos y constantes",
-          "ribbonTitle": "Datos y constantes"
+          "ribbonTitle": "Datos y constantes",
+          "hide": true
         },
-        "cierre-enunciados",
+        {
+          "b": "cierre-enunciados",
+          "hide": true
+        },
         {
           "b": "enlaces",
-          "class": "dense here-enunciados"
+          "class": "dense here-enunciados",
+          "hide": true
         }
       ]
     },

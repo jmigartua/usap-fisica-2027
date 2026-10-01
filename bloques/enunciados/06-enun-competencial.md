@@ -2,7 +2,7 @@ transition: fade
 section: "Anexo"
 class: dense tight
 ...
-<div class="kicker">Anexo · ingeniería inversa · paso 2 → 1 · de lo que debió ser a la forma competencial ideal</div>
+<div class="kicker">Anexo · ingeniería inversa · paso 2 → 1 · de «más simple» a la forma competencial ideal</div>
 
 # De «sin narrativa» a la forma competencial ideal
 
@@ -46,7 +46,7 @@ Contexto y configuraciones: se mantienen.
 
 </div>
 <div class="col-version source col-span-5">
-<div class="col-tag">2 · Sin narrativa · lo que debió ser en el segundo año · <span class="wc">287 palabras</span> · referencia fija</div>
+<div class="col-tag">2 · Sin narrativa · más simple, en el segundo año · <span class="wc">287 palabras</span> · referencia fija</div>
 
 <div :class="{ q: true, hl: $clicks >= 2 && $clicks < 4, dim: $clicks >= 4 }">
 

@@ -297,13 +297,13 @@ De lo habitual a lo competencial, con narrativa y repeticiones · $408$ palabras
 
 ---
 transition: fade
-section: "Cómo debió ser"
+section: "Más simple"
 class: dense tight
 blockSrc: "bloques/enunciados/05-enun-como-debio.md"
 ---
 <div class="kicker">Anexo · ingeniería inversa · paso 3 → 2 · problema 2 completo</div>
 
-# De «2026, como salió» a «como debería haber sido...»
+# De «2026, como salió» a «más simple»
 
 <div :class="{ head: true, dim: $clicks >= 1 && $clicks < 32, hl: $clicks >= 30 && $clicks < 32, renewed: $clicks >= 32 }">
 <div class="head-tag">Contexto y configuraciones · común a las cuatro versiones</div>
@@ -562,7 +562,7 @@ section: "La forma pura"
 class: dense tight
 blockSrc: "bloques/enunciados/06-enun-competencial.md"
 ---
-<div class="kicker">Anexo · ingeniería inversa · paso 2 → 1 · de lo que debió ser a la forma competencial ideal</div>
+<div class="kicker">Anexo · ingeniería inversa · paso 2 → 1 · de «más simple» a la forma competencial ideal</div>
 
 # De «sin narrativa» a la forma competencial ideal
 
@@ -606,7 +606,7 @@ Contexto y configuraciones: se mantienen.
 
 </div>
 <div class="col-version source col-span-5">
-<div class="col-tag">2 · Sin narrativa · lo que debió ser en el segundo año · <span class="wc">287 palabras</span> · referencia fija</div>
+<div class="col-tag">2 · Sin narrativa · más simple, en el segundo año · <span class="wc">287 palabras</span> · referencia fija</div>
 
 <div :class="{ q: true, hl: $clicks >= 2 && $clicks < 4, dim: $clicks >= 4 }">
 
@@ -893,6 +893,7 @@ Recuadros: los tres cálculos habituales, <span class="bx-flux on">flujo</span>,
 ---
 transition: slide-up
 section: "Los cuatro niveles"
+hide: true
 blockSrc: "bloques/enunciados/08-enun-niveles.md"
 ---
 [Anexo · los verbos de la competencia]{.kicker}
@@ -962,6 +963,7 @@ Acortar: un verbo por nivel, sin repeticiones entre apartados · la escalera no 
 ---
 transition: fade
 section: "Las respuestas"
+hide: true
 blockSrc: "bloques/enunciados/09-enun-respuestas.md"
 ---
 [Anexo · preguntas previsibles]{.kicker}
@@ -1013,6 +1015,7 @@ transition: slide-up
 section: "Datos y constantes"
 class: dense
 ribbonTitle: "Datos y constantes"
+hide: true
 blockSrc: "bloques/enunciados/10-ref-constantes.md"
 ---
 [Anexo · la tabla de datos y constantes]{.kicker}
@@ -1098,6 +1101,7 @@ transition: fade
 section: "Cierre"
 class: dense
 ribbonTitle: "Para llevar"
+hide: true
 blockSrc: "bloques/enunciados/11-cierre-enunciados.md"
 ---
 [Para llevar]{.kicker}
@@ -1135,6 +1139,7 @@ transition: fade
 section: "Las tres"
 class: "dense here-enunciados"
 ribbonTitle: "Dónde está cada cosa"
+hide: true
 blockSrc: "bloques/enunciados/12-enlaces.md -> bloques/comun/enlaces.md"
 ---
 [Las tres presentaciones]{.kicker}
