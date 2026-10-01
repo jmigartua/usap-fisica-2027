@@ -22,7 +22,7 @@ ribbonTitle: "Qué hizo la prueba"
 ::
 
 ::div{.card.kpi v-click}
-[$25 \to 62.5\,\%$]{.kpi-value.coral}
+[$25 \to 50\,\%$]{.kpi-value.coral}
 
 [**Marcas competenciales**<br>la única de las nueve que cambió de género]{.kpi-label}
 ::

@@ -15,7 +15,7 @@ ribbonTitle: "El recorrido de cada una"
 
 ::div{.card.coral.tel v-click}
 ### Euskadi · la única flecha larga hacia abajo
-- [Pasó]{.v} [del $25$ al $62.5\,\%$ de puntos competenciales]{.t}
+- [Pasó]{.v} [del $25$ al $50\,\%$ de puntos competenciales]{.t}
 - [Cayó]{.v} [$-1.48$]{.t}
 - [Cambió de género]{.v} [la prueba · la única que lo hizo]{.t}
 ::
